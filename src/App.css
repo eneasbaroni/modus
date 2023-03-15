@@ -1,0 +1,54 @@
+:root {  
+  --main-color: #ffff;
+  --second-color: #F1FF33 ;  
+  --third-color: #7928ca;
+  --fourth-color: #e94f2d;   
+  --main-bg: #00036A;   
+  --main-bg: radial-gradient(ellipse at 99% 99%, #0018A3 0%, #000474 24%, #000271 100%);    
+  --second-bg: #a3a3a3;  
+  --main-border: rgba(0, 0, 0, 0.2);
+  --main-filter: invert(0%) sepia(6%) saturate(9%) hue-rotate(343deg) brightness(100%) contrast(87%);
+}
+
+* {    
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px; 
+  font-weight: 400;   
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+  color: var(--main-color);
+}
+
+@font-face {
+  font-family: 'Tango Sans';
+  src: url('./fonts/TangoSans.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {  
+  font-size: 16px;   
+  background: var(--main-bg);
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Tango Sans', sans-serif;
+}
+
+.v {
+  border: 1px solid var(--main-color);
+}
+
+.sectionContainer {  
+  margin-inline: auto;  
+  min-height: calc(100vh - 78px - 54px);  
+}
+
+.divContainer {  
+  margin-inline: auto;   
+}
+
+
+
