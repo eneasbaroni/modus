@@ -2,12 +2,15 @@
   --main-color: #ffff;
   --second-color: #F1FF33 ;  
   --third-color: #7928ca;
-  --fourth-color: #e94f2d;   
+  --fourth-color: #FF6363; 
   --main-bg: #00036A;   
   --main-bg: radial-gradient(ellipse at 99% 99%, #0018A3 0%, #000474 24%, #000271 100%);    
+  --main-bg: linear-gradient(to right bottom, #000468, #00046a, #00046d, #00046f, #000472, #050573, #0b0675, #100776, #180a76, #1e0d76, #230f76, #281276);  
+  --main-bg: linear-gradient(to right bottom, #000270, #00067E);
   --second-bg: #a3a3a3;  
   --main-border: rgba(0, 0, 0, 0.2);
   --main-filter: invert(0%) sepia(6%) saturate(9%) hue-rotate(343deg) brightness(100%) contrast(87%);
+  scroll-behavior: smooth;
 }
 
 * {    
@@ -16,7 +19,7 @@
   font-weight: 400;   
   margin: 0;
   padding: 0;  
-  box-sizing: border-box;
+  box-sizing: border-box;  
   color: var(--main-color);
 }
 
@@ -29,7 +32,7 @@
 
 html {  
   font-size: 16px;   
-  background: var(--main-bg);
+  background: var(--main-bg);  
   min-height: 100vh;
 }
 

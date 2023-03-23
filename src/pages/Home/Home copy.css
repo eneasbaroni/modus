@@ -1,0 +1,55 @@
+#home {
+  z-index: 10;  
+  border: solid 1px blue;
+}
+
+.mainImgContainer {
+  height: 1728px;
+  width: 768px;
+  background: linear-gradient(-45deg, rgba(255,71,130,0.3477766106442577) 0%, rgba(0,12,141,0.35) 100%);
+  transform: rotate(45deg) ;
+  margin: 0;
+  overflow: hidden;  
+  border-radius: 384px;
+  position: relative;
+  top: -43rem;
+  left: calc(50vw - 50px - 420px);
+}
+
+.mainImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 768px;
+  width: 768px;  
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.medidor {
+  width: 990px;
+  height: 753px;
+  border: solid 1px red;
+  position: absolute;
+  top: 0; 
+  right: 0;
+  z-index: 99;
+}
+
+#home h1 {
+  font-family: 'Tango Sans', sans-serif;
+  font-size: 5.1rem;
+  text-align: right;  
+  position: absolute;
+  top: 340px;
+  right: calc(50vw - 570px);
+  line-height: 5.1rem;
+}
+
+#home h1 span {
+  font-family: 'Tango Sans', sans-serif;
+  font-size: 5.1rem;
+  color: var(--second-color);
+  
+}
