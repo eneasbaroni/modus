@@ -8,16 +8,25 @@ import Style from './Style'
 
 
 const Home = () => {
-  const [scrollY, setScrollY] = useState(0)
+  /* const [scrollY, setScrollY] = useState(0) */
+  const [position, setPosition] = useState('0%')
+
+  const windowHeight = window.innerHeight;
+
 
   useEffect(() => {
     function handleScroll() {
-      setScrollY(window.scrollY);
+      /* setScrollY(window.scrollY); */
+      if (window.scrollY > windowHeight) {
+        setPosition('100%')        
+      } else {
+      setPosition(window.scrollY/windowHeight*100 + '%')
+      }
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
+    }; // eslint-disable-next-line
   }, []);
 
 
@@ -28,7 +37,7 @@ const Home = () => {
         <section className='homeBannerContainer'>
           <div className='mainImgContainer'>     
             <img className='mainImage' src='./images/main/main_image.png' alt='main' />        
-            <img className='mainImage2' src='./images/main/main_image 2.png' alt='main' {...scrollY > 200 ? {style: {objectPosition: 'right'}} : {style: {objectPosition: 'left'}}} />
+            <img className='mainImage2' src='./images/main/main_image 2.png' alt='main' style={{objectPosition: position }}/>
           </div> 
           <div className='mainTitleContainer'>        
             <h1><span>Gestionamos</span> la<br/>conversación de<br/>tu marca con equipos<br/>especializados de<br/>respuesta</h1>
