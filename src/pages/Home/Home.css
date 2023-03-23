@@ -156,6 +156,13 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
+/* media queries */
+@media (max-width: 768px) {
+  .mainActionsContainer {
+    grid-column: 3 / 11;
+  }
+}
+
 /* mainAction pair children */
 .mainAction:nth-child(even) {
   align-items: flex-start;
@@ -180,6 +187,7 @@
 
 .mainAction .imagesContainer {
   height: 3.5vw;
+  min-height: 30px;
   width: auto; 
   position: relative;
   margin-bottom: 1rem; 
@@ -219,10 +227,12 @@
 
 .mainAction h3 {
   font-size: 1.6vw;
+  font-size: max(1.6vw, 14px);
 }
 
 .mainAction h3 span {
   font-size: 1.6vw;
+  font-size: max(1.6vw, 14px);
   color: #0F21A3;
   transition: all 0.5s ease-in-out;
 }
@@ -269,7 +279,8 @@
 #style h3 {
   margin-top: 5vw;
   font-size: 2.5vw;
-  line-height: 2.5vw;
+  font-size: max(2.5vw, 20px);
+  /* line-height: 2.5vw; */
   /* display: inline-block; */
   width: auto;
   text-align: left;    
@@ -284,6 +295,7 @@
   grid-column: 4 / 10;
   padding-top: 55px;
   font-size: 1.6vw;
+  font-size: max(1.6vw, 14px);
   font-weight: 200;
   margin: 0 auto;
 }
@@ -291,6 +303,7 @@
 #style p span {
   color: var(--fourth-color);
   font-size: 1.6vw;
+  font-size: max(1.6vw, 14px);
   font-weight: 200;  
 }
 
@@ -449,13 +462,14 @@
   width: 60%;
   background-color: #000476;
   margin: 2.8vw auto 4vw;
-  height: 4vw;
-  border-radius: 2vw;
+  height: auto;
+  border-radius: calc(2.4vw + 1.5vw);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 3vw;
-  font-size: 1.5vw;
+  padding: 1.2vw 3vw;
+  /* font-size: 1.5vw; */
+  font-size: max(1.5vw, 16px);
   font-weight: 500;
 }
 
@@ -464,8 +478,8 @@
   height: 3.5vw;
   border-radius: 1.75vw;
   border: 1px solid #54b6eb33;
-  padding-left: 3vw;
-  font-size: 1.3vw;  
+  padding-left: 3vw;  
+  font-size: max(1.3vw, 14px);
   margin-bottom: 1.5vw;
   background-color: transparent;
   transition: all 0.2s ease-in-out;
@@ -482,7 +496,7 @@
   border: 1px solid #54b6eb33;
   padding-left: 3vw;
   padding-top: 1vw;
-  font-size: 1.3vw;  
+  font-size: max(1.3vw, 14px);  
   margin-bottom: 1.5vw;
   background-color: transparent;
 }
@@ -588,12 +602,12 @@
 .formContainer  .submitBtn {  
   background-color: var(--fourth-color);
   width: 25%;
-  height: 2vw;
+  height: auto;
   border: transparent;
   border-radius: 1vw;
-  padding: 0;
+  padding: 1.2vw 2vw;
   font-family: 'Tango Sans', sans-serif;
-  font-size: 1.3vw;
+  font-size: max(1.3vw, 14px);
   color: #fff;
   margin: 1rem auto 2rem;
   display: block;

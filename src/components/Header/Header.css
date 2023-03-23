@@ -1,6 +1,6 @@
 header {
   position: relative;
-  height: 125px;
+  height: 6.5vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +13,7 @@ header {
 }
 
 .headerLogo {
-  width: 270px;
+  width: 14vw;
   height: auto;  
 }
 
@@ -22,7 +22,7 @@ header .navBar {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1105px;
+  width: 58vw;
   margin: 0 auto;
   z-index: 90; 
 }
@@ -30,6 +30,8 @@ header .navBar {
 header .navBar a {
   text-decoration: none;
   color: var(--main-color);
-  font-size: 1.5rem;
+  font-size: 1.25vw;
+  font-size: 1rem;
+  font-size: max(1.25vw, 14px);
   font-weight: 200;  
 }

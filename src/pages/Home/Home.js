@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <main id='home'>
       <div className='titles-bg'>
-        <div className='medidor'></div>
+        {/* <div className='medidor'></div> */}
         <section className='homeBannerContainer'>
           <div className='mainImgContainer'>     
             <img className='mainImage' src='./images/main/main_image.png' alt='main' />        
