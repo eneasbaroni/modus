@@ -1,0 +1,55 @@
+
+/* Form */
+#yellowForm {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);  
+  margin-top: 13vw;
+  padding-bottom: 30vw;
+  margin-bottom: calc(-1rem - 1.4vw - 3vw);
+  background-image: url(../../../../public/images/gestion_publica/form-back-01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left;  
+}
+
+#yellowForm .formContainer input:focus, #yellowForm .formContainer textarea:focus {
+  border-color: var(--second-color);
+  box-shadow: 0vw 0vw 1vw 1vw rgba(240, 255, 101, 0.1);
+  -webkit-box-shadow: 0vw 0vw 1vw 1vw rgba(240, 255, 101, 0.1);
+  -moz-box-shadow: 0vw 0vw 1vw 1vw rgba(240, 255, 101, 0.1);
+}
+
+#yellowForm .formContainer  .submitBtn {  
+  background-color: var(--second-color);
+  width: 25%;
+  height: auto;
+  border: transparent;
+  border-radius: 1vw;
+  padding: 1.2vw 2vw;
+  font-family: 'Tango Sans', sans-serif;
+  font-size: 1.3vw;
+  font-size: max(1.3vw, 14px);
+  color: blue;
+  margin: 1rem auto 2rem;
+  display: block;
+  cursor: pointer;
+}
+
+
+#yellowForm .formContainer .iconsContainer .whatsapp-icon:hover {
+  background-image: url(../../../../public/images/main/wa-icon-active-y.svg);
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));
+  filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));  
+}
+
+#yellowForm .formContainer .iconsContainer .linkedin-icon:hover {
+  background-image: url(../../../../public/images/main/llinkedin-icon-active-y.svg);  
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));
+  filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));
+}
+
+#yellowForm .formContainer .iconsContainer .mail-icon:hover {
+  background-image: url(../../../../public/images/main/mail-icon-active-y.svg);  
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));
+  filter: drop-shadow(0px 0px 4px rgba(241,255,51,0.75));
+}

@@ -11,3 +11,7 @@ footer img {
  height: auto;
  padding-bottom: 3vw; 
 }
+
+.yellow {
+  border-bottom: 1rem solid #0462BF !important;
+}

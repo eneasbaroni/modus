@@ -1,0 +1,65 @@
+#why {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.whyContainer {
+  grid-column: 3 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyContainer h2 {
+  font-family: 'Tango Sans', sans-serif;
+  color: var(--second-color);  
+  font-size: 3vw;
+  font-size: max(3vw, 24px); 
+  margin-bottom: 2.2vw; 
+}
+
+.whyContainer h3 {  
+  color: var(--second-color);
+  background-color: #bdccd420; 
+  border: solid 1px  #bdccd450;
+  font-size: 1.8vw;
+  font-size: max(1.8vw, 18px);
+  padding: 1.35vw;  
+}
+
+.whyInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.whyInfo img {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 1.3vw auto; 
+}
+
+.whyInfo p {
+  grid-column: 2 / 7;
+  height: 100%;
+  font-size: 1.5vw;
+  font-size: max(1.5vw, 16px);
+  line-height: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2vw;
+ /*  line-height: 2.5vw;
+  line-height: max(2.5vw, 24px);
+  padding: 0 1.5vw; */
+}
+
