@@ -1,3 +1,4 @@
+import Animation from '../../../components/Animation/Animation'
 import './Campana.css'
 
 const Campana = () => {
@@ -11,7 +12,8 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">              
+            <div className="card-content">   
+                <Animation/>            
                 <h4>Interacción uno a uno en comentarios de publicaciones.</h4>
             </div>
           </div>            
@@ -35,7 +37,7 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">              
+            <div className="card-content">                             
                 <h4>Centro de respuestas para campañas electorales y gestión de gobierno.</h4>
             </div>
           </div>            
