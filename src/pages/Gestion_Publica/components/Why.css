@@ -4,6 +4,11 @@
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
   align-items: center;
+  background-image: url(../../../../public/images/gestion_publica/waves-01.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-bottom: 6vw;
 }
 
 .whyContainer {

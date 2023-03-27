@@ -2,6 +2,7 @@ import { useState } from "react";
 
 
 const Form = () => {
+  const [sended, setSended] = useState(false)
 
   const [user, setUser] = useState({
     nombre:"",
@@ -19,6 +20,7 @@ const Form = () => {
   const sendData = (e) => {
     e.preventDefault();
     console.log(user);
+    setSended(true);
   }
 
   return (
@@ -65,8 +67,10 @@ const Form = () => {
           </div>            
         </div> */}
 
-        <input type="submit" value="Enviar" className="submitBtn"></input>
-       
+        <div className= 'formSubmitControl' onClick={sendData}>
+          <p>Enviar</p>
+          <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
+        </div>   
                 
       </form>
         

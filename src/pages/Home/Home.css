@@ -656,6 +656,52 @@
   background-image: url(../../../public/images/main/mail-icon-active.svg);  
 }
 
+.formSubmitControl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;  
+}
+
+.formSubmitControl p {
+  height: 1.3vw;  
+  font-size: 1.5vw;
+  margin: 0 0 1rem;
+}
+
+.formSubmitControl .arrowContainer {
+  width: 4.5vw; 
+  height: 4.5vw;
+  border-radius: 50%;
+  /* background: rgb(0,21,156); */
+  background: linear-gradient(-45deg, rgba(0,21,156,1) 0%, rgba(33,59,133,1) 100%);
+  border: 1px white solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 0 1rem 1rem;
+  transition: all 1s ease-in-out;
+}
+
+.formSubmitControl .arrowContainer:hover {
+  background: rgb(255,99,99);
+  background: linear-gradient(-45deg, rgba(255,99,99,0.5) 0%, rgba(255,99,99,0) 100%);  
+}
+
+.formSubmitControl .arrowContainerSended {
+  background: rgb(241,255,51);
+  background: linear-gradient(-45deg, rgba(241,255,51,0.5) 0%, rgba(241,255,51,0) 100%);
+}
+
+.formSubmitControl .arrowContainerSended:hover {
+  background: rgb(241,255,51);
+  background: linear-gradient(-45deg, rgba(241,255,51,0.5) 0%, rgba(241,255,51,0) 100%);
+}
+
+.formSubmitControl .arrowContainer img {
+  height: 50%;
+  width: auto;
+}
+
 
 
 

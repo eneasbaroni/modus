@@ -43,6 +43,10 @@ const Campana = () => {
       
       </div>
 
+      <div className='campanaCircleContainer'>
+      <div className='campanaCircle'></div>
+      </div>
+
     </section>
   )
 }
