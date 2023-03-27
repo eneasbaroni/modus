@@ -15,8 +15,9 @@ const Cards = () => {
     setTimeout(() => {
       setImageActive(card)
       setOpacity(1)
-    }, 500)
-  } 
+    }, 200)
+  }
+
 
   return (
     <section className='gpCardsContainer'>
@@ -34,12 +35,12 @@ const Cards = () => {
 
       <div className="cardImgContainer">
         <div className='noise'></div>
-        <img className='gpCardImgContainer' src='./images/gestion_publica/image-container.png' alt='card' />
-        {imageActive === 'card-01' && <img className='gpCardImg' src='./images/gestion_publica/card-01.png' alt='card' style={{scale: opacity}}/>}
-        {imageActive === 'card-02' && <img className='gpCardImg' src='./images/gestion_publica/card-02.png' alt='card' style={{scale: opacity}}/>}
-        {imageActive === 'card-03' && <img className='gpCardImg' src='./images/gestion_publica/card-03.png' alt='card' style={{scale: opacity}}/>}
-        {imageActive === 'card-04' && <img className='gpCardImg' src='./images/gestion_publica/card-04.png' alt='card' style={{scale: opacity}}/>}
-        {imageActive === 'card-05' && <img className='gpCardImg' src='./images/gestion_publica/card-05.png' alt='card' style={{scale: opacity}}/>}
+        {/* <img className='gpCardImgContainer' src='./images/gestion_publica/image-container.png' alt='card' style={{opacity:'0'}} /> */}
+        {imageActive === 'card-01' && <img className='gpCardImg' src='./images/gestion_publica/card-01.png' alt='card' style={{opacity: opacity}}/>}
+        {imageActive === 'card-02' && <img className='gpCardImg' src='./images/gestion_publica/card-02.png' alt='card' style={{opacity: opacity}}/>}
+        {imageActive === 'card-03' && <img className='gpCardImg' src='./images/gestion_publica/card-03.png' alt='card' style={{opacity: opacity}}/>}
+        {imageActive === 'card-04' && <img className='gpCardImg' src='./images/gestion_publica/card-04.png' alt='card' style={{opacity: opacity}}/>}
+        {imageActive === 'card-05' && <img className='gpCardImg' src='./images/gestion_publica/card-05.png' alt='card' style={{opacity: opacity}}/>}
         
         
         
