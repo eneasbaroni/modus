@@ -23,7 +23,7 @@ const Animation = () => {
 
 
   return (
-    <div className='animationContainer' ref={container} style={{ width: 300, height: 300 }}></div>
+    <div className='animationContainer' ref={container}></div>
   )
 }
 

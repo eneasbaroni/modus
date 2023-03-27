@@ -1,5 +1,6 @@
 .animationContainer {
-  width: 100%;
+  width: auto;
+  height: 5.1vw;
   display: flex;
   justify-content: center;
   align-items: center;  
