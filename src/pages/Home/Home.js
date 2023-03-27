@@ -7,7 +7,6 @@ import './Home.css'
 import Style from './Style'
 
 
-
 const Home = () => {
   /* const [scrollY, setScrollY] = useState(0) */
   const [loading, setLoading] = useState(true)
