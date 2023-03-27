@@ -1,6 +1,7 @@
 import Lottie from 'lottie-web';
-import animationData from '../../animations/totoro.json';
+import animationData from '../../animations/A1.json';
 import React, { useEffect, useRef } from 'react';
+import './Animation.css';
 
 const Animation = () => {
 
@@ -22,7 +23,7 @@ const Animation = () => {
 
 
   return (
-    <div ref={container} style={{ width: 300, height: 300 }}></div>
+    <div className='animationContainer' ref={container} style={{ width: 300, height: 300 }}></div>
   )
 }
 
