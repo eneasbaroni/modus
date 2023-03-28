@@ -1,0 +1,197 @@
+.noisy {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png); 
+  width: 54vw;
+  height: 30vw;
+  border-radius: 3.6vw;
+  position: absolute;
+  top: 11vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+  transition: all 0.5s ease-in-out;
+}
+
+.noisy-2 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png); 
+  width: 54vw;
+  height: 30vw;
+  border-radius: 3.6vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+
+#resumeContainer {
+  width: 54vw;
+  height: 30vw;
+  background: rgb(52,12,119);
+  background: linear-gradient(0deg, rgba(52,12,119,0.84) 0%, rgba(0,2,114,0.84) 100%);
+  position: absolute;
+  border-radius: 3.6vw;
+  border: solid 2px #ffffff9f;
+  top: 11vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+#resumeContainer h2 {
+  font-family: 'Tango Sans', sans-serif;
+  color: var(--second-color);  
+  font-size: 3.2vw;
+  font-size: max(3.2vw, 24px);  
+  background: rgb(109,214,51);
+  background: linear-gradient(-90deg, rgba(109,214,51,1) 0%, rgba(241,255,51,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#resumeContainer img {
+  width: 2vw;
+  height: auto;
+  object-fit: cover;
+  margin: 1vw auto;
+}
+
+#resumeContainer p {  
+  font-size: 1.5vw;
+  font-size: max(1.5vw, 16px); 
+  font-weight: 200; 
+}
+
+#resumeContainer .note {  
+  padding: 1vw 2vw;
+  border-radius: 1.8vw;
+  border: solid 2px #ffffff65;
+  text-align: center;
+  background-color: #8e72e13d;
+  margin-top: 1vw;
+}
+
+#resumeContainer form {  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+#resumeContainer form label, #resumeContainer form .file-upload{  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+}
+
+#resumeContainer form img{  
+  height: 5.8vw;
+  width: auto;
+  object-fit: cover;      
+  transition: all 0.2s ease-in-out;
+}
+
+#resumeContainer form .addImg{   
+  cursor: pointer;    
+}
+
+#resumeContainer form img:hover{    
+  /* transform: scale(1.1);   */ 
+}
+
+#resumeContainer form .file-upload h3 span{  
+  font-family: 'Rubik', sans-serif;  
+  font-size: 1.5vw;
+  font-size: max(1.5vw, 16px); 
+  font-weight: 200;  
+  color: var(--second-color);
+}
+
+#resumeContainer form h3{  
+  font-family: 'Tango Sans', sans-serif;    
+  font-size: 2vw;
+  font-size: max(2vw, 20px);  
+  line-height: 1.5vw;
+  padding: 0 1.3vw;
+}
+
+#resumeContainer form h3 span{  
+  font-family: 'Rubik', sans-serif;  
+  font-size: 1.5vw;
+  font-size: max(1.5vw, 16px); 
+  font-weight: 200;  
+  color: #5067D8;
+}
+
+.file-upload button {
+  background: none;
+  border: none;
+}
+
+.sendImg {
+  background: rgb(0,21,156);
+  background: linear-gradient(-45deg, rgba(0,21,156,1) 0%, rgba(33,59,133,1) 100%);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.sendImg:hover {
+  background: rgb(241,255,51);
+  background: linear-gradient(135deg, rgba(241,255,51,1) 0%, rgba(241,255,51,0) 100%); 
+}
+
+/* Drag Container */
+#drag {
+  transition: all 0.2s ease-in-out;
+}
+
+.dragContainer {
+  width: 54vw;
+  height: 30vw;
+  background: rgb(255,99,99);
+  background: linear-gradient(0deg, rgba(255,99,99,0.65) 0%, rgba(183,41,146,0.65) 100%);
+  background-image: url(../../../public/images/resume/drag-01.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-radius: 3.6vw;
+  border: solid 2px #ffffff9f;
+  top: 0vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  z-index: 20;
+}
+
+.dragContainer h3 {
+  font-family: 'Tango Sans', sans-serif;   
+  font-size: 5vw;
+  font-size: max(5vw, 2rem);  
+  text-align: center;  
+}
+
+.dragContainer P {
+  font-size: 1.5vw;
+  font-size: max(1.5vw, 16px); 
+  font-weight: 200;    
+  text-align: center;
+}
+
+
+
+
+
+
