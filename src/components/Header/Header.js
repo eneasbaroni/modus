@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Resume from '../Resume/Resume'
 import './Header.css'
 
 const Header = () => {
   const [color, setColor] = useState('red')
+  const [resumeActive, setResumeActive] = useState(false)
 
   const location = useLocation()
   useEffect (() => {
@@ -15,6 +17,10 @@ const Header = () => {
     }
   }, [location])
 
+  const desactiveResume = () => {
+    setResumeActive(false)
+  }
+
 
   return (
     <header className={color}>
@@ -22,8 +28,9 @@ const Header = () => {
         <Link to="/"> <img className='headerLogo' src={color === 'rojo' ? "/images/Logo_red.svg" : "/images/Logo.svg"} alt="logo" /> </Link>         
         <Link to="/">Soluciones</Link>        
         <a href="#formulario" className="linkedin-icon">Contacto</a>
-        <Link to="/">Unite al equipo</Link>
+        <h3 onClick={() => setResumeActive(!resumeActive)}>Unite al equipo</h3>
       </div>
+      {resumeActive && <Resume desactive={desactiveResume}/>}
     </header>
   )
 }
