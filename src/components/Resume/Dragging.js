@@ -12,8 +12,7 @@ const Dragging = () => {
 
 
   return (
-    <div id='drag' style={{ opacity: opacity }}> 
-      /*<div className='noisy-2'></div>*/
+    <div id='drag' style={{ opacity: opacity }}>      
       <div className='dragContainer'>
         <h3>Soltalo acá</h3>
         <p>Subí tu archivo arrastrándolo <br/>a esta ventana</p>
