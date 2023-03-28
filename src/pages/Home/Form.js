@@ -25,7 +25,7 @@ const Form = () => {
 
   return (
     <section id="mainForm">
-      <div className="formContainer">
+      <div className="formContainer" id="formulario">
 
       <div className="iconsContainer">
 

@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <header className={color}>
       <div className = 'navBar'>
-        <Link to="/"> <img className='headerLogo' src="/images/Logo.svg" alt="logo" /> </Link>
-        <Link to="/">Soluciones</Link>
-        <Link to="/">Contacto</Link>
+        <Link to="/"> <img className='headerLogo' src={color === 'rojo' ? "/images/Logo_red.svg" : "/images/Logo.svg"} alt="logo" /> </Link>         
+        <Link to="/">Soluciones</Link>        
+        <a href="#formulario" className="linkedin-icon">Contacto</a>
         <Link to="/">Unite al equipo</Link>
       </div>
     </header>

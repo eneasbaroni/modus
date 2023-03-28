@@ -26,7 +26,7 @@ const Form = () => {
 
   return (
     <section id="yellowForm">
-      <div className="formContainer">
+      <div className="formContainer" id="formulario">
 
       <div className="iconsContainer">
 
