@@ -432,10 +432,10 @@
   margin-top: 3vw;
   padding-bottom: 30vw;
   margin-bottom: calc(-1rem - 1.4vw - 3vw);
-  background-image: url(../../../public/images/main/form-bg.png); 
+  background-image: url(../../../public/images/main/form-bg-01.svg); 
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: bottom left;
+  background-position: top left;
   
 }
 

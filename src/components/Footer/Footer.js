@@ -10,17 +10,21 @@ const Footer = () => {
   const location = useLocation()
   useEffect (() => {
     console.log(location.pathname)
-    if (location.pathname === '/gestion-publica'){
-      setColor('yellow')      
+    if (location.pathname === '/'){
+      setColor('red') 
+    } else if (location.pathname === '/sector-privado'){
+      setColor('redish')     
     } else {
-      setColor('red')
+      setColor('yellow')
     }
   }, [location])
 
 
   return (
     <footer className={color}>
-      <img src={color === 'red' ? '/images/footer-logo.svg' : '/images/footer-logo-y.svg'} alt="logo" />      
+      <img src={color === 'red' ? '/images/footer-logo.svg' 
+      : color === 'redish' ? '/images/footer-logo.svg' 
+      : '/images/footer-logo-y.svg'} alt="logo" />      
     </footer>
   )
 }

@@ -35,3 +35,7 @@ header .navBar a {
   font-size: max(1.25vw, 14px);
   font-weight: 200;  
 }
+
+.rojo {
+  border-top: 1rem solid var(--fourth-color);
+}
