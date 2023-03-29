@@ -299,9 +299,10 @@
   background: linear-gradient(to left, #FF6363 0%, #B72992 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
 }
 
-/* #style h3::after  {
+#style h3::after  {
   content: '';
   display: inline-block;
   width: 50vw;
@@ -310,7 +311,7 @@
   position: absolute;
   bottom: 1.1vw;
   right: -38.5vw;
-} */
+}
 
 #style p {
   grid-column: 4 / 10;
