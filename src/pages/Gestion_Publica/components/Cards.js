@@ -34,7 +34,8 @@ const Cards = () => {
       
 
       <div className="cardImgContainer">
-        <div className='noise'></div>
+        <div className='blury'></div>
+        <div className='noisee'></div>
         {/* <img className='gpCardImgContainer' src='./images/gestion_publica/image-container.png' alt='card' style={{opacity:'0'}} /> */}
         {imageActive === 'card-01' && <img className='gpCardImg' src='./images/gestion_publica/card-01.png' alt='card' style={{opacity: opacity}}/>}
         {imageActive === 'card-02' && <img className='gpCardImg' src='./images/gestion_publica/card-02.png' alt='card' style={{opacity: opacity}}/>}
@@ -48,7 +49,7 @@ const Cards = () => {
       </div>
       
       <div className='gpCardInfo'>
-        <h1>Gestión <br/>pública</h1> 
+        <h1>Gestión <br/><span>pública</span></h1> 
         <div className={cardActive === 'card-01' ? 'textGroup activeGroup' : 'textGroup'} id="card-01" onMouseEnter= {() => handleActiveCard('card-01')}>
           <p><span>•Difundí</span></p>
           <p>&nbsp;tu mensaje</p>
