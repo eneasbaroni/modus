@@ -98,12 +98,12 @@
 }
 
 .gpCardInfo .activeGroup p{ 
-  font-size: 2vw;  
-  font-size: max(2vw, 18px);
-  line-height: 2vw ; 
-  line-height: max(2vw, 18px);
-  text-align: left ;
-  color: #fff ;
+  font-size: 2vw !important;  
+  font-size: max(2vw, 18px)!important;
+  line-height: 2vw !important; 
+  line-height: max(2vw, 18px)!important;
+  text-align: left !important;
+  color: #fff !important;
   transition: all 0.4s ease-in-out;
 }
 
