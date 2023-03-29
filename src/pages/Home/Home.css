@@ -254,7 +254,7 @@
   align-items: center; 
   background-image: url(../../../public/images/main/style-bg.svg);  
   background-repeat: no-repeat;
-  
+  overflow-x: hidden;   
 }
 
 #style .titlesContainer {
@@ -299,6 +299,17 @@
   background: linear-gradient(to left, #FF6363 0%, #B72992 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#style h3::after  {
+  content: '';
+  display: inline-block;
+  width: 50vw;
+  height: 0.5vw;  
+  background: #D5417E; 
+  position: absolute;
+  bottom: 1.1vw;
+  right: -38.5vw;
 }
 
 #style p {
