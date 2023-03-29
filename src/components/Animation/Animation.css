@@ -8,3 +8,21 @@
   /* border: solid 1px red; */
   margin-bottom: 1vw;
 }
+
+.point {
+  width: auto;
+  height: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 0 auto;  
+  margin-bottom: 1vw;
+  padding: 3vw;
+}
+
+.point img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;  
+}
+

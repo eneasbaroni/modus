@@ -1,8 +1,10 @@
 
+import { useState } from 'react'
 import Animation from '../../../components/Animation/Animation'
 import './Campana.css'
 
 const Campana = () => {
+  const [animetionActive, setAnimetionActive] = useState('')
   return (
     <section id='campana'>      
 
@@ -11,38 +13,51 @@ const Campana = () => {
       
       <div className='campanaContainer'>
 
-        <div className="content">
+        <div className="content" onMouseEnter={() => setAnimetionActive('A5')} onMouseLeave={() => setAnimetionActive('')}>
           <div className="card">
-            <div className="card-content">  
-                <Animation animation='A5'/>                            
+            <div className="card-content">
+                {animetionActive === 'A5' ?  
+                <Animation animation='A5'/> :
+                <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>
+                }                                            
                 <h4>Interacción personalizada en comentarios de publicaciones.</h4>
             </div>
           </div>            
         </div>
 
-        <div className="content">
+        <div className="content" onMouseEnter={() => setAnimetionActive('A6')} onMouseLeave={() => setAnimetionActive('')}>
           <div className="card">
-            <div className="card-content">              
-                <Animation animation='A6'/>                            
-                <h4>Respuestas acertadas y ágiles a mensajes y consultas inbox.</h4>
+            <div className="card-content">  
+              {animetionActive === 'A6' ?
+              <Animation animation='A6'/> :
+              <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>
+              }          
+                                           
+              <h4>Respuestas acertadas y ágiles a mensajes y consultas inbox.</h4>
             </div>
           </div>            
         </div>
 
-        <div className="content">
+        <div className="content" onMouseEnter={() => setAnimetionActive('A7')} onMouseLeave={() => setAnimetionActive('')}>
           <div className="card">
             <div className="card-content">              
-                <Animation animation='A7'/>                            
+                {animetionActive === 'A7' ?
+                <Animation animation='A7'/> :
+                <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>
+                }                           
                 <h4>Generación y mantenimiento de comunidades.</h4>
             </div>
           </div>            
         </div>
 
-        <div className="content">
+        <div className="content" onMouseEnter={() => setAnimetionActive('A8')} onMouseLeave={() => setAnimetionActive('')}>
           <div className="card">
-            <div className="card-content">                             
-                <Animation animation='A8'/>                            
-                <h4>Generación de informes y de propuestas de mejora.</h4>
+            <div className="card-content">
+              {animetionActive === 'A8' ?
+              <Animation animation='A8'/> :
+              <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>
+              }                                            
+              <h4>Generación de informes y de propuestas de mejora.</h4>
             </div>
           </div>            
         </div>
