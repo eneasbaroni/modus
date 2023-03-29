@@ -7,11 +7,10 @@ const Why = () => {
         <h2>¿Por qué Modus?</h2>
         <h3>Porque somos especialistas.</h3>
         <div className='whyInfo'>
-          <img src='./images/gestion_publica/10.png' alt='why1' />
-          <p>Más de 10 años solucionando problemas a través de la comunicación en la gestión de gobierno y campañas políticas de diferentes clientes de la Argentina. </p>
-          <img src='./images/gestion_publica/equipo.png' alt='why1' />
-          <p>Trabajamos con un sistema automático (chatbot) y contamos con un equipo especializado en resolución de conflictos, fidelización y respuesta para atender necesidades puntuales.</p>
-
+          <img src='./images/gestion_publica/why-01.svg ' alt='why1' />
+          <p>Estamos preparados para contener situaciones conflictivas y evitar escalamiento.</p>
+          <img src='./images/gestion_publica/why-02.svg ' alt='why1' />
+          <p>Mantenemos tu buena imagen de forma profesional y dedicada.</p>
         </div>
       </div>
     </section>

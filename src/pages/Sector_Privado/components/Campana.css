@@ -72,17 +72,6 @@
   border-radius: 35px;
 }
 
-.campanaContainer .card-content h4 {  
-  font-family: 'Rubik', sans-serif;
-  color: #fff; 
-  font-size: 1.8vw;
-  font-size: max(1.8vw, 18px);
-  line-height: 1.8vw; 
-  line-height: max (1.8vw, 18px);
-  font-weight: 400; 
-  text-align: center;
-}
-
 .card-content p {
   font-family: 'Tango Sans', sans-serif;  
   color: #fff;  

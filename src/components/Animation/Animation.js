@@ -1,9 +1,13 @@
 import Lottie from 'lottie-web';
-import animationData from '../../animations/A1.json';
+/* import A1 from '../../animations/A1.json'; */
 import React, { useEffect, useRef } from 'react';
 import './Animation.css';
 
-const Animation = () => {
+
+const Animation = ({animation}) => { 
+  
+  const animationData = require(`../../animations/${animation}.json`);
+  
 
   const container = useRef(null);
 
@@ -18,7 +22,7 @@ const Animation = () => {
       loop: true,
       autoplay: true,
       animationData: animationData,
-    });
+    });// eslint-disable-next-line
   }, []);
 
 

@@ -7,6 +7,8 @@ const Form = () => {
 
   const [user, setUser] = useState({
     nombre:"",
+    compania:"",
+    correo:"",
     asunto:"",
     mensaje:""    
   }) 
@@ -40,7 +42,9 @@ const Form = () => {
       <form onSubmit={sendData}>
         
         <legend>Tengamos una conversación...</legend>  
-        <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>        
+        <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
+        <input type='text'  placeholder='Compañía' name='compania' id='compania' onChange={handleInputChange} required></input>
+        <input type='email'  placeholder='Correo' name='correo' id='correo' onChange={handleInputChange} required></input>      
         <input type='text'  placeholder='Asunto' name='asunto' id='asunto' onChange={handleInputChange} required></input>    
         <textarea  rows='5' cols='33'  placeholder='Mensaje' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>        
       

@@ -13,7 +13,7 @@ const Campana = () => {
         <div className="content">
           <div className="card">
             <div className="card-content">   
-                <Animation/>            
+                <Animation animation='A1'/>            
                 <h4>Interacción uno a uno en comentarios de publicaciones.</h4>
             </div>
           </div>            
@@ -21,7 +21,8 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">              
+            <div className="card-content">  
+                <Animation animation='A2'/>            
                 <h4>Respuesta a mensajes y consultas inbox.</h4>
             </div>
           </div>            
@@ -29,7 +30,8 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">              
+            <div className="card-content">  
+                <Animation animation='A3'/>            
                 <h4>Difusión de ideas a través de la conversación.</h4>
             </div>
           </div>            
@@ -37,7 +39,8 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">                             
+            <div className="card-content"> 
+                <Animation animation='A4'/>                            
                 <h4>Centro de respuestas para campañas electorales y gestión de gobierno.</h4>
             </div>
           </div>            

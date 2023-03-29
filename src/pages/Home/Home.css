@@ -489,9 +489,9 @@
   justify-content: flex-start;
   align-items: center;
   padding: 1.2vw 3vw;
-  /* font-size: 1.5vw; */
+  font-size: 1.3vw;
   font-size: max(1.3vw, 14px);
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .formContainer input {
@@ -501,7 +501,8 @@
   border: 1px solid #54b6eb33;
   padding-left: 3vw;  
   font-size: max(1.3vw, 14px);
-  margin-bottom: 1.5vw;
+  font-weight: 200;
+  margin-bottom: 0.7vw;
   background-color: transparent;
   transition: all 0.2s ease-in-out;
 }
@@ -518,6 +519,7 @@
   padding-left: 3vw;
   padding-top: 1vw;
   font-size: max(1.3vw, 14px);  
+  font-weight: 200;
   margin-bottom: 1.5vw;
   background-color: transparent;
 }
@@ -532,6 +534,7 @@
   -webkit-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
   -moz-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
 }
+
 
 
 /* .inputGroup {  
