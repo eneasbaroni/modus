@@ -42,6 +42,7 @@
   grid-template-columns: repeat(6, 1fr);
   justify-content: center;
   align-items: center;
+  margin-top: 1.3vw;
 }
 
 .whyInfo img {
