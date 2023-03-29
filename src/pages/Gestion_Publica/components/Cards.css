@@ -29,7 +29,7 @@
   width: 39vw;
   border-radius: 50%;
   position: absolute;
-  backdrop-filter: blur(10px);  
+  backdrop-filter: blur(5px);  
 }
 
 /* .gpCardImgContainer {
@@ -89,7 +89,7 @@
   color: var(--second-color);
 }
 
-#gestionPublica .gpCardInfo h1 span{
+.gpCardInfo h1 span{
   font-family: 'Tango Sans', sans-serif;
   align-self: flex-end;
   font-size: 5vw;  

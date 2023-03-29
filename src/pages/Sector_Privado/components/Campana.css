@@ -51,13 +51,16 @@
   position: relative;
   width: 100%;
   height: 100%;  
-  background-color: #1F2387;
-  border-radius: 35px;  
-  cursor: pointer;  
+  background-color: #1F2387;  
 }
   
 .card:nth-child(1):before, .card:nth-child(1):after {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.30), transparent);
+  transition: all 0.3s ease-in-out;
+}
+
+#sectorPrivado .card:nth-child(1):hover:before, #sectorPrivado .card:nth-child(1):hover:after {
+  background: linear-gradient(90deg, rgba(255, 99, 99, 0.3), transparent);
 }
   
 .card:before, .card:after {

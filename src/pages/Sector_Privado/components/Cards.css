@@ -82,6 +82,29 @@
   color: var(--fourth-color);
 }
 
+#sectorPrivado .gpCardInfo h1 span{
+  font-family: 'Tango Sans', sans-serif;
+  align-self: flex-end;
+  font-size: 5vw;  
+  font-size: max(5vw, 25px);
+  text-align: right;   
+  padding: 2vw 0; 
+  color: var(--fourth-color);
+  position: relative;
+}
+
+#sectorPrivado .gpCardInfo h1 span::before  {
+  content: '';
+  display: inline-block;
+  width: 30vw;
+  height: 0.8vw;  
+  background: var(--fourth-color);  
+  position: absolute; 
+  z-index: -1;
+  right: 18vw;
+  bottom: 3.8vw;
+}
+
 .gpCardInfo .textGroup{  
   align-self: flex-end;  
   text-align: right;

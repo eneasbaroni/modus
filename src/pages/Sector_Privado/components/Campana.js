@@ -1,4 +1,5 @@
 
+import Animation from '../../../components/Animation/Animation'
 import './Campana.css'
 
 const Campana = () => {
@@ -12,8 +13,9 @@ const Campana = () => {
 
         <div className="content">
           <div className="card">
-            <div className="card-content">                              
-                <h4>Interacción uno a uno en comentarios de publicaciones.</h4>
+            <div className="card-content">  
+                <Animation animation='A5'/>                            
+                <h4>Interacción personalizada en comentarios de publicaciones.</h4>
             </div>
           </div>            
         </div>
@@ -21,7 +23,8 @@ const Campana = () => {
         <div className="content">
           <div className="card">
             <div className="card-content">              
-                <h4>Respuesta a mensajes y consultas inbox.</h4>
+                <Animation animation='A6'/>                            
+                <h4>Respuestas acertadas y ágiles a mensajes y consultas inbox.</h4>
             </div>
           </div>            
         </div>
@@ -29,7 +32,8 @@ const Campana = () => {
         <div className="content">
           <div className="card">
             <div className="card-content">              
-                <h4>Resolución de situaciones conflictivas.</h4>
+                <Animation animation='A7'/>                            
+                <h4>Generación y mantenimiento de comunidades.</h4>
             </div>
           </div>            
         </div>
@@ -37,6 +41,7 @@ const Campana = () => {
         <div className="content">
           <div className="card">
             <div className="card-content">                             
+                <Animation animation='A8'/>                            
                 <h4>Generación de informes y de propuestas de mejora.</h4>
             </div>
           </div>            
