@@ -301,7 +301,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-#style h3::after  {
+/* #style h3::after  {
   content: '';
   display: inline-block;
   width: 50vw;
@@ -310,7 +310,7 @@
   position: absolute;
   bottom: 1.1vw;
   right: -38.5vw;
-}
+} */
 
 #style p {
   grid-column: 4 / 10;
