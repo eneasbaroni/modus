@@ -386,7 +386,7 @@
 
 .card-content {
  font-family: 'Lato', sans-serif; 
-  padding: 10%;
+  padding: 5% 10% 10%;
   color: #fff;  
 }
 
@@ -457,8 +457,7 @@
   background-image: url(../../../public/images/main/form-bg-01.svg); 
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: top left;
-  
+  background-position: bottom left;  
 }
 
 .formContainer {

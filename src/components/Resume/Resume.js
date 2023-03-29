@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
 import Dragging from './Dragging'
 import './Resume.css'
+import axios from 'axios';
+import Loader from '../Loader/Loader'
+
+
 
 const Resume = ({desactive}) => {
   const [opacity, setOpacity] = useState(0)
   const [dragging, setDragging] = useState(false)
   const [selectedFile, setSelectedFile] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleFileSelect = (event) => {
   setSelectedFile(event.target.files[0])
@@ -26,15 +31,34 @@ const Resume = ({desactive}) => {
   };
 
 
-  const handleSubmit = (e) => {
+ /*  const handleSubmit = (e) => {
     e.preventDefault()
     console.log("Nombre del archivo:", selectedFile.name)
     console.log("Tipo del archivo:", selectedFile.type);
     console.log("Tamaño del archivo:", selectedFile.size);
-    desactive()
-    // Logica para enviar archivo por mail
+    desactive()    
     return false
-  }
+  } */
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true)
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      axios.post('http://localhost:8000/send-email', formData)
+        .then(response => {
+          console.log(response.data);
+          setLoading(false)
+          desactive();
+        })
+        .catch(error => {
+          setLoading(false)
+          console.error(error);
+          desactive();
+        });
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,6 +68,7 @@ const Resume = ({desactive}) => {
 
   return (
     <>
+      {loading && <Loader/>}
       <div className='noisy' style={{ opacity: opacity - 0.7 }}></div>
       <div id='resumeContainer' style={{ opacity: opacity }} onDragOver={handleDragOver}  onDrop={handleDrop}>
         <h2>Unite al equipo</h2>
