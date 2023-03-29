@@ -262,7 +262,7 @@
   text-align: center;  
 }
 
-#style h2 {
+#style h2, #style h2 span  {
   font-size: 6vw;
   line-height: 6vw;
   display: inline-block;
@@ -273,7 +273,17 @@
   background: #FF6363;
   background: linear-gradient(to left, #FF6363 0%, #B72992 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;  
+}
+
+#style h2 span::before  {
+  content: '';
+  display: inline-block;
+  width: 12vw;
+  height: 1vw;  
+  background: #D5417E;  
+  margin-right: 1vw;  
+  margin-bottom: 1.25vw; 
 }
 
 #style h3 {
