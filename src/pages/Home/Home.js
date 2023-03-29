@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <main id='home'>
 
-      <img  src='./images/main/main_image.png' alt='main' style={{display: 'none'}}/>        
+      <img  src='./images/main/main_image.svg' alt='main' style={{display: 'none'}}/>        
       <img  src='./images/main/main_image 2.png' alt='main' style={{display: 'none'}} onLoad={() => setLoading(false)}/>
 
       <div className='titles-bg'>
@@ -45,7 +45,7 @@ const Home = () => {
             {/* <div className='medidor'></div> */}
             <section className='homeBannerContainer'>
               <div className='mainImgContainer'>     
-                <img className='mainImage' src='./images/main/main_image.png' alt='main' />        
+                <img className='mainImage' src='./images/main/main_image.svg' alt='main' />        
                 <img className='mainImage2' src='./images/main/main_image 2.png' alt='main' style={{objectPosition: position }}/>
               </div> 
               <div className='mainTitleContainer'>        
