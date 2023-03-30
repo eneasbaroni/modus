@@ -1,3 +1,5 @@
+import './Actions.css'
+
 const Actions = () => {
   return (
     <section id="actions">

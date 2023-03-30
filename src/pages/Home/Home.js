@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import Loader from '../../components/Loader/Loader'
-import Actions from './Actions'
-import Cards from './Cards'
-import Form from './Form'
+import Actions from './components/Actions'
+import Cards from './components/Cards'
+import Form from './components/Form'
 import './Home.css'
-import Style from './Style'
+import Style from './components/Style'
 
 
 const Home = () => {
