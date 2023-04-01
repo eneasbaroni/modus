@@ -1,0 +1,23 @@
+#presentation {
+  /* width: 200%; */
+  height: 400px;
+  background-color: yellowgreen;  
+  display: flex;
+  flex-direction: row;  
+  overflow-x: hidden;  
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;  
+  overflow-x: hidden;
+}
+
+.item {  
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: solid 1px red;  
+}
