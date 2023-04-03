@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Resume from '../Resume/Resume'
 import './Header.css'
+import { HashLink } from 'react-router-hash-link'
 
 const Header = () => {
   const [color, setColor] = useState('red')
@@ -25,9 +26,10 @@ const Header = () => {
   return (
     <header className={color}>
       <div className = 'navBar'>
-        <Link to="/"> <img className='headerLogo' src={color === 'rojo' ? "/images/Logo_red.svg" : "/images/Logo.svg"} alt="logo" /> </Link>         
-        <a href="#actions" className="linkedin-icon">Soluciones</a>
-        <a href="#style" className="linkedin-icon">¿Por qué Modus?</a> 
+        <Link to="/"> <img className='headerLogo' src={color === 'rojo' ? "/images/Logo_red.svg" : "/images/Logo.svg"} alt="logo" /> </Link>    
+        <HashLink to="/home#actions">Soluciones</HashLink>           
+        <HashLink to="/home#style">¿Por qué Modus?</HashLink>          
+         
         <a href="#formulario" className="linkedin-icon">Contacto</a>
         <h3 onClick={() => setResumeActive(!resumeActive)}>Unite al equipo</h3>
       </div>
