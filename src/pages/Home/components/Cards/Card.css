@@ -19,8 +19,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background-color: var(--main-bg);
-  /* margin: 40px; */
+  background-color: var(--main-bg);  
   cursor: pointer;  
 }
   
