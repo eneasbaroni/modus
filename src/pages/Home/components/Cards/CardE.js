@@ -14,7 +14,15 @@ const CardE = ({handleCard, state}) => {
             <p>con chatbot.</p>
             {state === 'active' ? <Animation animation='A11'/> : <div className="animationNull"></div>}
         </div>
-        </div>            
+        </div>   
+
+        {state === 'active' && 
+        <div className="auxCards auxE">  
+          <p><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
+          <p>POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
+          <p>BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
+        </div>    
+        }           
     </div>
   )
 }

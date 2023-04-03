@@ -14,7 +14,15 @@ const CardA = ({handleCard, state}) => {
             <p>de producto y electorales.</p>
             {state === 'active' ? <Animation animation='A10'/> : <div className="animationNull"></div>}
         </div>
-        </div>            
+        </div> 
+
+        {state === 'active' && 
+        <div className="auxCards auxA">  
+          <p>LISTOS PARA<br/><span>GRANDES EVENTOS</span></p>      
+          <p><span>APORTAMOS VALOR<br/>PERSONAL</span> A LAS RESPUESTAS MASIVAS</p>      
+          <p><span>RESPONDEMOS</span><br/><h5 className="pSmall"> A TODOS CON CORRECCIÓN Y CALIDAD</h5></p>      
+        </div>    
+        }             
     </div>
   )
 }

@@ -13,7 +13,14 @@ const CardC = ({handleCard, state}) => {
             <h4>Gestión de reclamos.</h4> 
             {state === 'active' ? <Animation animation='A11'/> : <div className="animationNull"></div>}
         </div>
-        </div>            
+        </div> 
+
+        {state === 'active' && 
+        <div className="auxCards auxC">  
+          <p><span>ATENCIÓN 1:1</span><br/>PERSONALIZADA</p>      
+          <p><span>ENTENDEMOS</span><br/><span className="pSmall"> EMPATIZAMOS Y RESOLVEMOS</span></p>                     
+        </div>    
+        }             
     </div>
   )
 }

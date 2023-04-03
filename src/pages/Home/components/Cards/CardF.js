@@ -14,7 +14,15 @@ const CardF = ({handleCard, state}) => {
             <h4>fidelización y retención.</h4>
             {state === 'active' ? <Animation animation='A12'/> : <div className="animationNull"></div>} 
         </div>
-        </div>            
+        </div>   
+
+        {state === 'active' && 
+        <div className="auxCards auxC">  
+          <p><span>CREAR</span><br/>LAZOS</p>      
+          <p><span>FORMAR</span><br/>COMUNIDAD</p>    
+          <p>GENERAR<span> PERTENENCIA E IDENTIDAD</span> CON LA MARCA</p>      
+        </div>    
+        }           
     </div>
   )
 }

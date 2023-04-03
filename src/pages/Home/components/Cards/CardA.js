@@ -16,7 +16,7 @@ const CardA = ({handleCard, state}) => {
         </div>
         
         {state === 'active' && 
-          <div className="auxCards">  
+          <div className="auxCards auxA">  
             <p><span>TRANSFORMAMOS</span><br/>OPINIONES</p>      
             <p><span>CONTROLAMOS</span><br/>CONFLICTOS</p>      
             <p><span>CUIDAMOS</span><br/>LA IMÁGEN</p>      
