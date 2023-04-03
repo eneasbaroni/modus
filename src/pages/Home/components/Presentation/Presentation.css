@@ -12,7 +12,7 @@
   height: 100%;
   overflow-x: scroll;
   white-space: nowrap;  
-  overflow-x: hidden;  
+  overflow-x: hidden;   
 }
 
 .placaContainer {
@@ -59,7 +59,7 @@
 
 
 .cardMap {
-  width: 6vw;
+  width: 7vw;
   height: 3.2vw;  
   border-radius: 1.6vw;
   display: flex;
