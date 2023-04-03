@@ -3,7 +3,7 @@
   width: 54vw;
   height: 30vw;
   border-radius: 3.6vw;
-  position: absolute;
+  position: fixed;
   top: 11vw;
   left: 50%;
   transform: translate(-50%, 0);
@@ -16,7 +16,7 @@
   width: 54vw;
   height: 30vw;
   border-radius: 3.6vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
@@ -30,7 +30,7 @@
   height: 30vw;
   background: rgb(52,12,119);
   background: linear-gradient(0deg, rgba(52,12,119,0.84) 0%, rgba(0,2,114,0.84) 100%);
-  position: absolute;
+  position: fixed;
   border-radius: 3.6vw;
   border: solid 2px #ffffff9f;
   top: 11vw;
