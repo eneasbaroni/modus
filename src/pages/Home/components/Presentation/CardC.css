@@ -1,0 +1,77 @@
+#presentation .mainH1 {
+  font-size: 8vw; 
+  font-size: max(8vw, 80px);
+  height: 8vw;
+  text-align: center;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241,255,51);
+  background: linear-gradient(90deg, rgba(241,255,51,1) 0%, rgba(109,214,51,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+  pointer-events: none;
+}
+
+#presentation h3 {
+  font-size: 2.3vw;  
+  text-align: center;     
+  padding: 0;
+  margin: 0;  
+  pointer-events: none;
+  z-index: 2;
+}
+
+#presentation h3 span{
+  font-size: 2.3vw;  
+  color: var(--second-color)  
+}
+
+.placaCircle04 {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;  
+  right: 15vw;
+  top: -5vw;
+  transform: translate(0, 0);
+  transition: all 5s ease-in-out;
+  background-image: url(../../../../../public/images/main/card-3-01.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;  
+}
+
+.placaCircle04:hover {
+  transform: translate(20%, 20%) rotate(-180deg) scale(1.2) !important;    
+}
+
+.circle4Img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: .05;  
+}
+
+.placaCircle05 {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;  
+  right: 10vw;
+  bottom: 5vw;
+  transform: translate(0, 0);
+  transition: all 5s ease-in-out;
+  background-image: url(../../../../../public/images/main/card-3-02.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;  
+}
+
+.placaCircle05:hover {
+  transform: translate(-20%, -20%) rotate(-180deg) scale(1.2) !important;    
+}

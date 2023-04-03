@@ -1,0 +1,17 @@
+#placaB {
+    background-image: url(../../../../../public/images/main/card-2.svg);    
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;    
+    position: absolute;
+    box-shadow: 0px 0px 10px 2px rgba(230, 11, 157, 0.25);
+}
+

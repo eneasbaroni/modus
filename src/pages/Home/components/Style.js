@@ -6,7 +6,7 @@ const Style = () => {
     <section id='style'>
 
       <div className='titlesContainer'>
-        <h2>¿Cuál es tu <br/><span>estilo?</span></h2>
+        <h2><span>¿En qué</span><br/>ayudamos?</h2>
         <h3>Elegí el servicio que sea capaz de crear<br/>la comunicación que necesitás</h3>
         
       </div> 

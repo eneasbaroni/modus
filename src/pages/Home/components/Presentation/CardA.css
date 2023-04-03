@@ -1,0 +1,56 @@
+.placaCircle01 {
+  position: absolute;
+  width: 35vw;
+  height: 35vw;
+  border-radius: 50%;  
+  left: 2vw;
+  top: 0;
+  transform: translate(0, 0);
+  transition: all 5s ease-in-out;
+  background-image: url(../../../../../public/images/main/card-1-02.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.placaCircle01:hover {
+  transform: translate(20%, 20%) rotate(-180deg) scale(1.2);    
+}
+
+.placaCircle02 {
+  position: absolute;
+  width: 29vw;
+  height: 29vw;
+  border-radius: 50%;  
+  right: 30vw;
+  top: 5vw;
+  transform: translate(0, 0);
+  transition: all 5s ease-in-out;
+  background-image: url(../../../../../public/images/main/card-1-01.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.placaCircle02:hover {
+  transform: translate(-20%, -20%) rotate(180deg) scale(1.2);    
+}
+
+.placaCircle03 {
+  position: absolute;
+  width: 53vw;
+  height: 53vw;
+  border-radius: 50%;  
+  right: -10vw;
+  top: -20vw;
+  transform: translate(0, 0);
+  transition: all 5s ease-in-out;
+  background-image: url(../../../../../public/images/main/card-1-03.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.placaCircle03:hover {
+  transform: translate(-20%, 40%) rotate(180deg) scale(1.2);    
+}

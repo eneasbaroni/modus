@@ -1,0 +1,92 @@
+#presentation {
+  /* width: 200%; */
+  height: 80vh;   
+  display: flex;
+  flex-direction: row;  
+  overflow-x: hidden; 
+  position: relative;  
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;  
+  overflow-x: hidden;  
+}
+
+.placaContainer {
+  display: inline-block;
+  width: 100%;
+  height: 100%;  
+  height: calc(100% - 5px);  
+  position: relative;   
+}
+
+.placa {
+  width: 100%;   
+  height: 80vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  margin: 0;  
+  padding: 0;  
+  position: absolute;
+  overflow: hidden;
+}
+
+.placa h1 {
+  pointer-events: none !important;
+}
+
+#presentation h1 {   
+  font-family: 'Tango Sans', sans-serif;
+  font-size: 5vw;
+  text-align: center;   
+  line-height: 5vw;
+  z-index: 16;  
+}
+
+#presentation h1 span {   
+  font-family: 'Tango Sans', sans-serif;
+  font-size: 5vw;  
+  background: rgb(241,255,51);
+  background: linear-gradient(90deg, rgba(241,255,51,1) 0%, rgba(109,214,51,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+
+.cardMap {
+  width: 6vw;
+  height: 3.2vw;  
+  border-radius: 1.6vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.068);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardMapCircle {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: solid 1px var(--second-color);  
+  transition: all 0.5s ease;
+}
+
+.circleMapActive {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: solid 1px var(--second-color); 
+  background-color: var(--second-color); 
+  box-shadow: 0px 0px 9px 0px rgba(228, 253, 0, 0.75);
+  transition: all 0.5s ease;
+}

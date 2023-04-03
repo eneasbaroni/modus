@@ -33,7 +33,7 @@ header .navBar a, header .navBar h3 {
   font-size: 1.25vw;
   font-size: 1rem;
   font-size: max(1.25vw, 14px);
-  font-weight: 200;  
+  font-weight: 400;  
   cursor: pointer;
 }
 

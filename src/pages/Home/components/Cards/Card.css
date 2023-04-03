@@ -3,6 +3,14 @@
   flex-direction: column;   
 }
 
+.cardsContainer .standby {
+  opacity: 0.7;
+}
+
+.cardsContainer .cardOff {
+  opacity: 0.1;
+}
+
 .card {
   display: flex;
   justify-content: center;
@@ -13,8 +21,7 @@
   border-radius: 50%;
   background-color: var(--main-bg);
   margin: 40px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
   
 .card:nth-child(1):before, .card:nth-child(1):after {
@@ -30,8 +37,7 @@
   bottom: -2px;
   background: #fff;
   border-radius: 50%;
-  z-index: -1;
-  
+  z-index: -1;  
 }
 
 .card-content {
@@ -59,15 +65,17 @@
   gap: 1rem;
 }
 
-
 .content {
   grid-column: auto / span 1;
   display: flex;
   flex-direction: column;   
-  height: auto;     
+  height: auto;   
+  width: 100%;
+  height: 100%; 
+  transition: all 0.3s ease-in-out;
 }
 
-.card {
+.card {  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,9 +84,13 @@
   height: 100%;  
   background-color: #1F2387;
   border-radius: 35px;  
-  cursor: pointer;  
+  cursor: pointer;    
 }
-  
+
+#mainCards .card {
+  margin: 0;
+}
+
 .card:nth-child(1):before, .card:nth-child(1):after {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.30), transparent);
 }
@@ -145,13 +157,59 @@
 }
 
 .linktoGP, .linktoSP {
-  background-image: url(../../../../public/images/main/mainLinkBg-01.svg);  
+  background-image: url(../../../../../public/images/main/mainLinkBg-01.svg);  
   transition: all 0.5s ease-in-out;
 }
 
 .linktoSP:hover {
-  background-image: url(../../../../public/images/main/link-sp.svg); 
+  background-image: url(../../../../../public/images/main/link-sp.svg); 
 }
 .linktoGP:hover {
-  background-image: url(../../../../public/images/main/link-gp.svg); 
+  background-image: url(../../../../../public/images/main/link-gp.svg); 
+}
+
+.animationNull {
+  width: auto;
+  height: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 0 auto;
+  /* border: solid 1px red; */
+  margin-bottom: 1vw;
+}
+
+.active {
+  position: relative;  
+}
+
+.auxCards {
+  width: 15vw;
+  height: auto;  
+  position: absolute;
+  right: -16vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.auxCards p {
+  width: 100%;
+  padding: 0.5vw; 
+  background: linear-gradient(90deg, rgba(255,99,99,0.5) 0%, rgba(52,22,119,0.1) 100%);  
+  text-align: center;
+  border-radius: 1vw;
+  border: 2px solid rgba(255, 255, 255, 0.315);
+  margin-bottom: 1vw;
+  font-size: 1.2vw;
+  font-size: max(1.2vw, 16px);
+  font-weight: 500;
+}
+
+.auxCards p span {
+  color: var(--fourth-color); 
+  font-size: 1.2vw;
+  font-size: max(1.2vw, 16px);
+  font-weight: 500;
 }

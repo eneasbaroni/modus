@@ -26,7 +26,8 @@ const Header = () => {
     <header className={color}>
       <div className = 'navBar'>
         <Link to="/"> <img className='headerLogo' src={color === 'rojo' ? "/images/Logo_red.svg" : "/images/Logo.svg"} alt="logo" /> </Link>         
-        <Link to="/">Soluciones</Link>        
+        <a href="#actions" className="linkedin-icon">Soluciones</a>
+        <a href="#style" className="linkedin-icon">¿Por qué Modus?</a> 
         <a href="#formulario" className="linkedin-icon">Contacto</a>
         <h3 onClick={() => setResumeActive(!resumeActive)}>Unite al equipo</h3>
       </div>

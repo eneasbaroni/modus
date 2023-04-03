@@ -5,8 +5,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   justify-content: center;
-  align-items: center; 
-  background-image: url(../../../../public/images/main/style-bg.svg);  
+  align-items: center;   
+  background-image: url(../../../../public/images/main/style-bg.svg);
   background-repeat: no-repeat;
   overflow-x: hidden;   
 }
@@ -23,20 +23,20 @@
   width: auto;
   margin: 0 auto;   
   font-family: 'Tango Sans', sans-serif;    
-  text-align: right;
+  text-align: left;
   background: #FF6363;
   background: linear-gradient(to left, #FF6363 0%, #B72992 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  
 }
 
-#style h2 span::before  {
+#style h2 span::after  {
   content: '';
   display: inline-block;
-  width: 12vw;
+  width: 8vw;
   height: 1vw;  
   background: #D5417E;  
-  margin-right: 1vw;  
+  margin-left: 1vw;  
   margin-bottom: 1.25vw; 
 }
 
