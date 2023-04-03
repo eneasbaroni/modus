@@ -8,7 +8,8 @@
   align-items: center;   
   background-image: url(../../../../public/images/main/style-bg.svg);
   background-repeat: no-repeat;
-  overflow-x: hidden;   
+  overflow-x: hidden;
+  margin-top: 7vw;  
 }
 
 #style .titlesContainer {
