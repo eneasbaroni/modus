@@ -8,6 +8,7 @@ const CardA = () => {
         <div className='placaCircle05'></div>
         <h1 className='mainH1'>De nada.</h1>
         <h3>Pero acá estamos nosotros<br/><span>para ayudarte</span>, de nada.</h3>
+      <div className='gradientBGC'></div>
       </div>
     </div>
   )
