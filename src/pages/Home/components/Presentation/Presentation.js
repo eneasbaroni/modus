@@ -36,10 +36,23 @@ const Presentation = () => {
     return () => slider.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNext = () => {
+    const slider = sliderRef.current;
+    const scrollStep = slider.clientWidth;
+    slider.scrollLeft += scrollStep;
+  };
+
+  const handlePrevius = () => {
+    const slider = sliderRef.current;
+    const scrollStep = slider.clientWidth;
+    slider.scrollLeft -= scrollStep;
+  };
+
 
   return (
     <div id='presentation' onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
       <div id='slider' ref={sliderRef} onWheel={handleWheel}>
+        <img src='./images/main/presentation-arrow.svg' alt='arrow' className='previusArrow' onClick={handlePrevius} style={cardActive === 1 ? {display: 'none'} : {display: 'block'}}/>
 
         <CardA/>
         <CardD/>
@@ -52,6 +65,8 @@ const Presentation = () => {
           <div className={`cardMapCircle ${cardActive === 3 ? 'circleMapActive' : ''}`}></div>                    
           <div className={`cardMapCircle ${cardActive === 4 ? 'circleMapActive' : ''}`}></div>                    
         </div>    
+        
+        <img src='./images/main/presentation-arrow.svg' alt='arrow' className='nextArrow' onClick={handleNext} style={cardActive === 4 ? {display: 'none'} : {display: 'block'}}/>
 
       </div>
     </div>
