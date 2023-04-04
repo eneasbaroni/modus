@@ -18,15 +18,15 @@
 
 .noisee {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png); 
-  height: 39vw;
-  width: 39vw;
+  height: 39.5vw;
+  width: 39.5vw;
   border-radius: 50%;
   position: absolute;
   opacity: 0.05;
 }
 .blury {  
-  height: 39vw;
-  width: 39vw;
+  height: 39.5vw;
+  width: 39.5vw;
   border-radius: 50%;
   position: absolute;
   backdrop-filter: blur(5px);  
