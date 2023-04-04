@@ -41,7 +41,8 @@
   width: 54vw;
   height: auto;
   background: rgb(52,12,119);
-  background: linear-gradient(0deg, rgba(52,12,119,0.84) 0%, rgba(0,2,114,0.84) 100%);
+  background: linear-gradient(0deg, rgba(52,12,119,0.9) 0%, rgba(0,2,114,0.9) 100%);
+  backdrop-filter: blur(5px);
   /* position: fixed; */
   border-radius: 3.6vw;
   border: solid 2px #ffffff9f;
@@ -119,6 +120,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+#resumeContainer form button img {  
+  height: 4.3vw;
+}
+
 #resumeContainer form .addImg{   
   cursor: pointer;    
 }
@@ -162,7 +167,7 @@
 .file-upload button {
   position: absolute;
   bottom: 2vw;
-  right: 2vw;
+  right: 8vw;
   background: none;
   border: none;
 }
