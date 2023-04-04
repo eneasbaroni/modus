@@ -27,7 +27,7 @@ const Cards = () => {
         <CardF handleCard={handleCard} state = {cardActive==='A6' ? 'active' : cardActive==='' ? 'standby' : ''}/>
 
         <div className='mainLinksContainer'>
-          <Link className='mainLinks linktoGP' to='/gestion-publica'>Gestión pública</Link>
+          <Link className='mainLinks linktoGP' to='/gestion-publica'>Sector público</Link>
           <Link className='mainLinks linktoSP' to='/sector-privado'>Sector privado</Link>
         </div>
 
