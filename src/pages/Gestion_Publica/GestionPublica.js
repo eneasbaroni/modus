@@ -5,6 +5,7 @@ import Why from './components/Why'
 import './GestionPublica.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import Header from './components/Header/Header'
 
 const GestionPublica = () => {
 
@@ -17,12 +18,15 @@ const GestionPublica = () => {
 
 
   return (
-    <main id='gestionPublica'>      
-      <Cards/> 
-      <Why/>  
-      <Campana/>   
-      <Form/>      
-    </main>
+    <>
+      <Header/>
+      <main id='gestionPublica'>      
+        <Cards/> 
+        <Why/>  
+        <Campana/>   
+        <Form/>      
+      </main>
+    </>
   )
 }
 
