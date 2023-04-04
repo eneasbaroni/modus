@@ -12,6 +12,19 @@ const Resume = ({desactive}) => {
   const [selectedFile, setSelectedFile] = useState(null)
   const [loading, setLoading] = useState(false)
 
+  const [user, setUser] = useState({
+    nombre:"",    
+    correo:"",    
+    mensaje:""    
+  })
+  
+  const handleInputChange = (event) => {
+    setUser({
+      ...user,
+      [event.target.name] : event.target.value
+    })
+  } 
+
   const handleFileSelect = (event) => {
   setSelectedFile(event.target.files[0])
   }
@@ -30,18 +43,9 @@ const Resume = ({desactive}) => {
     setDragging(false)    
   };
 
-
- /*  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Nombre del archivo:", selectedFile.name)
-    console.log("Tipo del archivo:", selectedFile.type);
-    console.log("Tamaño del archivo:", selectedFile.size);
-    desactive()    
-    return false
-  } */
-
-  const handleSubmit = (e) => {
+  /* const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(user);
     setLoading(true)
     if (selectedFile) {
       const formData = new FormData();
@@ -58,7 +62,31 @@ const Resume = ({desactive}) => {
           desactive();
         });
     }
-  };
+  }; */
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(user);
+    setLoading(true)
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('nombre', user.nombre);
+      formData.append('correo', user.correo);
+      formData.append('mensaje', user.mensaje);
+      axios.post('http://localhost:8000/send-email', formData)
+        .then(response => {
+          console.log(response.data);
+          setLoading(false)
+          desactive();
+        })
+        .catch(error => {
+          setLoading(false)
+          console.error(error);
+          desactive();
+        });
+    }
+  };     
 
   useEffect(() => {
     setTimeout(() => {
@@ -69,20 +97,33 @@ const Resume = ({desactive}) => {
   return (
     <>
       {loading && <Loader/>}
+      <div className='resumeContainer' style={{ opacity: opacity }}>
       <div className='noisy' style={{ opacity: opacity - 0.7 }}></div>
       <div id='resumeContainer' style={{ opacity: opacity }} onDragOver={handleDragOver}  onDrop={handleDrop}>
         <h2>Unite al equipo</h2>
-        <img src="/images/main/main_arrow.svg" alt="arrow" />
-        <p>Importá tu CV</p>
-        <div className='note'>
-          <p>Postulate importando tu currículum<br/>en formato PDF o Word:</p>
-        </div>
-        <form>          
+        {!selectedFile && 
+          <>
+            <img src="/images/main/main_arrow.svg" alt="arrow" />
+            <p>Importá tu CV</p>
+            <div className='note'>
+              <p>Postulate importando tu currículum<br/>en formato PDF o Word:</p>
+            </div>
+          </>
+        }
+        <form className='resumeForm'>          
           {selectedFile ? (
             <div className="file-upload">
             {/* <div className="file-upload" onClick={() => {document.getElementById('file').click()}}> */}
-              <img src="/images/resume/check.svg" alt="upload" />
-              <h3>Archivo cargado<br/><span>Listo para enviar</span></h3>  
+              <div className='checkResumeContainer'>
+                <img src="/images/resume/check.svg" alt="upload" />
+                <h3>Archivo cargado<br/><span>Listo para enviar</span></h3>  
+              </div>
+
+              <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
+              <input type='email'  placeholder='Correo' name='correo' id='correo' onChange={handleInputChange} required></input>                
+              <textarea  rows='5' cols='33'  placeholder='Contanos sobe vos ' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>  
+
+
               <button type='button' onClick={handleSubmit}>
                 <img src="/images/resume/send.svg" alt="send" className='sendImg'/>
               </button>            
@@ -100,6 +141,7 @@ const Resume = ({desactive}) => {
 
         {dragging  &&  <Dragging/>} 
 
+      </div>
       </div>
     </>
   )

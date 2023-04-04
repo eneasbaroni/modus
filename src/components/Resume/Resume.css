@@ -1,14 +1,26 @@
-.noisy {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png); 
+.resumeContainer {
+  height: auto;
+  position: relative;
   width: 54vw;
-  height: 30vw;
-  border-radius: 3.6vw;
+  height: auto;
   position: fixed;
   top: 11vw;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.noisy {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png); 
+  width: 54vw;
+  height: 100%;
+  border-radius: 3.6vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   opacity: 0.3;
   transition: all 0.5s ease-in-out;
+  z-index: -1;
 }
 
 .noisy-2 {
@@ -27,20 +39,22 @@
 
 #resumeContainer {
   width: 54vw;
-  height: 30vw;
+  height: auto;
   background: rgb(52,12,119);
   background: linear-gradient(0deg, rgba(52,12,119,0.84) 0%, rgba(0,2,114,0.84) 100%);
-  position: fixed;
+  /* position: fixed; */
   border-radius: 3.6vw;
   border: solid 2px #ffffff9f;
-  top: 11vw;
-  left: 50%;
-  transform: translate(-50%, 0);
+  /* top: 11vw;
+  left: 50%; 
+  transform: translate(-50%, 0);*/
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  padding: 2vw 0;
 }
 
 #resumeContainer h2 {
@@ -84,11 +98,18 @@
   margin-top: 2vw;
 }
 
-#resumeContainer form label, #resumeContainer form .file-upload{  
+#resumeContainer form label{  
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;  
+}
+
+#resumeContainer form .file-upload{  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  
 }
 
 #resumeContainer form img{  
@@ -104,6 +125,14 @@
 
 #resumeContainer form img:hover{    
   /* transform: scale(1.1);   */ 
+}
+
+.checkResumeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #resumeContainer form .file-upload h3 span{  
@@ -131,6 +160,9 @@
 }
 
 .file-upload button {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
   background: none;
   border: none;
 }
@@ -203,4 +235,48 @@
   font-size: max(1.5vw, 16px); 
   font-weight: 200;    
   text-align: center;
+}
+
+
+
+/* Form */
+.resumeForm input {
+  width: 100%;
+  height: 3.5vw;
+  border-radius: 1.75vw;
+  border: 1px solid #54b6eb33;
+  padding-left: 2vw;  
+  font-size: max(1.3vw, 14px);
+  font-weight: 200;
+  margin-bottom: 0.7vw;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.resumeForm input:focus, .resumeForm textarea:focus {
+  outline: none;  
+}
+
+.resumeForm textarea {
+  width: 100%;
+  height: 10vw;
+  border-radius: 1.75vw;
+  border: 1px solid #54b6eb33;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  font-size: max(1.3vw, 14px);  
+  font-weight: 200;
+  margin-bottom: 1.5vw;
+  background-color: transparent;
+}
+
+.resumeForm textarea::placeholder, .resumeForm input::placeholder {
+  color: #fff;
+}
+
+.resumeForm input:focus, .resumeForm textarea:focus {
+  border-color: var(--fourth-color);
+  box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
+  -webkit-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
+  -moz-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
 }
