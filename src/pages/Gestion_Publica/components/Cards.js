@@ -13,9 +13,12 @@ const Cards = () => {
     setCardActive(card)    
     setOpacity(0)
     setTimeout(() => {
-      setImageActive(card)
-      setOpacity(1)
+      setImageActive(card)      
     }, 200)
+
+    setTimeout(() => {
+      setOpacity(1)
+    }, 300)    
   }
 
 
