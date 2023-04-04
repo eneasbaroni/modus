@@ -5,6 +5,7 @@ import Cards from './components/Cards'
 import Form from './components/Form'
 import Why from './components/Why'
 import './SectorPirvado.css'
+import Header from './components/Header/Header'
 
 const SectorPirvado = () => {
   const location = useLocation()
@@ -14,13 +15,16 @@ const SectorPirvado = () => {
   }, [location]);
 
   return (
-    <main id='sectorPrivado'>
-      <Cards/>
-      <Why/>
-      <Campana/>
-      <Form/>
-      
-    </main>
+    <>
+      <Header/>
+      <main id='sectorPrivado'>
+        <Cards/>
+        <Why/>
+        <Campana/>
+        <Form/>
+        
+      </main>
+    </>
   )
 }
 

@@ -5,7 +5,7 @@ const Why = () => {
     <section id='why'>
       <div className='whyContainer'>
         <h2>Ayudamos a escalar tu proceso comercial</h2>
-        <h3>Automatizando el contacto con tus clientes.</h3>
+        <h3>conectando con tus clientes.</h3>
         <div className='whyInfo'>
           <img src='./images/sector_privado/why-01.png' alt='why1' />
           <p>Nos integramos con las tecnologías de tu empresa.</p>
