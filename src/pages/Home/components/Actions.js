@@ -16,7 +16,7 @@ const Actions = () => {
             <img className='imgActive' src='./images/main/main_action_01_active.svg' alt='soluciones'/>
             <img src='./images/main/main_action_01.svg' alt='soluciones'/>
           </div>
-          <h3><span>Hablà</span> directamente<br/>con tus audiencias y <span>creá</span><br/>relaciones duraderas.</h3>
+          <h3><span>Hablá</span> directamente<br/>con tus audiencias y <span>creá</span><br/>relaciones duraderas.</h3>
         </div>
         <div className='mainAction'>
           <div className='imagesContainer'>
@@ -30,7 +30,7 @@ const Actions = () => {
             <img className='imgActive' src='./images/main/main_action_04_active.svg' alt='soluciones'/>
             <img src='./images/main/main_action_04.svg' alt='soluciones'/>
           </div>
-          <h3>Ya sea que se trate de nuevos miembros<br/>en tu comunidad o de los más fieles,<br/>nuestro equipo está aquí para <span>atender a todos<br/>y cada uno de ellos de manera personalizada</span></h3>
+          <h3>Ya sea que se trate de nuevos miembros<br/>en tu comunidad o de los más fieles,<br/>nuestro equipo está aquí para <span>atender a todos<br/>y cada uno de ellos de manera personalizada.</span></h3>
         </div>
 
       </div>

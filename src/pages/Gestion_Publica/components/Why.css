@@ -37,7 +37,7 @@
 }
 
 .whyInfo {
-  width: 100%;
+  width: 75%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   justify-content: center;

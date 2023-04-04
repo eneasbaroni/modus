@@ -49,23 +49,23 @@ const Cards = () => {
       </div>
       
       <div className='gpCardInfo'>
-        <h1>Gestión <br/><span>pública</span></h1> 
+        <h1>Sector <br/><span>público</span></h1> 
         <div className={cardActive === 'card-01' ? 'textGroup activeGroup' : 'textGroup'} id="card-01" onMouseEnter= {() => handleActiveCard('card-01')}>
           <p><span>•Difundí</span></p>
-          <p>&nbsp;tu mensaje</p>
+          <p>&nbsp;tu mensaje.</p>
         </div>
         <div className={cardActive === 'card-02' ? 'textGroup activeGroup' : 'textGroup'} id="card-02" onMouseEnter= {() => handleActiveCard('card-02')}>
           <p><span>•Asegurate de repetir y</span></p>
-          <p>&nbsp;hacer llegar tu propuesta</p>
+          <p>&nbsp;hacer llegar tu propuesta.</p>
         </div>
         <div className={cardActive === 'card-03' ? 'textGroup activeGroup' : 'textGroup'} id="card-03" onMouseEnter= {() => handleActiveCard('card-03')}>
           <p><span>•Conversá</span></p>
-          <p>&nbsp;con tu electorado</p>
+          <p>&nbsp;con tu electorado.</p>
         </div>
         <div className={cardActive === 'card-04' ? 'textGroup activeGroup' : 'textGroup'} id="card-04" onMouseEnter= {() => handleActiveCard('card-04')}>
           <p><span>•</span>Aprovechá cada comentario</p>
           <p>&nbsp;como una oportunidad de</p>
-          <p><span>&nbsp;responder y conversar</span></p>
+          <p><span>&nbsp;responder y conversar.</span></p>
         </div>
         <div className={cardActive === 'card-05' ? 'textGroup activeGroup' : 'textGroup'} id="card-05" onMouseEnter= {() => handleActiveCard('card-05')}>
           <p><span>•Mejorá la percepción que</span></p>
