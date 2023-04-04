@@ -1,7 +1,26 @@
+import { useEffect } from "react";
 import Animation from "../../../../components/Animation/Animation"
 
 
 const CardE = ({handleCard, state}) => {
+
+  useEffect(() => {
+    if(state === 'active'){      
+      setTimeout(() => {
+        /* auxCards first child, delete class */
+        document.querySelector('.auxE').children[0].classList.remove('defaseE')
+      }, 10);
+      setTimeout(() => {
+        /* auxCards second child, delete class */
+        document.querySelector('.auxE').children[1].classList.remove('defaseE')
+      }, 800);
+      setTimeout(() => {
+        /* auxCards third child, delete class */
+        document.querySelector('.auxE').children[2].classList.remove('defaseE')
+      }, 1600);
+    }   
+  }, [state])
+
   return (
     <div 
         className={state === 'active' ? 'content active' : state === 'standby' ? 'content standby' : 'content cardOff'} 
@@ -18,9 +37,9 @@ const CardE = ({handleCard, state}) => {
 
         {state === 'active' && 
         <div className="auxCards auxE">  
-          <p><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
-          <p>POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
-          <p>BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
+          <p className="defaseE"><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
+          <p className="defaseE">POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
+          <p className="defaseE">BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
         </div>    
         }           
     </div>

@@ -9,6 +9,7 @@
 
 .cardsContainer .cardOff {
   opacity: 0.1;
+  z-index: 10;
 }
 
 .card {
@@ -180,6 +181,7 @@
 
 .active {
   position: relative;  
+  z-index: 20;
 }
 
 .auxCards {
@@ -190,7 +192,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  z-index: 20;
+  z-index: -1;
 }
 
 .auxA {  
@@ -219,7 +221,26 @@
   margin-bottom: 1vw;
   font-size: 1.2vw;
   font-size: max(1.2vw, 16px);
-  font-weight: 400;  
+  font-weight: 400;  transition: all 0.5s ease-in-out;
+  
+}
+
+.auxCards .defaseA {
+  transform: translate(-16.5vw, 0) !important;  
+}
+
+.auxCards .defaseB {
+  transform: translate(0, -14vw) !important; 
+}
+
+.auxCards .defaseC {
+  transform: translate(16vw, 0) !important; 
+  opacity: 0;
+}
+
+.auxCards .defaseE {
+  transform: translate(0, 18vw) !important;
+  opacity: 0; 
 }
 
 .auxCards p span {

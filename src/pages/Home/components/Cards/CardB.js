@@ -1,7 +1,24 @@
+import { useEffect } from "react";
 import Animation from "../../../../components/Animation/Animation"
 
 
 const CardB = ({handleCard, state}) => {
+
+  useEffect(() => {
+    if(state === 'active'){      
+      setTimeout(() => {
+        /* auxCards first child, delete class */
+        document.querySelector('.auxB').children[1].classList.remove('defaseB')
+      }, 10);
+      setTimeout(() => {
+        /* auxCards second child, delete class */
+        document.querySelector('.auxB').children[0].classList.remove('defaseB')
+      }, 800);       
+    }   
+  }, [state])
+
+
+
   return (
     <div 
         className={state === 'active' ? 'content active' : state === 'standby' ? 'content standby' : 'content cardOff'} 
@@ -17,8 +34,8 @@ const CardB = ({handleCard, state}) => {
 
         {state === 'active' && 
         <div className="auxCards auxB">  
-          <p><span>CONECTAR</span><br/>CON EL USUARIO</p>      
-          <p><span>ESTAR PRESENTE Y ATENDER</span><br/><span className="pSmall"> A LAS NECESIDADES DEL CLIENTE</span></p>   
+          <p className="defaseB"><span>CONECTAR</span><br/>CON EL USUARIO</p>      
+          <p className="defaseB"><span>ESTAR PRESENTE Y ATENDER</span><br/><span className="pSmall"> A LAS NECESIDADES DEL CLIENTE</span></p>   
         </div>    
         }              
     </div>
