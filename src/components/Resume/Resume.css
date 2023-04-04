@@ -191,8 +191,8 @@
 }
 
 .dragContainer {
-  width: 54vw;
-  height: 30vw;
+  width: 100%;
+  height: 100%;
   background: rgb(255,99,99);
   background: linear-gradient(0deg, rgba(255,99,99,0.65) 0%, rgba(183,41,146,0.65) 100%);
   background-image: url(../../../public/images/resume/drag-01.svg);
@@ -200,8 +200,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  border-radius: 3.6vw;
-  border: solid 2px #ffffff9f;
+  border-radius: 3.6vw;  
   top: 0vw;
   left: 50%;
   transform: translate(-50%, 0);
@@ -241,8 +240,6 @@
   font-weight: 200;    
   text-align: center;
 }
-
-
 
 /* Form */
 .resumeForm input {
