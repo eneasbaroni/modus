@@ -35,6 +35,11 @@ header .navBar a, header .navBar h3 {
   font-size: max(1.25vw, 14px);
   font-weight: 300;  
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header .navBar a:hover, header .navBar h3:hover {
+  color: var(--second-color);    
 }
 
 .rojo {
