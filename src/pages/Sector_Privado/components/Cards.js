@@ -8,16 +8,21 @@ const Cards = () => {
   const [opacity, setOpacity] = useState(1)
   const [cardActive, setCardActive] = useState('card-01')
   const [imageActive, setImageActive] = useState('card-01')
+  const [inactiveImage, setInactiveImage] = useState('')
+  const [inactiveOpacity, setInactiveOpacity] = useState(1)
 
   const handleActiveCard = (card) => {
     setCardActive(card)    
+    setInactiveOpacity(1)
+    setInactiveImage(imageActive)
     setOpacity(0)
     setTimeout(() => {
-      setImageActive(card)      
+      setImageActive(card)         
     }, 200)
 
     setTimeout(() => {
       setOpacity(1)
+      setInactiveOpacity(0)
     }, 300)    
   }
 
@@ -36,6 +41,10 @@ const Cards = () => {
         <div className='blury'></div>
         <div className='noise'></div>
         {/* <img className='gpCardImgContainer' src='./images/gestion_publica/image-container.png' alt='card' style={{opacity:'0'}} /> */}
+        {inactiveImage === 'card-01' && <img className='gpCardImg' src='./images/sector_privado/card-01.png' alt='card' style={{opacity: inactiveOpacity}}/>}
+        {inactiveImage === 'card-02' && <img className='gpCardImg' src='./images/sector_privado/card-02.png' alt='card' style={{opacity: inactiveOpacity}}/>}
+        {inactiveImage === 'card-03' && <img className='gpCardImg' src='./images/sector_privado/card-03.png' alt='card' style={{opacity: inactiveOpacity}}/>}
+
         {imageActive === 'card-01' && <img className='gpCardImg' src='./images/sector_privado/card-01.png' alt='card' style={{opacity: opacity}}/>}
         {imageActive === 'card-02' && <img className='gpCardImg' src='./images/sector_privado/card-02.png' alt='card' style={{opacity: opacity}}/>}
         {imageActive === 'card-03' && <img className='gpCardImg' src='./images/sector_privado/card-03.png' alt='card' style={{opacity: opacity}}/>}

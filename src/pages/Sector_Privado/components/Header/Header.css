@@ -9,7 +9,7 @@ header {
   box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
   -webkit-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
   -moz-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
-  z-index: 99;
+  z-index: 20;
 }
 
 .headerLogo {
@@ -24,7 +24,7 @@ header .navBar {
   align-items: center;
   width: 58vw;
   margin: 0 auto;
-  z-index: 90; 
+  z-index: 25; 
 }
 
 header .navBar a, header .navBar h3 {

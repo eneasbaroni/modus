@@ -97,6 +97,7 @@ const Resume = ({desactive}) => {
   return (
     <>
       {loading && <Loader/>}
+      <div className='bluryBg' onClick={desactive}></div>
       <div className='resumeContainer' style={{ opacity: opacity }}>
       <div className='noisy' style={{ opacity: opacity - 0.7 }}></div>
       <div id='resumeContainer' style={{ opacity: opacity }} onDragOver={handleDragOver}  onDrop={handleDrop}>
@@ -141,7 +142,7 @@ const Resume = ({desactive}) => {
 
         {dragging  &&  <Dragging/>} 
 
-      </div>
+      </div>      
       </div>
     </>
   )

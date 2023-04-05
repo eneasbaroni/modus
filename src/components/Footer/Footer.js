@@ -8,8 +8,7 @@ const Footer = () => {
   /* dectectar path coun react router */
 
   const location = useLocation()
-  useEffect (() => {
-    console.log(location.pathname)
+  useEffect (() => {    
     if (location.pathname === '/'){
       setColor('red') 
     } else if (location.pathname === '/sector-privado'){
