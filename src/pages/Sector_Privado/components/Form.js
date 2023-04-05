@@ -28,6 +28,7 @@ const Form = () => {
 
   return (
     <section id="redForm">
+      <div className="circleForm"></div>
       <div className="formContainer" id="formulario">
 
       <div className="iconsContainer">

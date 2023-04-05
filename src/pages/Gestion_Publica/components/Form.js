@@ -3,7 +3,7 @@ import './Form.css'
 
 
 const Form = () => {
-  const [sended, setSended] = useState(false)
+  const [sended, setSended] = useState(false)   
 
   const [user, setUser] = useState({
     nombre:"",
@@ -24,10 +24,12 @@ const Form = () => {
     e.preventDefault();
     console.log(user);
     setSended(true);
-  }
+  } 
+ 
 
   return (
-    <section id="yellowForm">
+    <section id="yellowForm">      
+      <div className="circleForm"></div>
       <div className="formContainer" id="formulario">
 
       <div className="iconsContainer">
@@ -39,7 +41,7 @@ const Form = () => {
       </div>
 
 
-      <form onSubmit={sendData}>
+      <form id="form" onSubmit={sendData}>
         
         <legend>Tengamos una conversación...</legend>  
         <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
