@@ -11,13 +11,21 @@ const Presentation = () => {
   const [cardActive, setCardActive] = useState(1)
   const { disableScroll, enableScroll } = usePreventBodyScroll();
   const sliderRef = useRef(null);
+  const [scrollCount, setScrollCount] = useState(0);
 
 
   const handleWheel = (ev) => {
     const slider = sliderRef.current;
     const scrollStep = slider.clientWidth;
     const scrollDirection = ev.deltaY > 0 ? 1 : -1;
-    slider.scrollLeft += scrollStep * scrollDirection;
+    
+    setScrollCount(scrollCount + 1);
+  
+    // Cambiar el número en la comparación para requerir más scroll para avanzar a la siguiente tarjeta
+    if (scrollCount > 2) {
+      slider.scrollLeft += scrollStep * scrollDirection;
+      setScrollCount(0);
+  }
 
     // Comprobar si se ha alcanzado el final del elemento desplazable
     if (slider.scrollLeft + slider.clientWidth === slider.scrollWidth) {
