@@ -1,18 +1,28 @@
-.upArrowContainer {
+.upArrowContainer{
   position: fixed;
   bottom: 2vw;
   right: 2vw;
+  width: 4vw; 
   height: 4vw;
-  width: 4vw;
-  border-radius: 50%;
-  transform: rotate(180deg);
-  border: 1px solid rgba(255, 255, 255, 0.493);
+  border-radius: 50%;  
+  background: linear-gradient(-45deg, rgba(0,21,156,1) 0%, rgba(33,59,133,1) 100%);
+  border: 1px white solid;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0.5vw;
-  background: rgb(9,9,121);
-  background: linear-gradient(0deg, rgba(9,9,121,0.5) 0%, rgba(98,0,255,0.4) 100%);
-  cursor: pointer;
-  backdrop-filter: blur(5px);
+  align-items: center;  
+  margin: 0 1rem 1rem;
+  transform: rotate(-90deg);
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out;
+}
+
+.upArrowContainer:hover {
+  /* background: rgb(241,255,51); */
+  background: linear-gradient(-45deg, rgba(241,255,51,0.5) 0%, rgba(241,255,51,0) 100%); 
+  transform: scale(1.1) rotate(-90deg)  ;
+}
+
+.upArrowContainer img {
+  height: 50%;
+  width: auto;
 }

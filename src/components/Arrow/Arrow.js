@@ -10,7 +10,7 @@ const Arrow = () => {
 
   return (
     <div className='upArrowContainer' onClick={scrollUp}>
-      <img className='upArrow' src='./images/main/main_arrow.svg' alt='up arrow' />
+      <img className='upArrow' src='./images/main/form-arrow.svg' alt='up arrow' />
     </div>
   )
 }
