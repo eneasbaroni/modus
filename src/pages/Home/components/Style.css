@@ -83,3 +83,48 @@
   font-size: max(1.6vw, 14px);
   font-weight: 200;  
 }
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+  #style {
+    background-image: none;   
+  }
+
+  #style .titlesContainer {
+    grid-column: 3 / 11;
+    width: 100%;
+    text-align: center;  
+  }
+
+  #style h2, #style h2 span  {
+    font-size: 10vw;
+    line-height: 10vw; 
+  }
+
+  #style h2 span::after  {    
+    width: 15vw;
+    height: 1.5vw; 
+  }
+
+  #style h3 {
+    margin-top: 5vw;
+    font-size: 3.5vw;    
+    margin-left: 4vw;    
+  }
+
+  #style h3::after  {    
+    display: none;  
+  }
+
+  #style p, #style p span {
+    grid-column: 3 / 11;
+    padding-top: 2vw;
+    font-size: 3.5vw; 
+  }
+
+  #style p{    
+    margin-left: 4vw;
+  }
+
+}

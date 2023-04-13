@@ -259,3 +259,74 @@
   /* margin-bottom: -100px; */
 }
 
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #home .cardsContainer { 
+    margin-top: 5vw; 
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;  
+    width: 100%;
+  }
+
+  #home .content {
+    grid-column: auto / span 2 !important;    
+  }
+
+  #home .card {    
+    background-color: #0a0d5f;  
+    background-image: url(../../../../../public/images/sector_privado/card-bg-red.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3.2vw;  
+    cursor: pointer;  
+  }
+
+  #home .card:nth-child(1):before, #home .card:nth-child(1):after {
+    background: linear-gradient(90deg, rgba(211, 255, 51, 0.3), transparent) ;
+  }
+
+  #home .card-content h4 {     
+    font-size: 3vw;
+    line-height:3vw; 
+  }
+  
+  #home .card-content p {    
+    font-size: 1.5vw;
+    line-height: 2vw;  
+  }
+  
+  .cardsContainer .standby {
+    opacity: 1;
+  }
+
+  .mainLinksContainer {
+    grid-column: 1 / 5;
+    margin-top: 3.5vw;    
+    flex-direction: column;    
+    height: auto;    
+    border: 2px solid #bdccd46b;
+  }
+
+  .mainLinks {
+    height: 11vw;
+    width: 75%;
+    border-radius: 5.5vw;  
+    margin-bottom: 4vw;  
+    font-size: 4vw;  
+    background-size: cover;   
+  }
+
+  .linktoGP {
+    margin-top: 4vw;
+    border: solid 2px#f1ff3371;     
+  }
+
+  .linktoSP {    
+    border: solid 2px#7928ca71;    
+  }
+    
+
+}
+

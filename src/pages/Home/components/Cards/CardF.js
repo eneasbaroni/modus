@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import Animation from "../../../../components/Animation/Animation"
+import useScreenSize from "../../../../hooks/useScreenSize";
 
 
 const CardF = ({handleCard, state}) => {
+  const windowSize = useScreenSize()
 
   useEffect(() => {
     if(state === 'active'){      
@@ -31,7 +33,11 @@ const CardF = ({handleCard, state}) => {
         <div className="card-content" style={{padding: '10% 10% 0%'}}>              
             <p>Programas de </p>           
             <h4>fidelización y retención.</h4>
-            {state === 'active' ? <Animation animation='A12'/> : <div className="animationNull"></div>} 
+            {windowSize.width > 768 ? 
+              state === 'active' 
+                ? <Animation animation='A12'/> 
+                : <div className="animationNull"></div>
+              :<Animation animation='A12'/>} 
         </div>
         </div>   
 
