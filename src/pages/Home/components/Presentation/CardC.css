@@ -92,8 +92,9 @@
     font-weight: 500;    
   }
 
-  #presentation .mainH1 {    
-    height: 12vw;    
+  #presentation .mainH1 {   
+    height: 15vw; 
+    font-size: 12vw;    
   }
   
  

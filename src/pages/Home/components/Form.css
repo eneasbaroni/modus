@@ -194,5 +194,9 @@
   .formContainer input, .formContainer textarea, .formContainer  .submitBtn, .formContainer legend  {    
     font-size: max(1.3vw, 10px);    
   }
+
+  .formContainer {    
+    border: 1px solid #5b5b7e;    
+  }
   
 }

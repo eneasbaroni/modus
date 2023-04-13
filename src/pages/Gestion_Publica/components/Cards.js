@@ -97,7 +97,7 @@ const Cards = () => {
           <p><span>&nbsp;responder y conversar.</span></p>
         </div>
         <div className={cardActive === 'card-05' ? 'textGroup activeGroup' : 'textGroup'} id="card-05" onMouseEnter= {() => handleActiveCard('card-05')}>
-          {windowSize > 768 ?
+          {windowSize.width > 768 ?
             <>
               <p><span>•Mejorá la percepción que</span></p>
               <p>&nbsp;tienen de vos. Aumentá tu</p>
