@@ -1,9 +1,12 @@
 import { useState } from "react"
 import Loader from "../../../components/Loader/Loader"
 import './Cards.css'
+import useScreenSize from "../../../hooks/useScreenSize"
 
 
 const Cards = () => {
+  const windowSize = useScreenSize()
+
   const [loading, setLoading] = useState(true)
   const [opacity, setOpacity] = useState(1)
   const [cardActive, setCardActive] = useState('card-01')
@@ -24,6 +27,12 @@ const Cards = () => {
       setOpacity(1)
       setInactiveOpacity(0)
     }, 300)    
+  }
+
+  const handleNextCard = () => {
+    cardActive === 'card-01' && handleActiveCard('card-02')
+    cardActive === 'card-02' && handleActiveCard('card-03')
+    cardActive === 'card-03' && handleActiveCard('card-01')    
   }
 
 
@@ -49,8 +58,16 @@ const Cards = () => {
         {imageActive === 'card-02' && <img className='gpCardImg' src='./images/sector_privado/card-02.png' alt='card' style={{opacity: opacity}}/>}
         {imageActive === 'card-03' && <img className='gpCardImg' src='./images/sector_privado/card-03.png' alt='card' style={{opacity: opacity}}/>}
           
+        {windowSize.width > 768 && <img className='cardCircle' src='./images/gestion_publica/card-circle.png' alt='card' />}
+
+        {windowSize.width < 769 && 
+          <div className="changeCardBtnContainer" onClick={handleNextCard}>
+            <div className="changeCardBtn"> 
+              {imageActive === 'card-01' && <p> PRESIONÁ<br/>EL BOTÓN</p>}           
+            </div>          
+          </div>
+        }
         
-        <img className='cardCircle' src='./images/gestion_publica/card-circle.png' alt='card' />
       </div>
       
       <div className='gpCardInfo'>

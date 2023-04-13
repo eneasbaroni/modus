@@ -44,3 +44,52 @@ header .navBar a:hover, header .navBar h3:hover {
 .rojo {
   border-top: 1rem solid var(--fourth-color);
 }
+
+/* MOBILE */
+.menuIcon {
+  width: 12vw;
+  height: auto;
+  cursor: pointer;   
+}
+
+.menuMobile {
+  position: absolute; 
+  width: 84vw;
+  height: auto;
+  top: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../../../../../public/images/main/menu_mobile_bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;  
+  backdrop-filter: blur(3px);  
+}
+
+header .menuMobile a, header .menuMobile h3  { 
+ font-size: 4.5vw;
+ padding: 3.5vw 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;  
+    padding: 2.8vw 6.5vw; 
+  }
+
+  .headerLogo {
+    width: 30vw;
+    height: auto;  
+  }
+
+  header .navBar {    
+    width: 100%;    
+  }
+
+}
+

@@ -83,7 +83,7 @@
   width: 100%;
   height: 100%;  
   background-color: #1F2387;
-  border-radius: 35px;  
+  border-radius: 3.2vw;  
   cursor: pointer;    
 }
 
@@ -104,7 +104,7 @@
   bottom: -2px;
   background: #fff;  
   z-index: -1;  
-  border-radius: 35px;
+  border-radius: 3.2vw;
 }
 
 .card-content {

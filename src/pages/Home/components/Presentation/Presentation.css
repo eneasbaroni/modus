@@ -111,3 +111,50 @@
   box-shadow: 0px 0px 9px 0px rgba(228, 253, 0, 0.75);
   transition: all 0.5s ease;
 }
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #presentation {
+    box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 14px 40px -2px rgba(0,0,0,0.07);  
+  }
+
+  #presentation h1, #presentation h1 span  {      
+    font-size: 7.2vw;
+    line-height: 7.2vw;         
+  }
+  #presentation h1 span  {      
+    font-weight: 800;        
+  }
+
+  #presentation {    
+    height: calc(80vh - 5vw)
+  }
+
+  .placa {
+    height: 100%;
+  }
+
+  .previusArrow {    
+    left: 5vw;  
+    height: 6vw;  
+  }
+  
+  .nextArrow {    
+    right: 5vw;    
+    height: 6vw; 
+  }
+
+  .cardMap {
+    width: 18vw;
+    height: 5.4vw;  
+    border-radius: 2.7vw;    
+  }
+
+  .cardMapCircle, .circleMapActive{
+    width: 3vw;
+    height: 3vw;    
+  } 
+
+}

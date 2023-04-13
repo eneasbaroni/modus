@@ -84,3 +84,17 @@
   background: linear-gradient(0deg, rgba(0,2,122,1) 0%, rgba(0,2,95,0) 20%);
   pointer-events: none !important;
 }
+
+@media screen and (max-width: 768px) {
+
+  #presentation h3, #presentation h3 span {    
+    font-size: 3.2vw; 
+    font-weight: 500;    
+  }
+
+  #presentation .mainH1 {    
+    height: 12vw;    
+  }
+  
+ 
+}

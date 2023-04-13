@@ -101,7 +101,7 @@
   background: var(--fourth-color);  
   position: absolute; 
   z-index: -1;
-  right: 18vw;
+  right: 110%;
   bottom: 3.8vw;
 }
 
@@ -156,6 +156,85 @@
   height:20px;
   margin: 1rem auto;
 }
+
+
+/* MOBILE */
+#sectorPrivado .changeCardBtnContainer {  
+  background: rgb(219,66,99);
+  background: linear-gradient(-90deg, rgba(219,66,99,1) 0%, rgba(255,99,99,1) 100%);  
+}
+
+#sectorPrivado .changeCardBtnContainer div{  
+  background: rgb(255,99,99);
+  background: linear-gradient(90deg, rgba(255,99,99,1) 0%, rgba(255,99,99,1) 100%); 
+}
+
+.changeCardBtnContainer div p{
+  position: absolute;
+  font-size: 1.6vw; 
+  line-height: 1.6vw;
+  text-align: center;
+  letter-spacing: 0.5vw;  
+  bottom: -2vw;
+  left: 130%;
+  padding: 1vw 2vw ;
+  border-radius: 5vw; 
+  border: solid 1px #ffffff2f;  
+  background-color: #ffffff1f;
+}
+
+#sectorPrivado .changeCardBtnContainer:active {
+  background: rgb(50,75,255);
+  background: linear-gradient(90deg, rgba(50,75,255,1) 0%, rgba(26,60,229,1) 100%);
+}
+
+#sectorPrivado .changeCardBtnContainer:active div{
+  background: #324BFF;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .gpCardInfo{
+    grid-column: auto / span 5 !important;    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p, #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p span {   
+    font-size: 2.2vw;      
+    line-height: 2.2vw;  
+  } 
+
+  .gpCardInfo .textGroup p, .gpCardInfo .textGroup p span {      
+    font-size: 1.5vw;    
+  } 
+
+  .gpCardsContainer {
+    box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07); 
+    padding-bottom: 0vw;
+  }
+
+  .gpBtnContainer {
+    grid-column: 7 / 9;   
+    transform: translate(0, 110%);      
+    margin: 0 auto;
+  }
+  
+  .gpBtnContainer img {      
+    height:2vw;
+    margin: 1rem auto;
+  }
+ 
+}
+
+
+
+
+
+
 
 
 

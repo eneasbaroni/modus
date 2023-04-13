@@ -6,8 +6,11 @@ import Form from './components/Form'
 import Why from './components/Why'
 import './SectorPirvado.css'
 import Header from './components/Header/Header'
+import useScreenSize from '../../hooks/useScreenSize'
+import HeaderMobile from './components/Header/HeaderMobile'
 
 const SectorPirvado = () => {
+  const windowSize = useScreenSize()
   const location = useLocation()
 
   useEffect(() => {
@@ -16,7 +19,7 @@ const SectorPirvado = () => {
 
   return (
     <>
-      <Header/>
+       {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}
       <main id='sectorPrivado'>
         <Cards/>
         <Why/>

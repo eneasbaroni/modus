@@ -72,3 +72,26 @@
   padding: 0 1.5vw; */
 }
 
+@media screen and (max-width: 768px) {
+  #why {  
+    padding-top: 12vw;
+  }
+
+  #sectorPrivado .whyContainer h2 {
+    font-size: 4.2vw;   
+  }
+
+  #sectorPrivado .whyContainer h3 { 
+    font-size: 3vw
+  }
+
+  #sectorPrivado .whyInfo {
+    width: 100%;    
+  }
+  
+  #sectorPrivado .whyInfo p {       
+    font-size: 2.5vw;    
+    line-height: 2.5vw;   
+  }
+}
+

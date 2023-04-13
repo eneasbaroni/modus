@@ -41,14 +41,6 @@
   margin-bottom: 5vw;
 }
 
-
-/* media queries */
-@media (max-width: 768px) {
-  .mainActionsContainer {
-    grid-column: 3 / 11;
-  }
-}
-
 .mainAction {
   grid-column: auto / span 6;  
   display: flex;
@@ -102,5 +94,29 @@
 
 .mainAction:hover h3 span {
   color: var(--second-color);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #actions {
+    margin-top: 10vw;
+  }
+
+  .mainActionsContainer {
+    grid-column: 3 / 11;
+  }
+
+  .mainActionsContainer h2 {    
+    font-size: 5vw;
+    line-height: 6vw;   
+  }
+
+  .mainActionsContainer a { 
+    margin-top: 5vw;   
+    height: 3vw;     
+  }
+
+  
+
 }
 

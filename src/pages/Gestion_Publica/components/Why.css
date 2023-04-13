@@ -59,6 +59,7 @@
   font-size: 1.5vw;
   font-size: max(1.5vw, 16px);
   line-height: 1.5vw;
+  line-height: max(1.5vw, 16px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,5 +68,35 @@
  /*  line-height: 2.5vw;
   line-height: max(2.5vw, 24px);
   padding: 0 1.5vw; */
+}
+
+/* @media screen and (max-width: 1024px) {
+  .whyInfo p {       
+    font-size: 2.5vw;    
+    line-height: 2.5vw;   
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  #why {  
+    padding-top: 12vw;
+  }
+
+  .whyContainer h2 {
+    font-size: 4.2vw;   
+  }
+
+  .whyContainer h3 { 
+    font-size: 3vw
+  }
+
+  .whyInfo {
+    width: 100%;    
+  }
+  
+  .whyInfo p {       
+    font-size: 2.5vw;    
+    line-height: 2.5vw;   
+  }
 }
 

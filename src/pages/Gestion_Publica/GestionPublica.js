@@ -6,8 +6,11 @@ import './GestionPublica.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './components/Header/Header'
+import useScreenSize from '../../hooks/useScreenSize'
+import HeaderMobile from './components/Header/HeaderMobile'
 
 const GestionPublica = () => {
+  const windowSize = useScreenSize()
 
   const location = useLocation()
 
@@ -19,7 +22,7 @@ const GestionPublica = () => {
 
   return (
     <>
-      <Header/>
+      {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}
       <main id='gestionPublica'>      
         <Cards/> 
         <Why/>  

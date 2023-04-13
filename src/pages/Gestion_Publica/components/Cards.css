@@ -108,7 +108,7 @@
   background: var(--second-color);  
   position: absolute; 
   z-index: -1;
-  right: 18vw;
+  right: 110%;
   bottom: 3.8vw;
 }
 
@@ -163,6 +163,96 @@
   height:20px;
   margin: 1rem auto;
 }
+
+/* MOBILE */
+.changeCardBtnContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 12vw;
+  width: 12vw;
+  border-radius: 50%;
+  background: rgb(241,255,51);
+  background: linear-gradient(-90deg, rgba(241,255,51,1) 0%, rgba(212,255,51,1) 100%); 
+  z-index: 12;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.changeCardBtnContainer div{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: rgb(241,255,51);
+  background: linear-gradient(-90deg, rgba(241,255,51,1) 0%, rgba(212,255,51,1) 100%);  
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1); 
+  position: relative;
+}
+
+.changeCardBtnContainer div p{
+  position: absolute;
+  font-size: 1.6vw; 
+  line-height: 1.6vw;
+  text-align: center;
+  letter-spacing: 0.5vw;  
+  bottom: -2vw;
+  left: 130%;
+  padding: 1vw 2vw ;
+  border-radius: 5vw; 
+  border: solid 1px #ffffff2f;  
+  background-color: #ffffff1f;
+}
+
+.changeCardBtnContainer:active {
+  background: rgb(50,75,255);
+  background: linear-gradient(90deg, rgba(50,75,255,1) 0%, rgba(26,60,229,1) 100%);
+}
+
+.changeCardBtnContainer:active div{
+  background: #324BFF;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .gpCardInfo{
+    grid-column: auto / span 5 !important;    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gpCardsContainer .gpCardInfo .activeGroup p, .gpCardsContainer .gpCardInfo .activeGroup p span {   
+    font-size: 2.6vw;      
+    line-height: 2.6vw;  
+  } 
+
+  .gpCardInfo .textGroup p, .gpCardInfo .textGroup p span {      
+    font-size: 1.5vw;    
+  } 
+
+  .gpCardsContainer {
+    box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 14px 9px -2px rgba(0,0,0,0.07); 
+    padding-bottom: 0vw;
+  }
+
+  .gpBtnContainer {
+    grid-column: 7 / 9;   
+    transform: translate(0, 110%);      
+    margin: 0 auto;
+  }
+  
+  .gpBtnContainer img {      
+    height:2vw;
+    margin: 1rem auto;
+  }
+ 
+}
+
 
 
 

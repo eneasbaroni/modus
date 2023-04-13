@@ -5,13 +5,16 @@ import Presentation from './components/Presentation/Presentation'
 import './Home.css'
 import Style from './components/Style' 
 import Header from './components/Header/Header'
+import useScreenSize from '../../hooks/useScreenSize'
+import HeaderMobile from './components/Header/HeaderMobile'
 
 
 const Home = () => {
+  const windowSize = useScreenSize()
 
   return (
     <main id='home'>
-      <Header/>
+      {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}      
       <Presentation/>
       <Actions/>
       <Style/>
