@@ -295,3 +295,58 @@
   -webkit-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
   -moz-box-shadow: 0vw 0vw 1vw 1vw rgba(255,101,101,0.10);
 }
+
+@media screen and (max-width: 768px) {
+  .resumeContainer {
+    width: 90vw;   
+    /* height: 60vh; */
+  }
+  
+  #resumeContainer {    
+    width: 90vw; 
+    /* height: 60vh; */ 
+    justify-content: space-between;
+    align-items: center;  
+    padding: 5vw 0;   
+  }
+
+  #resumeContainer .note { 
+    margin: 2vw 5vw; 
+    padding: 1vw 1vw;
+    border-radius: 1.8vw;
+    border: solid 2px #ffffff65;
+    text-align: center;
+    background-color: #8e72e13d;
+    margin-top: 1vw;
+    font-size: 1vw;
+  }
+
+  #resumeContainer .note p {     
+    font-size: 4vw;
+  }
+
+  .checkResumeContainer {    
+    flex-direction: column;    
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+
+  #resumeContainer form h3{ 
+    font-size: 4vw;     
+    line-height: 4vw;
+    padding: 0 1.3vw;
+  }
+
+  .resumeForm input {
+    width: 100%;
+    height: 10vw;
+    border-radius: 5vw;    
+  }
+
+  .resumeForm textarea {    
+    height: 20vw;
+    border-radius: 5vw; 
+    padding-top: 2vw;   
+  }
+
+}

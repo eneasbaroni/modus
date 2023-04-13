@@ -3,10 +3,12 @@ import Dragging from './Dragging'
 import './Resume.css'
 import axios from 'axios';
 import Loader from '../Loader/Loader'
+import useScreenSize from '../../hooks/useScreenSize';
 
 
 
 const Resume = ({desactive}) => {
+  const windowSize = useScreenSize()
   const [opacity, setOpacity] = useState(0)
   const [dragging, setDragging] = useState(false)
   const [selectedFile, setSelectedFile] = useState(null)
@@ -133,7 +135,8 @@ const Resume = ({desactive}) => {
             <>
               <label htmlFor="file">
                 <img src="/images/resume/add.svg" alt="upload" className='addImg' />
-                <h3>Subir archivo<br/><span>o selecciona una carpeta</span></h3>
+                {windowSize.width > 768 ? <h3>Subir archivo<br/><span>o selecciona una carpeta</span></h3> : <h3>Subir archivo</h3>}
+                
               </label>
               <input type="file" id="file" name="file" accept=".pdf,.doc,.docx" onChange={handleFileSelect} style={{ display: 'none' }} />
             </>
