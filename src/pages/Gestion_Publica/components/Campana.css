@@ -52,7 +52,7 @@
   width: 100%;
   height: 100%;  
   background-color: #1F2387;
-  border-radius: 3.2vw;  
+  border-radius: 1.7vw;  
   cursor: pointer;  
   transition: all 0.3s ease-in-out;
 }
@@ -63,7 +63,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 3.2vw;  
+  border-radius: 1.7vw;  
   cursor: pointer;  
 }
   
@@ -85,7 +85,7 @@
   bottom: -2px;
   background: #fff;  
   z-index: -1;  
-  border-radius: 3.2vw;
+  border-radius: 1.7vw;
 }
 
 .campanaContainer .card-content h4 {  
