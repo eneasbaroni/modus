@@ -10,13 +10,17 @@ const CardC = ({handleCard, state}) => {
     if(state === 'active'){      
       setTimeout(() => {
         /* auxCards first child, delete class */
-        document.querySelector('.auxC').children[0].classList.remove('defaseC')
+        windowSize.width > 768 ?
+        document.querySelector('.auxC').children[0].classList.remove('defaseC'):
+        document.querySelector('.auxB').children[1].classList.remove('defaseB')
       }, 10);
       setTimeout(() => {
         /* auxCards second child, delete class */
-        document.querySelector('.auxC').children[1].classList.remove('defaseC')
+        windowSize.width > 768 ?
+        document.querySelector('.auxC').children[1].classList.remove('defaseC'):
+        document.querySelector('.auxB').children[0].classList.remove('defaseB')
       }, 800);       
-    }   
+    }   // eslint-disable-next-line
   }, [state])
 
 
@@ -38,9 +42,9 @@ const CardC = ({handleCard, state}) => {
         </div> 
 
         {state === 'active' && 
-        <div className="auxCards auxC">  
-          <p className="defaseC"><span>ATENCIÓN 1:1</span><br/>PERSONALIZADA</p>      
-          <p className="defaseC"><span>ENTENDEMOS</span><br/><span className="pSmall"> EMPATIZAMOS Y RESOLVEMOS</span></p>                     
+        <div className={windowSize.width > 768 ? 'auxCards auxC' : 'auxCards auxB'}>  
+          <p className={windowSize.width > 768 ? 'defaseC' : 'defaseB'}><span>ATENCIÓN 1:1</span><br/>PERSONALIZADA</p>      
+          <p className={windowSize.width > 768 ? 'defaseC' : 'defaseB'}><span>ENTENDEMOS</span><br/><span className="pSmall"> EMPATIZAMOS Y RESOLVEMOS</span></p>                     
         </div>    
         }             
     </div>

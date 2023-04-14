@@ -265,12 +265,14 @@
     margin-top: 5vw; 
     display: grid;    
     grid-template-columns: repeat(4, 1fr);
-    gap: 2vw;  
+    gap: 7vw;  
     width: 100%;
   }
 
   #home .content {
-    grid-column: auto / span 2 !important;    
+    grid-column: auto / span 4;  
+    width: 80%;
+    margin-inline: auto;  
   }
 
   #home .card {    
@@ -286,15 +288,17 @@
   #home .card:nth-child(1):before, #home .card:nth-child(1):after {
     background: linear-gradient(90deg, rgba(211, 255, 51, 0.3), transparent) ;
   }
-
+ 
   #home .card-content h4 {     
-    font-size: 3vw;
-    line-height:3vw; 
+    font-size: 4vw;
+    line-height:4vw; 
+    text-align: center;      
   }
   
   #home .card-content p {    
-    font-size: 1.5vw;
-    line-height: 2vw;  
+    font-size: 2.5vw;
+    line-height: 3.5vw;  
+    text-align: center;
   }
   
   .cardsContainer .standby {
@@ -325,6 +329,61 @@
 
   .linktoSP {    
     border: solid 2px#7928ca71;    
+  }
+
+  .auxCards p span {    
+    font-size: 3vw;    
+    font-weight: 500;
+  }
+
+  .auxCards {
+    width: 80%;   
+    margin-inline: auto; 
+  }    
+
+  .auxCards p {
+    width: 100%;
+    padding: 0.5vw; 
+    border-radius: 4vw;
+    border: 2px solid rgb(133, 137, 151);
+    margin-bottom: 1vw;
+    font-size: 3vw;  
+    line-height: 3vw;  
+    font-weight: 400;  
+    transition: all 0.5s ease-in-out;    
+  }
+  
+  .auxCards p .pSmall {     
+    font-size: 2vw;    
+    line-height: 2vw;  
+  }
+
+  .auxB {
+    bottom: -23vw;
+    left: 4vw;
+  }
+
+  .auxE {
+    top: -30vw; 
+    left: 4vw;
+  }
+
+  .auxB-A {
+    bottom: -28vw;
+    left: 4vw;
+  }
+
+  .auxB-D {
+    bottom: -33vw;
+    left: 4vw;
+  }
+
+  .auxCards .defaseB-A {
+    transform: translate(0, -28vw) !important; 
+  }
+
+  .auxCards .defaseB-D {
+    transform: translate(0, -27vw) !important; 
   }
     
 

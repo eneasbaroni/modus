@@ -96,6 +96,23 @@
     height: 15vw; 
     font-size: 12vw;    
   }
+
+  .placaCircle04 {
+    position: absolute;
+    width: 65vh;
+    height: 65vh;      
+    right: 50%;
+    transform: translate(50%, 0);
+    top: 3vh;    
+  }
+
+  .placaCircle05 {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;     
+    right: 10vw;
+    bottom: 5vw;      
+  }
   
  
 }

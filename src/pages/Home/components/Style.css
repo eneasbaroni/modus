@@ -88,11 +88,12 @@
 @media screen and (max-width: 768px) {
 
   #style {
-    background-image: none;   
+    background-image: none;  
+    overflow-x: hidden; 
   }
 
   #style .titlesContainer {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
     width: 100%;
     text-align: center;  
   }
@@ -100,17 +101,21 @@
   #style h2, #style h2 span  {
     font-size: 10vw;
     line-height: 10vw; 
+    position: relative;
+    margin-top: 3vw;
   }
 
-  #style h2 span::after  {    
-    width: 15vw;
+  #style h2 span::after  {  
+    position: absolute; 
+    top: 5vw; 
+    width: 40vw;
     height: 1.5vw; 
   }
 
   #style h3 {
     margin-top: 5vw;
-    font-size: 3.5vw;    
-    margin-left: 4vw;    
+    font-size: 4vw;    
+    margin-left: 8vw;    
   }
 
   #style h3::after  {    
@@ -118,13 +123,14 @@
   }
 
   #style p, #style p span {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
+    width: 80%;
     padding-top: 2vw;
     font-size: 3.5vw; 
   }
 
   #style p{    
-    margin-left: 4vw;
+    margin-inline: auto;
   }
 
 }

@@ -10,17 +10,23 @@ const CardA = ({handleCard, state}) => {
     if(state === 'active'){      
       setTimeout(() => {
         /* auxCards first child, delete class */
-        document.querySelector('.auxA').children[0].classList.remove('defaseA')
+        windowSize.width > 768 ?
+        document.querySelector('.auxA').children[0].classList.remove('defaseA'):
+        document.querySelector('.auxB-D').children[2].classList.remove('defaseB-D')
       }, 10);
       setTimeout(() => {
         /* auxCards second child, delete class */
-        document.querySelector('.auxA').children[1].classList.remove('defaseA')
+        windowSize.width > 768 ?
+        document.querySelector('.auxA').children[1].classList.remove('defaseA'):
+        document.querySelector('.auxB-D').children[1].classList.remove('defaseB-D')
       }, 800);
       setTimeout(() => {
         /* auxCards third child, delete class */
-        document.querySelector('.auxA').children[2].classList.remove('defaseA')
+        windowSize.width > 768 ?
+        document.querySelector('.auxA').children[2].classList.remove('defaseA'):
+        document.querySelector('.auxB-D').children[0].classList.remove('defaseB-D')
       }, 1600);
-    }   
+    }  // eslint-disable-next-line 
   }, [state]) 
 
   return (
@@ -42,10 +48,10 @@ const CardA = ({handleCard, state}) => {
         </div> 
 
         {state === 'active' && 
-        <div className="auxCards auxA">  
-          <p className="defaseA">LISTOS PARA<br/><span>GRANDES EVENTOS</span></p>      
-          <p className="defaseA"><span>APORTAMOS VALOR<br/>PERSONAL</span> A LAS RESPUESTAS MASIVAS</p>      
-          <p className="defaseA"><span>RESPONDEMOS</span><br/><h5 className="pSmall"> A TODOS CON CORRECCIÓN Y CALIDAD</h5></p>      
+        <div className={windowSize.width > 768 ? 'auxCards auxA' : 'auxCards auxB-D'}>  
+          <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-D'}>LISTOS PARA<br/><span>GRANDES EVENTOS</span></p>      
+          <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-D'}><span>APORTAMOS VALOR<br/>PERSONAL</span> A LAS RESPUESTAS MASIVAS</p>      
+          <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-D'}><span>RESPONDEMOS</span><br/><h5 className="pSmall"> A TODOS CON CORRECCIÓN Y CALIDAD</h5></p>      
         </div>    
         }             
     </div>

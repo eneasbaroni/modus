@@ -10,17 +10,23 @@ const CardE = ({handleCard, state}) => {
     if(state === 'active'){      
       setTimeout(() => {
         /* auxCards first child, delete class */
-        document.querySelector('.auxE').children[0].classList.remove('defaseE')
+        windowSize.width > 768 ?
+        document.querySelector('.auxE').children[0].classList.remove('defaseE'):
+        document.querySelector('.auxB-D').children[2].classList.remove('defaseB-D')
       }, 10);
       setTimeout(() => {
         /* auxCards second child, delete class */
-        document.querySelector('.auxE').children[1].classList.remove('defaseE')
+        windowSize.width > 768 ?
+        document.querySelector('.auxE').children[1].classList.remove('defaseE'):
+        document.querySelector('.auxB-D').children[1].classList.remove('defaseB-D')
       }, 800);
       setTimeout(() => {
         /* auxCards third child, delete class */
-        document.querySelector('.auxE').children[2].classList.remove('defaseE')
+        windowSize.width > 768 ?
+        document.querySelector('.auxE').children[2].classList.remove('defaseE'):
+        document.querySelector('.auxB-D').children[0].classList.remove('defaseB-D')
       }, 1600);
-    }   
+    }   // eslint-disable-next-line 
   }, [state])
 
   return (
@@ -42,10 +48,10 @@ const CardE = ({handleCard, state}) => {
         </div>   
 
         {state === 'active' && 
-        <div className="auxCards auxE">  
-          <p className="defaseE"><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
-          <p className="defaseE">POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
-          <p className="defaseE">BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
+        <div className={windowSize.width > 768 ? 'auxCards auxE' : 'auxCards auxB-D'}>  
+          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
+          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
+          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
         </div>    
         }           
     </div>

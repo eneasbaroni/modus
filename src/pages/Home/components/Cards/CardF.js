@@ -10,17 +10,23 @@ const CardF = ({handleCard, state}) => {
     if(state === 'active'){      
       setTimeout(() => {
         /* auxCards first child, delete class */
-        document.querySelector('.auxC').children[0].classList.remove('defaseC')
+        windowSize.width > 768 ?
+        document.querySelector('.auxC').children[0].classList.remove('defaseC'):
+        document.querySelector('.auxE').children[0].classList.remove('defaseE')
       }, 10);
       setTimeout(() => {
         /* auxCards second child, delete class */
-        document.querySelector('.auxC').children[1].classList.remove('defaseC')
+        windowSize.width > 768 ?
+        document.querySelector('.auxC').children[1].classList.remove('defaseC'):
+        document.querySelector('.auxE').children[1].classList.remove('defaseE')
       }, 800);
       setTimeout(() => {
         /* auxCards third child, delete class */
-        document.querySelector('.auxC').children[2].classList.remove('defaseC')
+        windowSize.width > 768 ?
+        document.querySelector('.auxC').children[2].classList.remove('defaseC'):
+        document.querySelector('.auxE').children[2].classList.remove('defaseE')
       }, 1600);
-    }   
+    }   // eslint-disable-next-line 
   }, [state])
 
   return (
@@ -42,10 +48,10 @@ const CardF = ({handleCard, state}) => {
         </div>   
 
         {state === 'active' && 
-        <div className="auxCards auxC">  
-          <p className="defaseC"><span>CREAR</span><br/>LAZOS</p>      
-          <p className="defaseC"><span>FORMAR</span><br/>COMUNIDAD</p>    
-          <p className="defaseC">GENERAR<span> PERTENENCIA E IDENTIDAD</span> CON LA MARCA</p>      
+        <div className={windowSize.width > 768 ? 'auxCards auxC' : 'auxCards auxE'}>  
+          <p className={windowSize.width > 768 ? 'defaseC' : 'defaseE'}><span>CREAR</span><br/>LAZOS</p>      
+          <p className={windowSize.width > 768 ? 'defaseC' : 'defaseE'}><span>FORMAR</span><br/>COMUNIDAD</p>    
+          <p className={windowSize.width > 768 ? 'defaseC' : 'defaseE'}>GENERAR<span> PERTENENCIA E IDENTIDAD</span> CON LA MARCA</p>      
         </div>    
         }           
     </div>

@@ -157,4 +157,27 @@
     height: 3vw;    
   } 
 
+  #presentation, #slider {    
+    overflow-x:scroll      
+  }
+
+  #slider {
+    white-space: nowrap;
+    scroll-behavior: "smooth";
+    scroll-snap-type: x mandatory;
+  }
+
+  #slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  #slider .placaContainer {
+    scroll-snap-type: y mandatory;
+  }
+
+  #slider .placaContainer {
+    scroll-snap-align: start;
+  }
+
+
 }

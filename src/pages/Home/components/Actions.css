@@ -100,15 +100,16 @@
 @media screen and (max-width: 768px) {
   #actions {
     margin-top: 10vw;
+    padding-bottom: 12vw;
   }
 
   .mainActionsContainer {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
   }
 
   .mainActionsContainer h2 {    
-    font-size: 5vw;
-    line-height: 6vw;   
+    font-size: 6vw;
+    line-height: 7vw;   
   }
 
   .mainActionsContainer a { 
@@ -118,12 +119,12 @@
 
   .mainAction .imagesContainer {
     height: auto;    
-    width: 7.2vw; 
-    margin-top: 3vw;   
+    width: 9vw; 
+    margin-top: 4vw;   
   }
 
   .mainAction h3, .mainAction h3 span  {
-    font-size: 3.5vw;       
+    font-size: 4vw;       
   }
 
   .mainAction h3 span  { 

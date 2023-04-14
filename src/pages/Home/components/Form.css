@@ -191,8 +191,31 @@
 }
 
 @media screen and (max-width: 768px) {
+  #home #mainForm {
+    margin-top: 10vw; 
+  }
+
+  .formContainer legend {
+    width: 100%;    
+  }
+
+  .formContainer input {
+    width: 90%; 
+    border-radius: 3vw;  
+    margin-bottom: 1vw;    
+  }
+
+  .formContainer textarea {
+    margin-top: 0.5vw;
+    border-radius: 3vw; 
+  }
+
+  .formContainer input {
+    height: 5vw;    
+  }
+
   .formContainer input, .formContainer textarea, .formContainer  .submitBtn, .formContainer legend  {    
-    font-size: max(1.3vw, 10px);    
+    font-size: 2.5vw; 
   }
 
   .formContainer {    
