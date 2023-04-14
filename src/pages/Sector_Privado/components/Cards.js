@@ -75,12 +75,13 @@ const Cards = () => {
         <div className={cardActive === 'card-01' ? 'textGroup activeGroup' : 'textGroup'} id="card-01" onMouseEnter= {() => handleActiveCard('card-01')}>
           <p><span>•Brillá</span></p>
           <p>&nbsp;Diferenciate de la competencia con</p>
-          <p>&nbsp;una atención al cliente de calidad.</p>
+          <p>&nbsp;una atención al cliente de calidad.</p>          
         </div>
         <div className={cardActive === 'card-02' ? 'textGroup activeGroup' : 'textGroup'} id="card-02" onMouseEnter= {() => handleActiveCard('card-02')}>
           <p><span>•Conversá con tus clientes</span></p>
-          <p>&nbsp;Diferenciate de la competencia con</p>
-          <p>&nbsp;una atención al cliente de calidad.</p>
+          <p>&nbsp;Conectate con tu público</p>
+          <p>&nbsp;atendiendo a sus necesidades</p>
+          <p>&nbsp;particulares.</p>          
         </div>
         <div className={cardActive === 'card-03' ? 'textGroup activeGroup' : 'textGroup'} id="card-03" onMouseEnter= {() => handleActiveCard('card-03')}>
           <p><span>•Fidelizá</span></p>

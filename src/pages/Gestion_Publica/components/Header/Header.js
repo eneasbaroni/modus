@@ -16,7 +16,7 @@ const Header = () => {
       <div className = 'navBar'>
         <Link to="/"> <img className='headerLogo' src={"/images/Logo.svg"} alt="logo" /> </Link>   
         <a href="#why" className="linkedin-icon">¿Por qué Modus?</a>
-        <a href="#campana" className="linkedin-icon">Te Conectamos</a>
+        <a href="#campana" className="linkedin-icon">Te conectamos</a>
         <h3 onClick={() => setResumeActive(!resumeActive)}>Unite al equipo</h3>
         <a href="#formulario" className="linkedin-icon">Contacto</a>
       </div>

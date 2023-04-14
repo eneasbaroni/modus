@@ -58,7 +58,7 @@ const CardA = ({handleCard, state}) => {
           <div className={windowSize.width > 768 ? 'auxCards auxA' : 'auxCards auxB-A'}>  
             <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>TRANSFORMAMOS</span><br/>OPINIONES</p>      
             <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CONTROLAMOS</span><br/>CONFLICTOS</p>      
-            <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CUIDAMOS</span><br/>LA IMÁGEN</p>      
+            <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CUIDAMOS</span><br/>LA IMAGEN</p>      
           </div>    
         }         
     </div>
