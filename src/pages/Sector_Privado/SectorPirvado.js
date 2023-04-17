@@ -19,7 +19,7 @@ const SectorPirvado = () => {
 
   return (
     <>
-       {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}
+       {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
       <main id='sectorPrivado'>
         <Cards/>
         <Why/>

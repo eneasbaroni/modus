@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <main id='home'>
-      {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}      
+      {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}      
       <Presentation/>
       <Actions/>
       <Style/>

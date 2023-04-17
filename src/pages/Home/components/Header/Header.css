@@ -45,6 +45,8 @@ header .navBar a:hover, header .navBar h3:hover {
   border-top: 1rem solid var(--fourth-color);
 }
 
+
+
 /* MOBILE */
 .menuIcon {
   width: 12vw;
@@ -75,6 +77,22 @@ header .menuMobile a, header .menuMobile h3  {
  font-size: 4.5vw;
  padding: 3.5vw 0;
 }
+
+@media screen and (min-width: 768px) {
+
+  .menuIcon {
+    width: auto;
+    height: 4vw;
+    cursor: pointer;   
+  }  
+
+  header .menuMobile a, header .menuMobile h3  { 
+    font-size: 3vw;
+    padding: 2.5vw 0;
+   }
+
+}
+
 
 @media screen and (max-width: 768px) {
   header {

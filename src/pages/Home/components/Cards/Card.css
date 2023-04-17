@@ -220,17 +220,19 @@
   border: 2px solid rgb(133, 137, 151);
   margin-bottom: 1vw;
   font-size: 1.2vw;
-  font-size: max(1.2vw, 16px);
+  /* font-size: max(1.2vw, 16px); */
   font-weight: 400;  transition: all 0.5s ease-in-out;
   
 }
 
 .auxCards .defaseA {
   transform: translate(-16.5vw, 0) !important;  
+  opacity: 0;
 }
 
 .auxCards .defaseB {
   transform: translate(0, -14vw) !important; 
+  opacity: 0;
 }
 
 .auxCards .defaseC {
@@ -246,14 +248,14 @@
 .auxCards p span {
   color: var(--fourth-color); 
   font-size: 1.2vw;
-  font-size: max(1.2vw, 16px);
+  /* font-size: max(1.2vw, 16px); */
   font-weight: 500;
 }
 
 .auxCards p .pSmall {
   color: white; 
   font-size: 0.8vw;
-  font-size: max(0.8vw, 12px); 
+  /* font-size: max(0.8vw, 12px);  */
   line-height: 0.8vw;     
   font-weight: 400;
   /* margin-bottom: -100px; */

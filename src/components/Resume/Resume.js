@@ -107,7 +107,7 @@ const Resume = ({desactive}) => {
         {!selectedFile && 
           <>
             <img src="/images/main/main_arrow.svg" alt="arrow" />
-            <p>Importá tu CV</p>
+            {/* <p>Importá tu CV</p> */}
             <div className='note'>
               <p>Postulate importando tu currículum<br/>en formato PDF o Word:</p>
             </div>

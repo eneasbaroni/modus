@@ -22,7 +22,7 @@ const GestionPublica = () => {
 
   return (
     <>
-      {windowSize.width > 768 ? <Header/> : <HeaderMobile/>}
+      {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
       <main id='gestionPublica'>      
         <Cards/> 
         <Why/>  
