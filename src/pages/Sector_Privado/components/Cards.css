@@ -249,7 +249,7 @@
 
   .gpBtnContainer {
     grid-column: 7 / 9;   
-    transform: translate(0, 280%);      
+    transform: translate(0, 22vw);      
     margin: 0 auto;
   }
   
