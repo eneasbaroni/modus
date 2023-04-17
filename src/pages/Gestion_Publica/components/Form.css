@@ -102,4 +102,16 @@
   .circleForm {
    border: solid 1px rgba(255, 255, 0, 0.473);
   }
+
+  /* MOBILE */
+
+
+  #gestionPublica .formContainer::before{
+    display: none;
+  }
+
+  #gestionPublica .formContainer legend {
+    width: 79%;    
+  }
+
 }

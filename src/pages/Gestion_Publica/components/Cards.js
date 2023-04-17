@@ -71,7 +71,7 @@ const Cards = () => {
         {windowSize.width < 769 && 
           <div className="changeCardBtnContainer" onClick={handleNextCard}>
             <div className="changeCardBtn"> 
-              {imageActive === 'card-01' && <p> PRESIONÁ<br/>EL BOTÓN</p>}           
+              <p> PRESIONÁ<br/>EL BOTÓN</p>           
             </div>          
           </div>
         }

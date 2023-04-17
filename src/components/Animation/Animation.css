@@ -31,5 +31,10 @@
   #home .animationContainer {    
     height: 15vw;    
   }
+
+  #sectorPrivado .animationContainer, #gestionPublica .animationContainer {    
+    height: 12vw; 
+    margin-top: 2vw;   
+  }
 }
 

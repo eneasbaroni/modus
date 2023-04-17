@@ -175,8 +175,8 @@
   line-height: 1.6vw;
   text-align: center;
   letter-spacing: 0.5vw;  
-  bottom: -2vw;
-  left: 130%;
+  bottom: -110%;
+  left: -50%;
   padding: 1vw 2vw ;
   border-radius: 5vw; 
   border: solid 1px #ffffff2f;  
@@ -195,19 +195,49 @@
 
 
 @media screen and (max-width: 992px) {
-  .gpCardInfo{
-    grid-column: auto / span 5 !important;    
+  #sectorPrivado .gpCardInfo{
+    grid-column: auto / span 5;    
   }
 }
 
 @media screen and (max-width: 768px) {
-  #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p, #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p span {   
-    font-size: 2.2vw;      
-    line-height: 2.2vw;  
+
+  #sectorPrivado .gpCardsContainer {    
+    padding-bottom: 10vw;  
+  }
+
+  #sectorPrivado .gpCardInfo h1 span::before  {
+    display: none;
+  }
+
+  #sectorPrivado .gpCardInfo{
+    grid-column: 7 / span 6 !important;   
+    grid-row: 1 / span 1 !important;
+    z-index: 20; 
+  }
+
+  #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p {   
+    font-size: 2.3vw;      
+    line-height: 2.3vw;  
+    margin-left: 2vw;  
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: #fff; 
+  } 
+
+  #sectorPrivado .gpCardsContainer .gpCardInfo .activeGroup p span {   
+    font-size: 4vw;      
+    line-height: 4vw; 
+    background: none;   
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: var(--fourth-color);
   } 
 
   .gpCardInfo .textGroup p, .gpCardInfo .textGroup p span {      
-    font-size: 1.5vw;    
+    font-size: 2vw; 
+    background: rgb(93,93,226);
+    background: linear-gradient(90deg, rgba(93,93,226,0) 20%, rgba(93,93,226,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   } 
 
   .gpCardsContainer {
@@ -219,7 +249,7 @@
 
   .gpBtnContainer {
     grid-column: 7 / 9;   
-    transform: translate(0, 110%);      
+    transform: translate(0, 280%);      
     margin: 0 auto;
   }
   

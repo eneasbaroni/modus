@@ -82,8 +82,15 @@
     padding-top: 12vw;
   }
 
-  .whyContainer h2 {
-    font-size: 4.2vw;   
+  .whyContainer {
+    grid-column: 2 / 10;    
+  }
+
+  #gestionPublica .whyContainer h2 {
+    width: 100%;
+    text-align: center;    
+    font-size: 5vw;  
+    line-height: 4.5vw;
   }
 
   .whyContainer h3 { 
@@ -93,10 +100,14 @@
   .whyInfo {
     width: 100%;    
   }
+
+  .whyInfo img {    
+    width: 90%;    
+  }
   
   .whyInfo p {       
-    font-size: 2.5vw;    
-    line-height: 2.5vw;   
+    font-size: 3.2vw;    
+    line-height: 3.2vw;   
   }
 }
 

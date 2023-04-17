@@ -43,7 +43,7 @@ const CardA = ({handleCard, state}) => {
         onMouseLeave={() => handleCard('')}
         >
         <div className="card">
-        {windowSize.width < 768 && pulseActive && <Pulse foo = {handlePulse}/>}
+        {windowSize.width < 769 && pulseActive && <Pulse foo = {handlePulse}/>}
         <div className="card-content" style={{padding: '10% 10% 0%'}}>              
             <h4>Prevención y gestión de crisis.</h4>
             {windowSize.width > 768 ? 

@@ -77,8 +77,14 @@
     padding-top: 12vw;
   }
 
+  .whyContainer {
+    grid-column: 2 / 10;    
+  }
+
   #sectorPrivado .whyContainer h2 {
-    font-size: 4.2vw;   
+    width: 80%;
+    font-size: 5vw;  
+    line-height: 4.5vw;
   }
 
   #sectorPrivado .whyContainer h3 { 
@@ -88,10 +94,14 @@
   #sectorPrivado .whyInfo {
     width: 100%;    
   }
+
+  #sectorPrivado .whyInfo img {    
+    width: 90%;    
+  }
   
   #sectorPrivado .whyInfo p {       
-    font-size: 2.5vw;    
-    line-height: 2.5vw;   
+    font-size: 3vw;    
+    line-height: 3vw;   
   }
 }
 

@@ -63,7 +63,7 @@ const Cards = () => {
         {windowSize.width < 769 && 
           <div className="changeCardBtnContainer" onClick={handleNextCard}>
             <div className="changeCardBtn"> 
-              {imageActive === 'card-01' && <p> PRESIONÁ<br/>EL BOTÓN</p>}           
+              <p> PRESIONÁ<br/>EL BOTÓN</p>           
             </div>          
           </div>
         }
@@ -78,10 +78,21 @@ const Cards = () => {
           <p>&nbsp;una atención al cliente de calidad.</p>          
         </div>
         <div className={cardActive === 'card-02' ? 'textGroup activeGroup' : 'textGroup'} id="card-02" onMouseEnter= {() => handleActiveCard('card-02')}>
-          <p><span>•Conversá con tus clientes</span></p>
-          <p>&nbsp;Conectate con tu público</p>
-          <p>&nbsp;atendiendo a sus necesidades</p>
-          <p>&nbsp;particulares.</p>          
+        {windowSize.width > 769 ?
+          <p><span>•Conversá con tus clientes</span></p> :
+          <p><span>•Conversá<br/>&nbsp; con tus clientes</span></p> }
+        {windowSize.width > 769 ?
+          <>
+            <p>&nbsp;Conectate con tu público</p>
+            <p>&nbsp;atendiendo a sus necesidades</p>
+            <p>&nbsp;particulares.</p>          
+          </> :
+          <>
+            <p>&nbsp;&nbsp;&nbsp;Conectate con tu público</p>
+            <p>&nbsp;&nbsp;&nbsp;atendiendo a sus necesidades</p>
+            <p>&nbsp;&nbsp;&nbsp;particulares.</p>          
+          </> }
+
         </div>
         <div className={cardActive === 'card-03' ? 'textGroup activeGroup' : 'textGroup'} id="card-03" onMouseEnter= {() => handleActiveCard('card-03')}>
           <p><span>•Fidelizá</span></p>

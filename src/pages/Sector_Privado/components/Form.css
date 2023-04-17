@@ -24,3 +24,15 @@
   background: linear-gradient(180deg, rgb(6, 6, 104) 0%, rgba(0,2,114,0) 100%);
   z-index: -20; 
 }
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+  #redForm .formContainer::before{
+    display: none;
+  }
+
+  #sectorPrivado .formContainer legend {
+    width: 79%;    
+  }
+}
