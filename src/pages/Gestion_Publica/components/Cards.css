@@ -235,7 +235,7 @@
   #gestionPublica .gpCardInfo{
     grid-column: 7 / span 6 !important;   
     grid-row: 1 / span 1 !important;
-    z-index: 20; 
+    /* z-index: 20; */ 
   } 
 
   #gestionPublica .gpCardsContainer .gpCardInfo .activeGroup p {   
