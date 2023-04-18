@@ -35,9 +35,9 @@ const CardC = ({handleCard, state}) => {
             <h4>Gestión de reclamos.</h4> 
             {windowSize.width > 768 ? 
               state === 'active' 
-                ? <Animation animation='A11'/> 
+                ? <Animation animation='A13'/> 
                 : <div className="animationNull"></div>
-              :<Animation animation='A11'/>} 
+              :<Animation animation='A13'/>} 
         </div>
         </div> 
 
