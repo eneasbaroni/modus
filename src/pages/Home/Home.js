@@ -7,10 +7,17 @@ import Style from './components/Style'
 import Header from './components/Header/Header'
 import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
-
-const Home = () => {
+const Home = () => {  
   const windowSize = useScreenSize()
+
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <main id='home'>
@@ -19,7 +26,7 @@ const Home = () => {
       <Actions/>
       <Style/>
       <Cards/>
-      <Form/>
+      <Form/>      
     </main>
   )
 }

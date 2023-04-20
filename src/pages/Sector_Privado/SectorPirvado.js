@@ -8,6 +8,7 @@ import './SectorPirvado.css'
 import Header from './components/Header/Header'
 import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
+import FooterLinks from '../../components/FooterLinks/FooterLinks'
 
 const SectorPirvado = () => {
   const windowSize = useScreenSize()
@@ -25,7 +26,7 @@ const SectorPirvado = () => {
         <Why/>
         <Campana/>
         <Form/>
-        
+        <FooterLinks page={"sectorprivado"}/>        
       </main>
     </>
   )

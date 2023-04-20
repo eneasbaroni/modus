@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import Header from './components/Header/Header'
 import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
+import FooterLinks from '../../components/FooterLinks/FooterLinks'
 
 const GestionPublica = () => {
   const windowSize = useScreenSize()
@@ -27,7 +28,8 @@ const GestionPublica = () => {
         <Cards/> 
         <Why/>  
         <Campana/>   
-        <Form/>      
+        <Form/>  
+        <FooterLinks page={"gestionpublica"}/>    
       </main>
     </>
   )

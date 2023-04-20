@@ -1,0 +1,38 @@
+#footerLinks {
+    display: block;
+    width: 100vw;
+    padding: 0 20vw;
+    margin: 0 auto -5vw;    
+    text-align: center;
+    transform: translate(0,  -20vw);    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerLinks img {
+    height: 6vw;
+    width: auto;
+    margin: 0 2vw;    
+    border-radius: 3vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#footerLinks .lnkTSP:hover {
+    background: #ff636371;
+}
+
+#footerLinks .lnkTGP:hover, #footerLinks .lnkTH:hover {
+    background: #f1ff336e;
+}
+
+@media screen and (max-width: 425px) {
+    #footerLinks {        
+        transform: translate(0,  -18vw);
+    }
+}
+
+

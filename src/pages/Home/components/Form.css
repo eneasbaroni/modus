@@ -221,5 +221,29 @@
   .formContainer {    
     border: 1px solid #5b5b7e;    
   }
+
+  .formContainer .iconsContainer  {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    top: auto;
+    right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formContainer .iconsContainer a {
+    margin-left: 2vw;
+    height: 3vw;
+    width: 3vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    margin-bottom: 1vw;
+    transition: all 0.2s ease-in-out;    
+  }
   
 }

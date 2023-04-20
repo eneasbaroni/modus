@@ -84,9 +84,9 @@
 
   .placaCircle01 {
     position: absolute;
-    width: 35vh;
-    height: 35vh;      
-    left: 2vw;
-    top: 30vh;    
+    width: 50vh;
+    height: 50vh;      
+    left:-10%;
+    top: 60vw;  
   }
 }
