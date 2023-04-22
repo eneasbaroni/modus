@@ -45,26 +45,7 @@ const Resume = ({desactive}) => {
     setDragging(false)    
   };
 
-  /* const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(user);
-    setLoading(true)
-    if (selectedFile) {
-      const formData = new FormData();
-      formData.append('file', selectedFile);
-      axios.post('http://localhost:8000/send-email', formData)
-        .then(response => {
-          console.log(response.data);
-          setLoading(false)
-          desactive();
-        })
-        .catch(error => {
-          setLoading(false)
-          console.error(error);
-          desactive();
-        });
-    }
-  }; */
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,15 +57,15 @@ const Resume = ({desactive}) => {
       formData.append('nombre', user.nombre);
       formData.append('correo', user.correo);
       formData.append('mensaje', user.mensaje);
-      axios.post('http://localhost:8000/send-email', formData)
+      axios.post('http://localhost:8000/send-resume', formData)
         .then(response => {
-          console.log(response.data);
+          console.log('respuesta del server', response.data);
           setLoading(false)
           desactive();
         })
         .catch(error => {
           setLoading(false)
-          console.error(error);
+          console.error('error del server', error);
           desactive();
         });
     }
