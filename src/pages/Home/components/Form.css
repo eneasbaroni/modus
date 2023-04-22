@@ -190,6 +190,14 @@
   width: auto;
 }
 
+.disableBtn .arrowContainer img {
+  height: 50%;
+  width: auto;
+  opacity: 0.2;
+}
+
+
+
 @media screen and (max-width: 768px) {
   #home #mainForm {
     margin-top: 10vw; 

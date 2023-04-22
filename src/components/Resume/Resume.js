@@ -13,12 +13,17 @@ const Resume = ({desactive}) => {
   const [dragging, setDragging] = useState(false)
   const [selectedFile, setSelectedFile] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   const [user, setUser] = useState({
     nombre:"",    
     correo:"",    
     mensaje:""    
   })
+
+  // Expresiones regulares para los campos del formulario 
+  // eslint-disable-next-line
+  const emailRegex = /^[\w_\.-]+@[\w\.-]+\.[a-z\.]{2,6}$/i 
   
   const handleInputChange = (event) => {
     setUser({
@@ -43,13 +48,17 @@ const Resume = ({desactive}) => {
       setSelectedFile(files[0])
     }
     setDragging(false)    
-  };
-
-  
+  };  
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(user);
+    e.preventDefault();  
+
+    setError(false)
+    if (!emailRegex.test(user.correo)) { 
+      setError(true)
+      return
+    }  
+
     setLoading(true)
     if (selectedFile) {
       const formData = new FormData();
@@ -57,7 +66,7 @@ const Resume = ({desactive}) => {
       formData.append('nombre', user.nombre);
       formData.append('correo', user.correo);
       formData.append('mensaje', user.mensaje);
-      axios.post('http://localhost:8000/send-resume', formData)
+      axios.post('https://modus-server.onrender.com/send-resume', formData)
         .then(response => {
           console.log('respuesta del server', response.data);
           setLoading(false)
@@ -103,14 +112,19 @@ const Resume = ({desactive}) => {
                 <h3>Archivo cargado<br/><span>Listo para enviar</span></h3>  
               </div>
 
+              
               <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
+              {error && <p className='error' style={{color: 'red', fontSize: '12px'}}>Correo inválido</p>}
               <input type='email'  placeholder='Correo' name='correo' id='correo' onChange={handleInputChange} required></input>                
               <textarea  rows='5' cols='33'  placeholder='Contanos sobe vos ' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>  
 
-
+              {user.correo && user.nombre && user.mensaje ?
               <button type='button' onClick={handleSubmit}>
                 <img src="/images/resume/send.svg" alt="send" className='sendImg'/>
-              </button>            
+              </button>:            
+              <button type='button' className='disableBtn'>
+                <img src="/images/resume/send.svg" alt="send" className='sendImg'/>
+              </button> }           
             </div>
           ) : (
             <>

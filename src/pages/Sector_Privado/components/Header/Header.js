@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import './Header.css'
 import Resume from '../../../../components/Resume/Resume'
 
@@ -14,11 +15,11 @@ const Header = () => {
   return (
     <header className='rojo'>
       <div className = 'navBar'>
-        <Link to="/"> <img className='headerLogo' src={"/images/Logo_red.svg"} alt="logo" /> </Link>   
-        <a href="#why" className="linkedin-icon">Te impulsamos</a>
-        <a href="#campana" className="linkedin-icon">Resolvemos</a>
+        <RouterLink to="/"> <img className='headerLogo' src={"/images/Logo_red.svg"} alt="logo" /> </RouterLink>
+        <Link to="why" className="linkedin-icon">Te impulsamos</Link>   
+        <Link to="campana" className="linkedin-icon">Resolvemos</Link>        
         <h3 onClick={() => setResumeActive(!resumeActive)}>Unite al equipo</h3>
-        <a href="#formulario" className="linkedin-icon">Contacto</a>
+        <Link to="formulario" className="linkedin-icon">Contacto</Link>        
       </div>
       {resumeActive && <Resume desactive={desactiveResume}/>}
     </header> 
