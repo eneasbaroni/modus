@@ -55,9 +55,9 @@ header .navBar a:hover, header .navBar h3:hover {
 }
 
 .menuMobile {
-  position: absolute; 
-  width: 84vw;
-  height: auto;
+  position: sticky; 
+  width: 80vw;  
+  aspect-ratio: 1/0.6;
   top: 15vw;
   left: 50%;
   transform: translateX(-50%);
@@ -67,15 +67,25 @@ header .navBar a:hover, header .navBar h3:hover {
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 90;  
   backdrop-filter: blur(3px);  
 }
 
 header .menuMobile a, header .menuMobile h3  { 
- font-size: 4.5vw;
- padding: 3.5vw 0;
+ font-size: 4.5vw; 
+}
+
+.menuMobile__background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {

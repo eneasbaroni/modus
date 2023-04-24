@@ -1,6 +1,9 @@
 const MenuMobile = ({desactive, setResumeActive}) => {
   return (
-    <div className="menuMobile">      
+    <>
+    <div className="menuMobile__background" onClick={desactive}></div>
+    
+    <div className="menuMobile">     
 
       <a href="#actions" className="linkedin-icon" onClick={desactive}>Soluciones</a>
       <a href="#style" className="linkedin-icon" onClick={desactive}>¿Por qué Modus?</a>
@@ -8,6 +11,7 @@ const MenuMobile = ({desactive, setResumeActive}) => {
       <h3 onClick={setResumeActive}>Unite al equipo</h3>
       
     </div>
+    </>
   )
 }
 

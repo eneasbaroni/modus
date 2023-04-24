@@ -54,9 +54,9 @@ header .navBar a, header .navBar h3 {
 }
 
 .menuMobile {
-  position: absolute; 
-  width: 84vw;
-  height: auto;
+  position: absolute;   
+  width: 80vw;  
+  aspect-ratio: 1/0.6;
   top: 15vw;
   left: 50%;
   transform: translateX(-50%);
@@ -66,15 +66,14 @@ header .navBar a, header .navBar h3 {
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 90;  
   backdrop-filter: blur(3px);  
 }
 
 header .menuMobile a, header .menuMobile h3  { 
- font-size: 4.5vw;
- padding: 3.5vw 0;
+ font-size: 4.5vw; 
 }
 
 @media screen and (min-width: 768px) {
