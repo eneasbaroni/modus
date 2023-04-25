@@ -74,7 +74,7 @@ const Form = () => {
 
       <div className="iconsContainer">
 
-        <a href="https://www.linkedin.com/in/modus-moderaci%C3%B3n-y-ux-672a30272/" target="_blank" rel="noreferrer" className="linkedin-icon"><p></p></a>
+        <a href="https://www.linkedin.com/company/modusmoderacion" target="_blank" rel="noreferrer" className="linkedin-icon"><p></p></a>
         <a href="https://wa.me/+5493517666737" target="_blank" rel="noreferrer" className="whatsapp-icon"><p></p></a>
         <a href="mailto:contacto@somosmodus.com?Subject=Contacto%20desde%20web" target="_blank" rel="noreferrer" className="mail-icon"><p></p></a>
 
