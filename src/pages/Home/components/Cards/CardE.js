@@ -1,10 +1,17 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Animation from "../../../../components/Animation/Animation"
 import useScreenSize from "../../../../hooks/useScreenSize";
+import LanguageContext from "../../../../context/languageContext";
 
 
 const CardE = ({handleCard, state}) => {
   const windowSize = useScreenSize()
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   useEffect(() => {
     if(state === 'active'){      
@@ -36,9 +43,17 @@ const CardE = ({handleCard, state}) => {
         onMouseLeave={() => handleCard('')}
         >
         <div className="card">
-        <div className="card-content" style={{padding: '10% 10% 0%'}}>              
-            <h4>Automatizamos respuestas</h4> 
-            <p>con chatbot.</p>
+        <div className="card-content" style={{padding: '10% 10% 0%'}}> 
+            {lang === 'esp' ?
+              <>
+                <h4>Automatizamos respuestas</h4> 
+                <p>con chatbot.</p>
+              </>:
+              <>
+                <h4>We automate answers</h4>
+                <p>with chatbot.</p>
+              </>           
+            }
             {windowSize.width > 768 ? 
               state === 'active' 
                 ? <Animation animation='A11'/> 
@@ -49,9 +64,17 @@ const CardE = ({handleCard, state}) => {
 
         {state === 'active' && 
         <div className={windowSize.width > 768 ? 'auxCards auxE' : 'auxCards auxB-D'}>  
-          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
-          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
-          <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
+          {lang === 'esp' ?
+          <>
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}><span>VELOCIDAD</span><br/>DE RESPUESTA</p>      
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>POSIBILIDAD DE <br/><span>AUTOGESTIÓN</span></p>      
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>BRINDAMOS<span> INFORMACIÓN CONCRETA</span> EN POCOS SEGUNDOS</p>      
+          </>:
+          <>
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}><span>SPEED</span><br/>OF RESPONSE</p>
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>POSSIBILITY OF <br/><span>SELF-MANAGEMENT</span></p>
+            <p className={windowSize.width > 768 ? 'defaseE' : 'defaseB-D'}>WE PROVIDE<span> CONCRETE INFORMATION</span> IN A FEW SECONDS</p>
+          </>}
         </div>    
         }           
     </div>

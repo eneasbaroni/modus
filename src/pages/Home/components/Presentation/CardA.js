@@ -1,8 +1,17 @@
+import { useContext, useEffect, useState } from 'react'
 import useScreenSize from '../../../../hooks/useScreenSize'
 import './CardA.css'
+import LanguageContext from '../../../../context/languageContext'
 
 const CardA = () => {
   const windowSize = useScreenSize()
+
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   /* funcion para afectar a los divs adyacentes */
   /* gruilla 15 x 6 */
@@ -95,7 +104,10 @@ const CardA = () => {
   return (
     <div className='placaContainer'>
       <div className='placa'>
-        <h1>¿De qué sirve<br/>tener redes sociales<br/><span>si no vas a socializar?</span></h1>
+        { lang === 'esp' ?
+          <h1>¿De qué sirve<br/>tener redes sociales<br/><span>si no vas a socializar?</span></h1> :
+          <h1>What's the point<br/>of having social media<br/><span>if you're not going to socialize?</span></h1>
+        }
         <div className='patronContainer'>    
           {[...Array(90)].map((e, i) => <div key={i} id={i} className='patron' onMouseEnter={addHovered} onMouseLeave={deleteHovered}><div></div></div>)}
         </div>

@@ -1,17 +1,34 @@
 
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Animation from '../../../components/Animation/Animation'
 import './Campana.css'
 import useScreenSize from '../../../hooks/useScreenSize'
+import LanguageContext from '../../../context/languageContext'
 
 const Campana = () => {
   const windowSize = useScreenSize()
   const [animetionActive, setAnimetionActive] = useState('')
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
+
   return (
     <section id='campana'>      
 
-      <h2>¿Cómo querés comunicar tus<br/>productos y servicios?</h2>
-      <h3>¿Cuál es tu público objetivo?</h3>
+      {lang === 'esp' ?
+        <>
+          <h2>¿Cómo querés comunicar tus<br/>productos y servicios?</h2>
+          <h3>¿Cuál es tu público objetivo?</h3>
+        </> :
+        <>
+          <h2>How do you want to communicate<br/>your products and services?</h2>
+          <h3>What is your target audience?</h3>
+        </> 
+      }
+
       
       <div className='campanaContainer'>
 
@@ -24,7 +41,7 @@ const Campana = () => {
                   <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>:                  
                 <Animation animation='A5'/>               
               }                                                           
-              <h4>Interacción personalizada en comentarios de publicaciones.</h4>
+              {lang === 'esp' ? <h4>Interacción personalizada en comentarios de publicaciones.</h4> : <h4>Personalized interaction in post comments.</h4>}
             </div>
           </div>            
         </div>
@@ -39,7 +56,7 @@ const Campana = () => {
                 <Animation animation='A6'/>               
               }          
                                            
-              <h4>Respuestas acertadas y ágiles a mensajes y consultas inbox.</h4>
+              {lang === 'esp' ? <h4>Respuestas acertadas y ágiles a mensajes y consultas inbox.</h4> : <h4>Accurate and agile responses to messages and inbox queries.</h4>}
             </div>
           </div>            
         </div>
@@ -53,7 +70,7 @@ const Campana = () => {
                   <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>:                  
                 <Animation animation='A7'/>               
               }                          
-                <h4>Generación y mantenimiento de comunidades.</h4>
+                {lang === 'esp' ? <h4>Generación y mantenimiento de comunidades.</h4> : <h4>Generation and maintenance of communities.</h4>}
             </div>
           </div>            
         </div>
@@ -67,7 +84,7 @@ const Campana = () => {
                   <div className='point'><img src='./images/sector_privado/point-red.svg' alt='point'/></div>:                  
                 <Animation animation='A8'/>               
               }                                           
-              <h4>Generación de informes y de propuestas de mejora.</h4>
+              {lang === 'esp' ? <h4>Generación de informes y de propuestas de mejora.</h4> : <h4>Generation of reports and improvement proposals.</h4>}
             </div>
           </div>            
         </div>

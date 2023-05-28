@@ -1,0 +1,45 @@
+#langSelector {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  height: calc(6.5vw - 1rem);    
+  justify-content: center;
+  align-items: center;  
+  z-index: 900;
+}
+
+#langSelector img {
+ height: 2vw; 
+ width: 2vw;
+ margin-inline: 0.5vw; 
+ transition: opacity 0.3s ease-in-out;
+}
+
+
+#langSelector .inactived {
+ opacity: 0.2;
+}
+
+@media screen and (max-width: 1000px) {
+  #langSelector {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 1.5rem;
+    left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    height: calc(6.5vw - 1rem);    
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;    
+  }
+
+  #langSelector img {
+    height: 3.5vw; 
+    width: 3.5vw;    
+   }
+}
+

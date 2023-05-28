@@ -9,6 +9,7 @@ import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import LangSelector from '../../components/LangSelector/LangSelector'
 
 const Home = () => {  
   const windowSize = useScreenSize()
@@ -21,7 +22,7 @@ const Home = () => {
 
   return (
     <main id='home'>
-      {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}      
+      {windowSize.width > 1000 ? <Header/> : <> <HeaderMobile/> <LangSelector/> </>}      
       <Presentation/>
       <Actions/>
       <Style/>

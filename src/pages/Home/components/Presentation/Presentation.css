@@ -71,7 +71,9 @@
 
 #presentation h1 span {   
   font-family: 'Tango Sans', sans-serif;
-  font-size: 5vw;  
+  font-size: 5vw; 
+  display: flex; 
+  height: 5.5vw;
   background: rgb(241,255,51);
   background: linear-gradient(90deg, rgba(241,255,51,1) 0%, rgba(109,214,51,1) 100%);
   -webkit-background-clip: text;
@@ -125,7 +127,8 @@
     line-height: 7.2vw;         
   }
   #presentation h1 span  {      
-    font-weight: 800;        
+    font-weight: 800;  
+    height: 7.5vw;      
   }
 
   #presentation {    

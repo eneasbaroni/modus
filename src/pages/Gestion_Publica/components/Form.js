@@ -1,14 +1,22 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './Form.css'
 import axios from 'axios';
 import Loader from '../../../components/Loader/Loader';
+import LanguageContext from "../../../context/languageContext";
 
 
 
 const Form = () => {
   const [loading, setLoading] = useState(false)
   const [sended, setSended] = useState(false)
-  const [error, setError] = useState(false)   
+  const [error, setError] = useState(false)  
+  
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   const [user, setUser] = useState({
     nombre:"",
@@ -82,24 +90,48 @@ const Form = () => {
 
 
       <form id="form" onSubmit={sendData}>
+
+        {lang === 'esp' ?
+          <>
+            <legend>Tengamos una conversación...</legend>  
+            <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
+            <input type='text'  placeholder='Compañía' name='compania' id='compania' onChange={handleInputChange} required></input>
+            {error && <p className='error' style={{color: 'red', fontSize: '12px'}}>Correo inválido</p>}
+            <input type='email'  placeholder='Correo' name='correo' id='correo' onChange={handleInputChange} required></input>      
+            <input type='text'  placeholder='Asunto' name='asunto' id='asunto' onChange={handleInputChange} required></input>    
+            <textarea  rows='5' cols='33'  placeholder='Mensaje' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>        
+          
+            {user.correo && user.nombre  && user.compania  && user.asunto  && user.mensaje ?
+            <div className= 'formSubmitControl' onClick={sendData}>
+              <p>Enviar</p>
+              <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
+            </div> :
+            <div className= 'formSubmitControl disableBtn' >
+              <p>Enviar</p>          
+              <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
+            </div> }
+          </> :
+
+          <>
+            <legend>Let's have a conversation...</legend>
+            <input type='text'  placeholder='Name' name='nombre' id='nombre' onChange={handleInputChange} required></input>
+            <input type='text'  placeholder='Company' name='compania' id='compania' onChange={handleInputChange} required></input>
+            {error && <p className='error' style={{color: 'red', fontSize: '12px'}}>Invalid email</p>}
+            <input type='email'  placeholder='Email' name='correo' id='correo' onChange={handleInputChange} required></input>
+            <input type='text'  placeholder='Subject' name='asunto' id='asunto' onChange={handleInputChange} required></input>
+            <textarea  rows='5' cols='33'  placeholder='Message' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>
+
+            {user.correo && user.nombre  && user.compania  && user.asunto  && user.mensaje ?
+            <div className= 'formSubmitControl' onClick={sendData}>
+              <p>Send</p>
+              <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
+            </div> :
+            <div className= 'formSubmitControl disableBtn' >
+              <p>Send</p>
+              <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
+            </div> }
+          </>}
         
-        <legend>Tengamos una conversación...</legend>  
-        <input type='text'  placeholder='Nombre' name='nombre' id='nombre' onChange={handleInputChange} required></input>  
-        <input type='text'  placeholder='Compañía' name='compania' id='compania' onChange={handleInputChange} required></input>
-        {error && <p className='error' style={{color: 'red', fontSize: '12px'}}>Correo inválido</p>}
-        <input type='email'  placeholder='Correo' name='correo' id='correo' onChange={handleInputChange} required></input>      
-        <input type='text'  placeholder='Asunto' name='asunto' id='asunto' onChange={handleInputChange} required></input>    
-        <textarea  rows='5' cols='33'  placeholder='Mensaje' name='mensaje' id='mensaje' onChange={handleInputChange} required></textarea>        
-      
-        {user.correo && user.nombre  && user.compania  && user.asunto  && user.mensaje ?
-        <div className= 'formSubmitControl' onClick={sendData}>
-          <p>Enviar</p>
-          <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
-        </div> :
-        <div className= 'formSubmitControl disableBtn' >
-          <p>Enviar</p>          
-          <div className={sended ? 'arrowContainer arrowContainerSended' : 'arrowContainer'}><img src="./images/main/form-arrow.svg" alt=""/></div>
-        </div> }
        
                 
       </form>

@@ -1,7 +1,15 @@
-import { useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './CardB.css'
+import LanguageContext from '../../../../context/languageContext';
 
 const CardA = () => {
+
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   useEffect(() => {
     const el = document.getElementById('placaB');
@@ -41,7 +49,10 @@ const CardA = () => {
   return (
     <div className='placaContainer'>
       <div className='placa placaB'>
-        <h1>¿De qué sirve informar<br/><span>si no vas a conversar?</span></h1>
+        {lang === 'esp' ?
+          <h1>¿De qué sirve informar<br/><span>si no vas a conversar?</span></h1>:
+          <h1>What's the point of informing<br/><span>if you're not going to talk?</span></h1>
+        }
         <div id='placaB'></div>
       </div>
     </div>

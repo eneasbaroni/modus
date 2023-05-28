@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Animation from "../../../../components/Animation/Animation"
 import useScreenSize from "../../../../hooks/useScreenSize"
 import Pulse from "../../../../components/Pulse/Pulse"
+import LanguageContext from "../../../../context/languageContext"
 
 
 const CardA = ({handleCard, state}) => {  
   const windowSize = useScreenSize()
   const [pulseActive, setPulseActive] = useState(true)
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   useEffect(() => {
     if(state === 'active'){      
@@ -44,8 +51,11 @@ const CardA = ({handleCard, state}) => {
         >
         <div className="card">
         {windowSize.width < 769 && pulseActive && <Pulse foo = {handlePulse}/>}
-        <div className="card-content" style={{padding: '10% 10% 0%'}}>              
-            <h4>Prevención y gestión de crisis.</h4>
+        <div className="card-content" style={{padding: '10% 10% 0%'}}>     
+            {lang === 'esp' ?         
+              <h4>Prevención y gestión de crisis.</h4>:
+              <h4>Prevention and crisis management.</h4>
+            }
             {windowSize.width > 768 ? 
               state === 'active' 
                 ? <Animation animation='A9'/> 
@@ -56,9 +66,17 @@ const CardA = ({handleCard, state}) => {
         
         {state === 'active' && 
           <div className={windowSize.width > 768 ? 'auxCards auxA' : 'auxCards auxB-A'}>  
-            <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>TRANSFORMAMOS</span><br/>OPINIONES</p>      
-            <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CONTROLAMOS</span><br/>CONFLICTOS</p>      
-            <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CUIDAMOS</span><br/>LA IMAGEN</p>      
+            {lang === 'esp' ?
+            <>
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>TRANSFORMAMOS</span><br/>OPINIONES</p>      
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CONTROLAMOS</span><br/>CONFLICTOS</p>      
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>CUIDAMOS</span><br/>LA IMAGEN</p>      
+            </> :
+            <>
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>WE TRANSFORM</span><br/>OPINIONS</p>
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>WE CONTROL</span><br/>CONFLICTS</p>
+              <p className={windowSize.width > 768 ? 'defaseA' : 'defaseB-A'}><span>WE TAKE CARE</span><br/>OF THE IMAGE</p>
+            </>}
           </div>    
         }         
     </div>

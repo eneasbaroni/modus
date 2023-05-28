@@ -9,6 +9,7 @@ import Header from './components/Header/Header'
 import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
 import FooterLinks from '../../components/FooterLinks/FooterLinks'
+import LangSelector from '../../components/LangSelector/LangSelector'
 
 const GestionPublica = () => {
   const windowSize = useScreenSize()
@@ -23,7 +24,7 @@ const GestionPublica = () => {
 
   return (
     <>
-      {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
+      {windowSize.width > 1000 ? <Header/> : <> <HeaderMobile/> <LangSelector/> </>}
       <main id='gestionPublica'>      
         <Cards/> 
         <Why/>  

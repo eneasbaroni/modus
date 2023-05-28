@@ -1,10 +1,17 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Animation from "../../../../components/Animation/Animation"
 import useScreenSize from "../../../../hooks/useScreenSize";
+import LanguageContext from "../../../../context/languageContext";
 
 
 const CardB = ({handleCard, state}) => {
   const windowSize = useScreenSize()
+  const {language} = useContext (LanguageContext)
+  const [lang, setLang] = useState()  
+
+  useEffect(() => {
+    setLang(language)    
+  }, [language])
 
   useEffect(() => {
     if(state === 'active'){      
@@ -32,8 +39,11 @@ const CardB = ({handleCard, state}) => {
         onMouseLeave={() => handleCard('')}
         >
         <div className="card">
-        <div className="card-content" style={{padding: '10% 10% 0%'}}>              
-            <h4>Atención al cliente en redes sociales.</h4>
+        <div className="card-content" style={{padding: '10% 10% 0%'}}>  
+            {lang === 'esp' ?            
+              <h4>Atención al cliente en redes sociales.</h4>:
+              <h4>Customer service on social networks.</h4>
+            }
             {windowSize.width > 768 ? 
               state === 'active' 
                 ? <Animation animation='A2'/> 
@@ -43,9 +53,16 @@ const CardB = ({handleCard, state}) => {
         </div>
 
         {state === 'active' && 
-        <div className={windowSize.width > 768 ? 'auxCards auxB' : 'auxCards auxB'}>           
-          <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>CONECTAR</span><br/>CON EL USUARIO</p>      
-          <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>ESTAR PRESENTE Y ATENDER</span><br/><span className="pSmall"> A LAS NECESIDADES DEL CLIENTE</span></p>   
+        <div className={windowSize.width > 768 ? 'auxCards auxB' : 'auxCards auxB'}>  
+          {lang === 'esp' ?
+          <>
+            <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>CONECTAR</span><br/>CON EL USUARIO</p>      
+            <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>ESTAR PRESENTE Y ATENDER</span><br/><span className="pSmall"> A LAS NECESIDADES DEL CLIENTE</span></p>   
+          </> :
+          <>
+            <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>CONNECT</span><br/>WITH THE USER</p>
+            <p className={windowSize.width > 768 ? 'defaseB' : 'defaseB'}><span>BE PRESENT AND ATTEND</span><br/><span className="pSmall"> TO THE NEEDS OF THE CLIENT</span></p>
+          </>}
         </div>    
         }              
     </div>

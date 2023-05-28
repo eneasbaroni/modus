@@ -1,7 +1,7 @@
 #presentation .mainH1 {
   font-size: 8vw; 
   font-size: max(8vw, 80px);
-  height: 8vw;
+  height: 9vw;
   text-align: center;  
   display: flex;
   justify-content: center;

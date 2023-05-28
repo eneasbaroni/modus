@@ -9,6 +9,7 @@ import Header from './components/Header/Header'
 import useScreenSize from '../../hooks/useScreenSize'
 import HeaderMobile from './components/Header/HeaderMobile'
 import FooterLinks from '../../components/FooterLinks/FooterLinks'
+import LangSelector from '../../components/LangSelector/LangSelector'
 
 const SectorPirvado = () => {
   const windowSize = useScreenSize()
@@ -20,7 +21,7 @@ const SectorPirvado = () => {
 
   return (
     <>
-       {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
+       {windowSize.width > 1000 ? <Header/> : <> <HeaderMobile/> <LangSelector/> </>}
       <main id='sectorPrivado'>
         <Cards/>
         <Why/>
