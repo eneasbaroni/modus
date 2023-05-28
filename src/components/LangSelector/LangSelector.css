@@ -14,6 +14,7 @@
  height: 2vw; 
  width: 2vw;
  margin-inline: 0.5vw; 
+ cursor: pointer;
  transition: opacity 0.3s ease-in-out;
 }
 
