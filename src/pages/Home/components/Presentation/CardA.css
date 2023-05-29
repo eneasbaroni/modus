@@ -16,6 +16,12 @@
   pointer-events: none !important;
 }
 
+#presentation .placa h1 .spanA {
+  height: 14vw;
+  text-align: center;
+  display: block;
+}
+
 .patron {  
   width: 100%;  
   height: 100%;  
@@ -43,6 +49,13 @@
   .patronContainer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(auto, 1.5fr)
+  }
+
+  #presentation .placa h1 .spanA {
+    height: 14vw;
+    text-align: center;
+    margin: auto 0;
+    display: block;
   }
 }
 

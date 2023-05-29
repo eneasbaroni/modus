@@ -106,7 +106,7 @@ const CardA = () => {
       <div className='placa'>
         { lang === 'esp' ?
           <h1>¿De qué sirve<br/>tener redes sociales<br/><span>si no vas a socializar?</span></h1> :
-          <h1>What's the point<br/>of having social media<br/><span>if you're not going to socialize?</span></h1>
+          <h1>What's the point<br/>of having social media<br/><span className='spanA'>if you're not going<br/>to socialize?</span></h1>
         }
         <div className='patronContainer'>    
           {[...Array(90)].map((e, i) => <div key={i} id={i} className='patron' onMouseEnter={addHovered} onMouseLeave={deleteHovered}><div></div></div>)}

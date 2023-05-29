@@ -51,7 +51,7 @@ const CardA = () => {
       <div className='placa placaB'>
         {lang === 'esp' ?
           <h1>¿De qué sirve informar<br/><span>si no vas a conversar?</span></h1>:
-          <h1>What's the point of informing<br/><span>if you're not going to talk?</span></h1>
+          <h1>What's the point<br/>of informing<br/><span className='spanA'>if you're not going <br/>to talk?</span></h1>
         }
         <div id='placaB'></div>
       </div>

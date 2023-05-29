@@ -15,7 +15,7 @@ const CardD = () => {
       <div className='placa'>
         {lang === 'esp' ?
           <h1>¿De qué sirve<br/>generar contenido<br/><span>si no vas a interactuar?</span></h1>:
-          <h1>What's the point<br/>of generating content<br/><span>if you're not going to interact?</span></h1>      
+          <h1>What's the point<br/>of generating content<br/><span className='spanA'>if you're not going<br/>to interact?</span></h1>      
         }
 
         <div className='placaCircle03'></div>
