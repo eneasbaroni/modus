@@ -60,7 +60,7 @@ const Actions = () => {
               <h3>Whether it's new members in your<br/>community or the most loyal,<br/>our team is here to <span>serve each and<br/>every one of them in a personalized way.</span></h3>:
             lang === 'esp' ?
               <h3>Ya sea que se trate de<br/>nuevos miembros en tu<br/>comunidad o de los más fieles,<br/>nuestro equipo está aquí<br/>para <span>atender a todos y cada<br/>uno de ellos de manera<br/>personalizada.</span></h3>:
-              <h3>Whether it's new members<br/>in your community or the<br/>most loyal, our team is here<br/>to <span>serve each and every<br/>one of them in a<br/>personalized way.</span></h3>
+              <h3>Whether it's new members<br/>in your community or the<br/>most loyal ones, our team is here<br/>to <span>serve each and every<br/>one of them in a<br/>personalized way.</span></h3>
           }
         </div>
 

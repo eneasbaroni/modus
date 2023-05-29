@@ -23,7 +23,7 @@ const CardA = () => {
           </>
         :
           <>
-            <h1 className='mainH1'>For nothing.</h1>
+            <h1 className='mainH1'>There's no point.</h1>
             <h3>But here we are<br/><span>to help you</span>, you're welcome.</h3>
           </>
         }
