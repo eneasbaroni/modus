@@ -99,11 +99,11 @@
 
   .placaCircle04 {
     position: absolute;
-    width: 65vh;
-    height: 65vh;      
+    width: 50vh;
+    height: 50vh;      
     right: 50%;
     transform: translate(50%, 0);
-    top: 3vh;    
+    top: 1vh;    
   }
 
   .placaCircle05 {
