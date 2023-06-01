@@ -33,10 +33,11 @@ const Style = () => {
         
       </div>
       {lang === 'esp' ?
-        <p>Con Modus vas a poder conectar con tu audiencia de la forma que más te convenga. Contamos con el servicio de <span>chatbot automático y múltiples equipos de personas</span> para respuesta especializada, según cada necesidad. </p>:
-        <p>With Modus you will be able to connect with your audience in the way that suits you best. We have the service of <span>automatic chatbot and multiple teams of people</span> for specialized response, according to each need.</p>
+        <p>Con Modus vas a poder conectar con tu audiencia de la forma que más te convenga. Respondemos todos los <span>comentarios y mensajes de tus usuarios</span> con múltiples equipos de personas para respuesta especializada según cada necesidad.<br/>También contamos con un servicio de chatbot automático para informar de manera rápida y autogestiva.</p>:
+        <p>With Modus you will be able to connect with your audience in the way that suits you best. We respond to all <span>comments and messages from your users</span> with multiple teams of people for specialized response according to each need.<br/>We also have an automatic chatbot service to inform quickly and self-managed.</p>
       }
-     
+      {/* <p>Con Modus vas a poder conectar con tu audiencia de la forma que más te convenga. Contamos con el servicio de <span>chatbot automático y múltiples equipos de personas</span> para respuesta especializada, según cada necesidad. </p>: */}
+      
 
     </section>
   )
