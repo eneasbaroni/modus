@@ -77,7 +77,7 @@ const Presentation = () => {
           <div className={`cardMapCircle ${cardActive === 5 ? 'circleMapActive' : ''}`}></div>                    
         </div>    
         
-        <img src='./images/main/presentation-arrow.svg' alt='arrow' className='nextArrow' onClick={handleNext} style={cardActive === 4 ? {display: 'none'} : {display: 'block'}}/>
+        <img src='./images/main/presentation-arrow.svg' alt='arrow' className='nextArrow' onClick={handleNext} style={cardActive === 5 ? {display: 'none'} : {display: 'block'}}/>
 
       </div>
     </div>
