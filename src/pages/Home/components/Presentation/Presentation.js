@@ -5,6 +5,7 @@ import CardC from './CardC';
 import './Presentation.css'
 import usePreventBodyScroll from "./usePreventBodyScroll";
 import CardD from './CardD';
+import CardE from './CardE';
 
 
 const Presentation = () => {
@@ -62,6 +63,7 @@ const Presentation = () => {
       <div id='slider' ref={sliderRef} onWheel={handleWheel}>
         <img src='./images/main/presentation-arrow.svg' alt='arrow' className='previusArrow' onClick={handlePrevius} style={cardActive === 1 ? {display: 'none'} : {display: 'block'}}/>
 
+        <CardE/>
         <CardA/>
         <CardD/>
         <CardB/>
@@ -72,6 +74,7 @@ const Presentation = () => {
           <div className={`cardMapCircle ${cardActive === 2 ? 'circleMapActive' : ''}`}></div> 
           <div className={`cardMapCircle ${cardActive === 3 ? 'circleMapActive' : ''}`}></div>                    
           <div className={`cardMapCircle ${cardActive === 4 ? 'circleMapActive' : ''}`}></div>                    
+          <div className={`cardMapCircle ${cardActive === 5 ? 'circleMapActive' : ''}`}></div>                    
         </div>    
         
         <img src='./images/main/presentation-arrow.svg' alt='arrow' className='nextArrow' onClick={handleNext} style={cardActive === 4 ? {display: 'none'} : {display: 'block'}}/>

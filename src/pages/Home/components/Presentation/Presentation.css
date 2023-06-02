@@ -82,7 +82,7 @@
 
 
 .cardMap {
-  width: 6vw;
+  width: 7.5vw;
   height: 3.2vw;  
   border-radius: 1.6vw;
   display: flex;
@@ -150,7 +150,7 @@
   }
 
   .cardMap {
-    width: 18vw;
+    width: 20vw;
     height: 5.4vw;  
     border-radius: 2.7vw;    
   }
