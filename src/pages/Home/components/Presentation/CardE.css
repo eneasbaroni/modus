@@ -28,7 +28,7 @@
     top: 0;
     height: 100%;
     width: 100%;  
-    animation: slideshowA 5s linear infinite;
+    animation: slideshowA 7s linear infinite;
     background-size: cover;
   }
   
@@ -40,7 +40,7 @@
     top: 0;
     height: 100%;
     width: 100%;  
-    animation: slideshow 5s linear infinite;
+    animation: slideshow 7s linear infinite;
     background-size: cover;
   }
   
@@ -61,6 +61,17 @@
   /* Mobile */
   @media screen and (max-width: 768px) {
     #presentation .placaE h1 span {     
-      height: 20vw;  
+      height: 21vw;  
+    }
+  
+    .bigArrowContainer .bigArrowA {
+      background-size: cover;
+      animation: slideshowA 5s linear infinite;
+      
+    }
+    
+    .bigArrowContainer .bigArrowB {
+      background-size: cover;
+      animation: slideshow 5s linear infinite;
     }
   }
