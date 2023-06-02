@@ -29,6 +29,7 @@
     height: 100%;
     width: 100%;  
     animation: slideshowA 5s linear infinite;
+    background-size: cover;
   }
   
   .bigArrowContainer .bigArrowB {
@@ -40,6 +41,7 @@
     height: 100%;
     width: 100%;  
     animation: slideshow 5s linear infinite;
+    background-size: cover;
   }
   
   
@@ -60,16 +62,5 @@
   @media screen and (max-width: 768px) {
     #presentation .placaE h1 span {     
       height: 20vw;  
-    }
-  
-    .bigArrowContainer .bigArrowA {
-      background-size: cover;
-      /* animation: slideshowA 5s linear infinite; */
-      
-    }
-    
-    .bigArrowContainer .bigArrowB {
-      background-size: cover;
-      /* animation: slideshow 5s linear infinite; */
     }
   }
