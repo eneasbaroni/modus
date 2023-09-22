@@ -14,6 +14,7 @@
   transform: rotate(-90deg);
   cursor: pointer; 
   transition: all 0.3s ease-in-out;
+  z-index: 99;
 }
 
 .upArrowContainer:hover {
@@ -25,4 +26,12 @@
 .upArrowContainer img {
   height: 50%;
   width: auto;
+}
+
+.profileArrow {
+  background: linear-gradient(-45deg, rgba(52,22,119,0.41) 0%, rgba(255,99,99,0.41) 100%);
+}
+
+.profileArrow:hover {
+  background-image: url(../../../public/images/profile/arrow-profile.svg);
 }

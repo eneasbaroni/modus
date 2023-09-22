@@ -1,0 +1,165 @@
+#casos {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; 
+  overflow: hidden;
+  padding-bottom: 10vw;
+
+  & .titleContainer {   
+    padding: 2vw 4vw;
+    border-radius: 3.2vw;
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(242,242,242,0) 100%);
+    border: 4px solid white;
+    margin-bottom: 2.5vw;
+    z-index: 2;
+
+    & h2 {
+      font-size: max(4.5vw, 2rem);
+      font-family: 'Tango Sans', sans-serif;
+      background: -webkit-linear-gradient(360deg, #341677, #ff6363);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;      
+    }
+  }  
+
+  & .casosContainer {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: #dbdbdb;
+    border-radius: 3vw;
+    padding: 1.6vw;
+    z-index: 2;
+
+    & .casoContainer {
+        min-height: 5vw;        
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242, 242, 242, 0) 100%);
+        padding: 3px 1vw 3px 3px;
+        border-radius: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin: 1rem 0;
+        
+        & .caso {
+          min-height: calc(5vw - 3px);
+          height: auto;
+          width: 100%;
+          border-radius: 2.5vw;          
+          background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(242, 242, 242, 0) 100%);
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+          align-items: center;
+          padding: 0 2.5vw;
+  
+         & .textNoOpen {
+          font-size: 2rem;
+          font-weight: 200;
+          color: #341677;
+         }
+
+         & img {
+          width: 1.5vw;
+          height: auto;
+          cursor: pointer;          
+         }
+
+         & .graphImg {
+          width: 5.6vw;
+          margin-right: 1rem;
+          height: auto;
+          cursor: auto;
+         }
+
+         & .closeInfo {
+          font-size: 3vw;
+          color:#ff6363;
+          margin-top: -5vw;
+          cursor: pointer;
+         }
+
+         & .casoOpen {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          width: 100%;
+
+          & h3 {
+            font-size: 2rem;
+            font-size: max(2.5vw, 2rem);
+            color: #ff6363;
+            padding: 1rem 0 0;
+            font-weight: 600;
+          }
+
+          & p {
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem);
+            color: #ff6363;
+          }  
+
+          & .casoLink  {
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem);
+            color: #341677;
+            text-decoration: none;  
+            margin-bottom: 1rem; 
+            
+             & p {
+              color: #341677;  
+              letter-spacing: 1vw; 
+              margin-top: 0.3vw;           
+             }
+          }  
+
+         }
+      }
+    }
+
+  }
+  & .mainLinksContainer {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background: transparent; 
+    justify-content: space-between;    
+    
+    & .linktoGP {
+      background-image: url(../../../../../public/images/main/link-sp.svg);
+      transition: all 0.5s ease-in-out;
+      border: solid 3px #d36d8f;  
+      
+      &:hover {
+        background-image: url(../../../../../public/images/profile/bg-sp-link.svg);
+      }
+    }   
+    
+    & .linktoSP {
+      background-image: url(../../../../../public/images/main/link-gp.svg);
+      transition: all 0.5s ease-in-out;   
+      border: solid 3px #c2e76a;  
+      
+      &:hover {
+        background-image: url(../../../../../public/images/profile/bg-pp-link.svg);
+      }
+    }   
+    & img {
+      background: linear-gradient(90deg, rgba(241,255,51,0.33) 0%, rgba(255,99,99,0.33) 100%);
+      border-radius: 50%;
+      width: 7vw;
+      height: auto;  
+      transition: all 0.5s ease-in-out;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

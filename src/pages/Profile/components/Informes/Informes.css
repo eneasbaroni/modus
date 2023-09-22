@@ -1,0 +1,176 @@
+#informes {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; 
+  overflow: hidden;
+  
+  & .circleInforme {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    left: 5vw;
+    top: 10vw;
+    background: rgb(179,179,179);
+    background: linear-gradient(45deg, rgba(179,179,179,1) 0%, rgba(255,255,255,0) 80%);
+    z-index: 1;
+    opacity: .35;
+  }
+
+  & .titleContainer {   
+    padding: 2vw 4vw;
+    border-radius: 3.2vw;
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(242,242,242,0) 100%);
+    border: 4px solid white;
+    margin-bottom: 2.5vw;
+    z-index: 2;
+
+    & h2 {
+      font-size: max(4.5vw, 2rem);
+      font-family: 'Tango Sans', sans-serif;
+      background: -webkit-linear-gradient(360deg, #341677, #ff6363);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;      
+    }
+  }  
+
+  & .informesContainer {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: #dbdbdb;
+    border-radius: 3vw;
+    padding: 1.6vw;
+    z-index: 2;
+
+    & .informeContainer {
+        min-height: 5vw;        
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242, 242, 242, 0) 100%);
+        padding: 3px 1vw 3px 3px;
+        border-radius: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin: 1rem 0;
+        
+        & .informe {
+          min-height: calc(5vw - 3px);
+          height: auto;
+          width: 100%;
+          border-radius: 2.5vw;          
+          background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(242, 242, 242, 0) 100%);
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+          align-items: center;
+          padding: 0 2.5vw;
+  
+         & .textNoOpen {
+          font-size: 2rem;
+          font-weight: 200;
+          color: #341677;
+         }
+
+         & img {
+          width: 1.5vw;
+          height: auto;
+          cursor: pointer;          
+         }
+
+         & .closeInfo {
+          font-size: 3vw;
+          color:#ff6363;
+          margin-top: -5vw;
+          cursor: pointer;
+         }
+
+         & .informeOpen {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          width: 100%;
+
+          & h3 {
+            font-size: 2rem;
+            font-size: max(2.5vw, 2rem);
+            color: #ff6363;
+            padding: 1rem 0;
+            font-weight: 600;
+          }
+
+          & p {
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem);
+            color: #ff6363;
+          }
+
+          & .linkContainer {
+            height: auto;
+            width: auto;
+            margin-left: 45%;
+            margin-top: -2rem;
+            position: relative;
+            transition: all 0.2s ease-in-out;          
+
+            & p {
+              position: absolute;
+              top: 20%;
+              left: 50%;
+              transform: translate(-55%);
+              
+              font-family: 'Tango Sans', sans-serif;
+              font-size: 4vw;
+              letter-spacing: 1vw;
+              color: white;
+              -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+              -webkit-text-stroke: 3px white;
+              transition: all 0.2s ease-in-out;              
+            }
+
+            &:hover {
+              background: linear-gradient(135deg, rgba(255,99,99,0.2) 0%, rgba(255,255,255,0) 20%);
+              & p {
+                -webkit-text-stroke: 3px #ff6363;
+              }
+            }
+
+            &:active {
+              & p {
+                -webkit-text-stroke: 3px #341677;
+              }
+            }
+
+            & .informeLink {
+              width: 25vw;
+              height: auto;
+              
+            }
+
+
+          }
+
+          & .downloadContainer {
+            height: auto;
+            width: auto;            
+
+            & .informeDonwload {
+              width: 3vw;
+              height: 3vw;
+              position: absolute;
+              top: 50%;
+              right: -4.5%;
+            }
+          }
+
+         }
+      }
+    }
+
+  }
+}

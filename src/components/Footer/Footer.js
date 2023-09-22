@@ -13,8 +13,10 @@ const Footer = () => {
       setColor('red') 
     } else if (location.pathname === '/sector-privado'){
       setColor('redish')     
+    } else if (location.pathname === '/gestion-publica'){
+      setColor('yellow')     
     } else {
-      setColor('yellow')
+      setColor('white')
     }
   }, [location])
 
@@ -22,7 +24,7 @@ const Footer = () => {
   return (
     <footer className={color}>
       <img src={color === 'red' ? '/images/footer-logo.svg' 
-      : color === 'redish' ? '/images/footer-logo.svg' 
+      : color === 'redish' || color === 'white' ? '/images/footer-logo.svg' 
       : '/images/footer-logo-y.svg'} alt="logo" />      
     </footer>
   )

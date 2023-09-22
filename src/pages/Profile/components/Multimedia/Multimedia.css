@@ -1,0 +1,170 @@
+#multimedia {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; 
+  overflow: hidden;
+
+  & .titleContainer {   
+    padding: 2vw 4vw;
+    border-radius: 3.2vw;
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(242,242,242,0) 100%);
+    border: 4px solid white;
+    margin-bottom: 2.5vw;
+    z-index: 2;
+
+    & h2 {
+      font-size: max(4.5vw, 2rem);
+      font-family: 'Tango Sans', sans-serif;
+      background: -webkit-linear-gradient(360deg, #341677, #ff6363);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;      
+    }
+  }  
+
+  & .multimediaContainer {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: #dbdbdb;
+    border-radius: 3vw;
+    padding: 1.6vw;
+    z-index: 2;
+
+    & .fileContainer {
+      min-height: 5vw;        
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242, 242, 242, 0) 100%);
+      padding: 3px 1vw 3px 3px;
+      border-radius: 2.5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin: 1rem 0;
+      
+      & .file {
+        min-height: calc(5vw - 3px);
+        height: auto;
+        width: 100%;
+        border-radius: 2.5vw;          
+        background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(242, 242, 242, 0) 100%);
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 2.5vw;
+
+        & .textNoOpen {
+          font-size: 2rem;
+          font-weight: 200;
+          color: #341677;
+         }
+
+        & img {
+          width: 1.5vw;
+          height: auto;
+          cursor: pointer;          
+         }
+
+        & .closeInfo {
+          font-size: 3vw;
+          color:#ff6363;
+          /* margin-top: -5vw; */
+          cursor: pointer;
+        }  
+        
+      }
+
+      & .fileOpen {
+        height: 170px;
+        position: relative;
+
+        & .fileInfo {
+          position: absolute;
+          top: 1.2rem;
+          left: 10rem;
+
+          & h3 {            
+            font-size: 2rem;
+            font-size: max(2vw, 2rem); 
+            font-weight: 600;
+            color: #ff6363;
+          }
+
+          & p {
+            color: #ff6363;
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem)
+          }
+        }
+        
+
+        & audio {          
+          width: 100%;
+          background-color: transparent;   
+          height: 10rem;          
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start !important;
+          position: relative;
+        }
+
+        & audio::-webkit-media-controls-panel { 
+          margin-top: -1.5rem;           
+          height: 12rem;          
+          position: absolute;
+          width: 95%;
+          left: 0;
+          top: 2vw;
+        }
+
+        & audio::-webkit-media-controls-enclosure {          
+          background-color: transparent;
+          height: 20rem;          
+        }
+
+        & audio::-webkit-media-controls-play-button {
+          background-image: url(../../../../../public/images/profile/play.svg);   
+          border-radius: 50%;
+          transform: scale(5);
+          margin-top: -4rem;
+          margin-right: 1rem;
+          margin-left: 1.5rem;
+          display: flex;
+          flex-direction: column;
+
+          &:focus {
+            background-color: red;
+          }
+        }
+
+        & .playing::-webkit-media-controls-play-button {
+          background-image: url(../../../../../public/images/profile/pause.svg);              
+        }
+
+        & audio::-webkit-media-controls-current-time-display {
+          margin-left: 2rem;
+        }
+        
+
+        & audio::-webkit-media-controls-current-time-display, & audio::-webkit-media-controls-time-remaining-display {
+          color: #ff6363 !important;
+          margin-top: 2.5rem;
+        }
+
+
+        & audio::-webkit-media-controls-timeline {          
+          margin-left: -5rem;
+          width: 150px;                      
+        }
+        & audio::-webkit-media-controls-mute-button {
+          filter: invert(55%) sepia(6%) saturate(7491%) hue-rotate(316deg) brightness(101%) contrast(100%);                           
+        }
+      }
+    }
+  }
+}

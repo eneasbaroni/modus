@@ -14,6 +14,10 @@ footer img {
  padding-bottom: 3vw; 
 }
 
+.white {
+  background-color: #e9e9e9;
+}
+
 .yellow, .redish {
   border-bottom: 1rem solid #0462BF !important;
 }

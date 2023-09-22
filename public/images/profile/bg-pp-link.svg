@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 456.7 119.5" style="enable-background:new 0 0 456.7 119.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:2;stroke-miterlimit:10;}
+	.st1{opacity:0.7;fill:url(#SVGID_00000183927755820549281260000018264351997782440342_);}
+	.st2{opacity:0.3;fill:url(#SVGID_00000125575411723207161380000001304255357345199529_);}
+</style>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="59.7363" x2="456.6777" y2="59.7363">
+		<stop  offset="0" style="stop-color:#6BDB00"/>
+		<stop  offset="1" style="stop-color:#F1FF33"/>
+	</linearGradient>
+	<path class="st0" d="M405.6,118.5H51.4C23.5,118.5,1,95.9,1,68.1V51.5C1,23.6,23.6,1,51.5,1l354,0c27.7,0,50.2,22.5,50.2,50.2v17.1
+		C455.7,96,433.2,118.5,405.6,118.5z"/>
+	
+		<linearGradient id="SVGID_00000152956081460133127070000000568265015077561534_" gradientUnits="userSpaceOnUse" x1="1.8064" y1="59.7363" x2="454.7705" y2="59.7363">
+		<stop  offset="0" style="stop-color:#6BDB00"/>
+		<stop  offset="1" style="stop-color:#F1FF33"/>
+	</linearGradient>
+	<path style="opacity:0.7;fill:url(#SVGID_00000152956081460133127070000000568265015077561534_);" d="M404.7,117.5H52.2
+		C24.4,117.5,1.8,95,1.8,67.2V52.4c0-27.9,22.6-50.5,50.5-50.5l352.3,0c27.7,0,50.2,22.5,50.2,50.2v15.3
+		C454.8,95.1,432.3,117.5,404.7,117.5z"/>
+	
+		<linearGradient id="SVGID_00000091693355892587785190000013649930793974188708_" gradientUnits="userSpaceOnUse" x1="456.0555" y1="30.0751" x2="72.9387" y2="30.0751">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</linearGradient>
+	<path style="opacity:0.3;fill:url(#SVGID_00000091693355892587785190000013649930793974188708_);" d="M72.9,2.5H401
+		c34.9,0,55.1,24.7,55.1,55.1v0L72.9,2.5z"/>
+</g>
+</svg>
