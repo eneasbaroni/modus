@@ -121,6 +121,27 @@
       background: rgb(52,22,119);
       background: linear-gradient(45deg, rgba(52,22,119,1) 0%, rgba(255,99,99,1) 100%);
       margin-right: 0.5vw;
+      position: relative;
+      cursor: pointer;
+      
+      & .logoutButton {
+        position: absolute;
+        margin-top: 3.2rem;
+        top: 100%;
+        padding: 1rem 2rem;
+        background-color: #f1f1f1;
+        border-radius: 0.5vw;
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 7px 7px 9px -2px #35167746;
+        color: #341677;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+      }
     }
   }
 

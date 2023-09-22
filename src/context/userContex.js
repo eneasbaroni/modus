@@ -32,9 +32,14 @@ const UserProvider = ({children}) => {
       return false
     }
   }
+
+  const logout = async () => {
+    sessionStorage.removeItem('user')
+    setUser()
+  }
   
 
-  const data = {user, getUser, login }
+  const data = {user, getUser, login, logout }
   return <UserContext.Provider value={data}> {children} </UserContext.Provider>
 }
 

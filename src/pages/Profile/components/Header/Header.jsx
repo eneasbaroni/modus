@@ -5,11 +5,24 @@ import { Link } from 'react-scroll'
 import UserContext from '../../../../context/userContex'
 import Msn from './Msn'
 
+const Logout = () => {
+  const {logout} = useContext (UserContext)
+  const handleLogout = () => {
+    logout()
+  }
+
+  return (
+    <button className='logoutButton' onClick={handleLogout}>
+      Logout
+    </button>
+  )
+}
 
 const Header = () => {
   const {user} = useContext (UserContext)
   const [msgPanel, setMsgPanel] = useState(false)
   const [mensajesNoLeidos, setMensajesNoLeidos] = useState(false)
+  const [logout, setLogout] = useState(false)
 
   useEffect(() => {
     if (user) {
@@ -42,7 +55,10 @@ const Header = () => {
         </div>
         {user && 
           /* user first leter */
-          <p className='userInitial'>{user.nombre.charAt(0).toUpperCase()}</p>          
+          <div className='userInitial' onClick={() => setLogout(!logout)}>                      
+              <p>{user.nombre.charAt(0).toUpperCase()}</p>  
+              {logout && <Logout/>}
+          </div>
         }
       </div>
 
