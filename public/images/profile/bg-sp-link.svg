@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 456.68 119.47"><defs><style>.cls-1{isolation:isolate;}.cls-2,.cls-3{mix-blend-mode:multiply;}.cls-2{opacity:0.7;fill:url(#Degradado_sin_nombre_24);}.cls-3{fill:none;stroke-miterlimit:10;stroke-width:2px;stroke:url(#Degradado_sin_nombre_24-2);}.cls-4{opacity:0.3;fill:url(#Degradado_sin_nombre_91);}</style><linearGradient id="Degradado_sin_nombre_24" x1="1.81" y1="59.74" x2="454.77" y2="59.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b72992"/><stop offset="0" stop-color="#b82a91"/><stop offset="0.14" stop-color="#d23f80"/><stop offset="0.29" stop-color="#e64f73"/><stop offset="0.45" stop-color="#f45a6a"/><stop offset="0.66" stop-color="#fc6165"/><stop offset="1" stop-color="#ff6363"/></linearGradient><linearGradient id="Degradado_sin_nombre_24-2" x1="0" y1="59.74" x2="456.68" y2="59.74" xlink:href="#Degradado_sin_nombre_24"/><linearGradient id="Degradado_sin_nombre_91" x1="456.06" y1="30.08" x2="72.94" y2="30.08" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="cls-1"><g id="Capa_1" data-name="Capa 1"><path class="cls-2" d="M52.28,1.93H404.54a50.23,50.23,0,0,1,50.23,50.23V67.43a50.11,50.11,0,0,1-50.11,50.11H52.16A50.35,50.35,0,0,1,1.81,67.19V52.4A50.47,50.47,0,0,1,52.28,1.93Z"/><path class="cls-3" d="M52,1H404.93a50.75,50.75,0,0,1,50.75,50.75V67.84A50.63,50.63,0,0,1,405,118.47H51.87A50.87,50.87,0,0,1,1,67.6V52A51,51,0,0,1,52,1Z"/><path class="cls-4" d="M72.94,2.54H401c34.94,0,55.07,24.66,55.07,55.07h0Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 456.7 119.5" style="enable-background:new 0 0 456.7 119.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.7;fill:url(#SVGID_1_);enable-background:new    ;}
+	.st1{opacity:0.3;fill:url(#SVGID_00000034797210638967414660000005452849695296087720_);enable-background:new    ;}
+</style>
+<g id="Capa_1_00000036933784175464471460000006845283632727687598_">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="456.68" y1="59.735" x2="-9.094947e-13" y2="59.735">
+		<stop  offset="0" style="stop-color:#B72992"/>
+		<stop  offset="0" style="stop-color:#B82A91"/>
+		<stop  offset="0.14" style="stop-color:#D23F80"/>
+		<stop  offset="0.29" style="stop-color:#E64F73"/>
+		<stop  offset="0.45" style="stop-color:#F45A6A"/>
+		<stop  offset="0.66" style="stop-color:#FC6165"/>
+		<stop  offset="1" style="stop-color:#FF6363"/>
+	</linearGradient>
+	<rect class="st0" width="456.7" height="119.5"/>
+	
+		<linearGradient id="SVGID_00000124871289773486174270000014261018375458665631_" gradientUnits="userSpaceOnUse" x1="456.68" y1="28.4543" x2="60.758" y2="28.4543">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</linearGradient>
+	
+		<polyline style="opacity:0.3;fill:url(#SVGID_00000124871289773486174270000014261018375458665631_);enable-background:new    ;" points="
+		60.8,0 456.7,0 456.7,56.9 	"/>
+</g>
+</svg>
