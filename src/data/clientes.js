@@ -13,21 +13,21 @@ const clientes = [
         informe: 'https://drive.google.com/file/d/1MX43I-eo0bUfM82fraEQwAxv5qIXmSGt/view?usp=sharing',
         multimedia: 'https://drive.google.com/file/d/1omIWLax2m-le3Md_ecyxj1EgwF5bp-tU/view?usp=sharing',
         estadistica: 'https://drive.google.com/file/d/1X8Xo8V5ZkxbhNz-fKgRZGq7O3Y4cW9Ny/view?usp=sharing',
-        grafico: 'https://www.solverglobal.com/wp-content/uploads/2021/12/PowerBI_GL_Quickstart_24-scaled-1.jpg'
+        grafico: 'https://analytics.wcx.cloud/#/Public/Qu4102/de92f685b58b47a986ab51db51b184bc'
       },
       {
         fecha: '13-08-2023',        
         informe: 'https://drive.google.com/file/d/18iehj1TXRdApQS8GS4m9gLMA-tRtAaxg/view?usp=sharing',
         multimedia: 'https://drive.google.com/file/d/132cgRhELwpD85vhDFO958DzGepfd0KCG/view?usp=sharing',
         estadistica: 'https://drive.google.com/file/d/1X8Xo8V5ZkxbhNz-fKgRZGq7O3Y4cW9Ny/view?usp=sharing',
-        grafico: 'https://www.solverglobal.com/wp-content/uploads/2021/12/PowerBI_GL_Quickstart_24-scaled-1.jpg'
+        grafico: 'https://analytics.wcx.cloud/#/Public/Qu4102/de92f685b58b47a986ab51db51b184bc'
       },
       {
         fecha: '13-07-2023',        
         informe: 'https://drive.google.com/file/d/1ZwOEkoElNQDpoEciaLWDs88ubJCTETHR/view?usp=sharing',
         multimedia: 'https://drive.google.com/file/d/1GwyfKGo_Y15RlTN-IGQnLpe86JB_aYxh/view?usp=sharing',
         estadistica: 'https://drive.google.com/file/d/1X8Xo8V5ZkxbhNz-fKgRZGq7O3Y4cW9Ny/view?usp=sharing',
-        grafico: 'https://www.solverglobal.com/wp-content/uploads/2021/12/PowerBI_GL_Quickstart_24-scaled-1.jpg'
+        grafico: 'https://analytics.wcx.cloud/#/Public/Qu4102/de92f685b58b47a986ab51db51b184bc'
       }
     ],
     mensajes : [
