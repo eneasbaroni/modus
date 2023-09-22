@@ -72,7 +72,7 @@
          }
 
          & .graphImg {
-          width: 5.6vw;
+          width: 5vw;
           margin-right: 1rem;
           height: auto;
           cursor: auto;
@@ -91,18 +91,26 @@
           position: relative;
           width: 100%;
 
+          &:hover {
+            & h3, & p {
+              color: #341677 !important;
+            }
+          }
+
           & h3 {
             font-size: 2rem;
             font-size: max(2.5vw, 2rem);
             color: #ff6363;
             padding: 1rem 0 0;
             font-weight: 600;
+            transition: color 0.5s ease-in-out;
           }
 
           & p {
             font-size: 1.5vw;
             font-size: max(1.3vw, 1rem);
             color: #ff6363;
+            transition: color 0.5s ease-in-out;
           }  
 
           & .casoLink  {
@@ -110,20 +118,18 @@
             font-size: max(1.3vw, 1rem);
             color: #341677;
             text-decoration: none;  
-            margin-bottom: 1rem; 
-            
-             & p {
-              color: #341677;  
-              letter-spacing: 1vw; 
-              margin-top: 0.3vw;           
-             }
+            margin-bottom: 1rem;            
+             
           } 
 
           & .linkContainer {
+            
             & p {
-              color: #341677;
-              cursor: pointer;
-            }
+              color: #341677;               
+              letter-spacing: 1vw !important; 
+              margin-top: -0.8vw;
+              margin-bottom: 1vw;           
+             }
           }
           
           & .imgContainer {

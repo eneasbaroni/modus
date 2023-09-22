@@ -11,15 +11,22 @@
   
   & .circleInforme {
     position: absolute;
-    width: 35vw;
-    height: 35vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     left: 5vw;
-    top: 10vw;
+    top: 4vw;
     background: rgb(179,179,179);
     background: linear-gradient(45deg, rgba(179,179,179,1) 0%, rgba(255,255,255,0) 80%);
     z-index: 1;
     opacity: .35;
+    transition: all 4s ease-in-out;
+
+    &:hover {
+      top: 7vw;
+      left: 1vw;
+    }
+
   }
 
   & .titleContainer {   
@@ -163,8 +170,18 @@
               width: 3vw;
               height: 3vw;
               position: absolute;
+              border-radius: 5vw;
               top: 50%;
               right: -4.5%;
+              background: linear-gradient(135deg, rgba(52,22,119,0.34) 0%, rgba(255,99,99,0.34) 100%);
+              transition: all 0.3s ease-in-out;
+              
+              &:hover {
+                background: linear-gradient(135deg, rgba(255,99,99,0.35) 0%, rgba(183,41,146,0.35) 100%);
+              }
+              &:active {
+                background: linear-gradient(135deg, rgba(52,22,119,0.35) 0%, rgba(0,2,114,0.35) 100%);
+              }
             }
           }
 

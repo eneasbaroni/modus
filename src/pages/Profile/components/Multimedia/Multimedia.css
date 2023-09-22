@@ -130,16 +130,13 @@
         & audio::-webkit-media-controls-play-button {
           background-image: url(../../../../../public/images/profile/play.svg);   
           border-radius: 50%;
-          transform: scale(5);
+          background-size: cover;
+          transform: scale(3.1);
           margin-top: -4rem;
           margin-right: 1rem;
           margin-left: 1.5rem;
           display: flex;
-          flex-direction: column;
-
-          &:focus {
-            background-color: red;
-          }
+          flex-direction: column;        
         }
 
         & .playing::-webkit-media-controls-play-button {
