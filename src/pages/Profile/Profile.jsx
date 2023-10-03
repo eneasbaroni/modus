@@ -8,13 +8,17 @@ import Informes from './components/Informes/Informes'
 import Multimedia from './components/Multimedia/Multimedia'
 import Estadisticas from './components/Estadisticas/Estadisticas'
 import Casos from './components/Casos/Casos'
+import HeaderMobile from './components/Header/HeaderMobile'
+import useScreenSize from '../../hooks/useScreenSize'
 
 const Profile = () => {
   const {user} = useContext (UserContext)  
+  const windowSize = useScreenSize()
 
   return (
-    <main id='profile'>
-      <Header/>
+    <main id='profile'>      
+      {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
+
       {user ? 
         <>
           <Welcome/>     

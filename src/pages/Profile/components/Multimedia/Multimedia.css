@@ -35,6 +35,10 @@
     padding: 1.6vw;
     z-index: 2;
 
+    @media screen and (max-width: 768px) { 
+      width: 80vw;
+    }
+
     & .fileContainer {
       min-height: 5vw;        
       background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242, 242, 242, 0) 100%);
@@ -62,6 +66,14 @@
           font-size: 2rem;
           font-weight: 200;
           color: #341677;
+
+          @media screen and (max-width: 768px) { 
+            font-size: 1.2rem
+          }
+
+          @media screen and (max-width: 576px) { 
+            font-size: 1rem
+          }
          }
 
         & img {
@@ -75,30 +87,64 @@
           color:#ff6363;
           /* margin-top: -5vw; */
           cursor: pointer;
+
+          @media screen and (max-width: 768px) { 
+            font-size: 5vw;            
+          }
         }  
         
       }
 
       & .fileOpen {
         height: 170px;
-        position: relative;
+        position: relative;        
+
+        @media screen and (max-width: 1000px) { 
+          display: flex;
+          flex-direction: column;
+          height: auto;
+        }
+
 
         & .fileInfo {
           position: absolute;
           top: 1.2rem;
-          left: 10rem;
+          left: calc(4.4vw + 5.5rem);                
+
+          @media screen and (max-width: 1000px) { 
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
 
           & h3 {            
             font-size: 2rem;
             font-size: max(2vw, 2rem); 
             font-weight: 600;
             color: #ff6363;
+
+            @media screen and (max-width: 1000px) { 
+              font-size: 2.5vw;    
+              margin: 1rem 0 0;
+            }
+            
+            @media screen and (max-width: 768px) { 
+              margin-left: 1rem;         
+              font-size: 1.5rem;              
+            }
           }
 
           & p {
             color: #ff6363;
             font-size: 1.5vw;
-            font-size: max(1.3vw, 1rem)
+            font-size: max(1.3vw, 1rem);
+
+            @media screen and (max-width: 768px) { 
+              font-size: 1rem;
+              padding-bottom: 1rem;  
+              margin-left: 1rem;             
+            }
           }
         }
         
@@ -111,6 +157,51 @@
           flex-direction: column;
           align-items: flex-start !important;
           position: relative;
+
+          @media screen and (max-width: 1000px) {
+
+            height: 6rem !important;
+
+            &::-webkit-media-controls-panel {  
+              height: 7rem !important;
+              padding: 0 !important;
+              padding-top: 0.5rem !important;
+            }
+            
+
+            &::-webkit-media-controls-play-button {
+              transform: scale(2.5) !important;
+              margin-top: -1rem !important;
+            }   
+            
+            &::-webkit-media-controls-current-time-display, &::-webkit-media-controls-time-remaining-display {              
+              margin-top: -2rem !important;
+            }
+            
+          }
+
+          @media screen and (max-width: 768px) { 
+            &::-webkit-media-controls-play-button {
+              transform: scale(2) !important;
+            }       
+          }
+
+          @media screen and (max-width: 576px) { 
+            height: 8rem !important;
+            margin-left: -5.5rem;
+            width: calc(100% + 6rem);
+
+            &::-webkit-media-controls-play-button {
+              transform: scale(2) translate(140%, -80%) !important;
+            }
+            
+            &::-webkit-media-controls-panel {      
+              padding-top: 4.2rem !important;
+              height: 5rem !important;
+             /*  margin: 0 !important; */
+            }
+          }
+          
         }
 
         & audio::-webkit-media-controls-panel { 
@@ -136,7 +227,8 @@
           margin-right: 1rem;
           margin-left: 1.5rem;
           display: flex;
-          flex-direction: column;        
+          flex-direction: column;  
+
         }
 
         & .playing::-webkit-media-controls-play-button {
@@ -155,7 +247,7 @@
 
 
         & audio::-webkit-media-controls-timeline {          
-          margin-left: -5rem;
+          margin-left: -5rem;          
           width: 150px;                      
         }
         & audio::-webkit-media-controls-mute-button {
