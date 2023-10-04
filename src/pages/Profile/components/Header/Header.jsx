@@ -48,7 +48,7 @@ const Header = () => {
         <div className='mailsContainer' onClick={() => setMsgPanel(!msgPanel)}>
           {user && <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />}
           {user && msgPanel && <Msn msg={user.mensajes}/>}   
-          {mensajesNoLeidos && <div className='mailNotification'></div>}       
+          {user && mensajesNoLeidos && <div className='mailNotification'></div>}       
         </div>
         {/* <div className='notifContainer'>
           <img className='notifIcon' src={"/images/header/notification.svg"} alt="notification icon" />        
