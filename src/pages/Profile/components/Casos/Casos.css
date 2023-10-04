@@ -84,7 +84,11 @@
          & img {
           width: 1.5vw;
           height: auto;
-          cursor: pointer;          
+          cursor: pointer;   
+          
+          @media screen and (max-width: 768px) { 
+            width: 3vw;
+          }
          }
 
          & .graphImg {
@@ -180,7 +184,8 @@
               background-color: white;
               border-radius: 2vw;
               height: 100%;
-              width: auto;              
+              width: auto; 
+                           
             }          
             
           }

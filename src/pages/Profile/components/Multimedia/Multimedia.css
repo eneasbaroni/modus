@@ -83,7 +83,11 @@
         & img {
           width: 1.5vw;
           height: auto;
-          cursor: pointer;          
+          cursor: pointer; 
+          
+          @media screen and (max-width: 768px) { 
+            width: 3vw;
+          }
          }
 
         & .closeInfo {

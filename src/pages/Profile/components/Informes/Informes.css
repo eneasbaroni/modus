@@ -103,7 +103,12 @@
          & img {
           width: 1.5vw;
           height: auto;
-          cursor: pointer;          
+          cursor: pointer;    
+          
+          @media screen and (max-width: 768px) { 
+            width: 3vw;
+          }
+
          }
 
          & .closeInfo {
@@ -235,7 +240,10 @@
               }
 
               @media screen and (max-width: 768px) { 
-                right: -4%;                 
+                right: -5.5%; 
+                width: 5vw;
+                height: 5vw;  
+
               }
             }
           }
