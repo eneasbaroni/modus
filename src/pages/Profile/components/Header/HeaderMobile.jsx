@@ -46,7 +46,7 @@ const HeaderMobile = () => {
         
         {menuActive && <MenuMobile desactive={() => setMenuActive(false)} setResumeActive={() => setResumeActive(!resumeActive)}/>}
           <div className='mailsContainer' onClick={() => setMsgPanel(!msgPanel)}>
-            <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />
+            {user && <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />}
             {user && msgPanel && <Msn msg={user.mensajes}/>}   
             {mensajesNoLeidos && <div className='mailNotification'></div>}       
           </div>
