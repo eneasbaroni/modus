@@ -162,7 +162,8 @@
               color: #341677;               
               letter-spacing: 1vw !important; 
               margin-top: -0.8vw;
-              margin-bottom: 1vw;           
+              margin-bottom: 1vw; 
+              cursor: pointer;          
              }
           }
           

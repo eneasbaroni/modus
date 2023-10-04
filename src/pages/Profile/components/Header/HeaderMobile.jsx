@@ -46,13 +46,13 @@ const HeaderMobile = () => {
         
         {menuActive && <MenuMobile desactive={() => setMenuActive(false)} setResumeActive={() => setResumeActive(!resumeActive)}/>}
           <div className='mailsContainer' onClick={() => setMsgPanel(!msgPanel)}>
-            <img className='mailIcon' src={"/images/header/mail.svg"} alt="mail icon" />
+            <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />
             {user && msgPanel && <Msn msg={user.mensajes}/>}   
             {mensajesNoLeidos && <div className='mailNotification'></div>}       
           </div>
-          <div className='notifContainer'>
+          {/* <div className='notifContainer'>
             <img className='notifIcon' src={"/images/header/notification.svg"} alt="notification icon" />        
-          </div>
+          </div> */}
           {user && 
             /* user first leter */
             <div className='userInitial' onClick={() => setLogout(!logout)}>                      
