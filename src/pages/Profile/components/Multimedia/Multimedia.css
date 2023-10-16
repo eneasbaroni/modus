@@ -18,6 +18,11 @@
     margin-bottom: 2.5vw;
     z-index: 2;
 
+    @media screen and (max-width: 768px) { 
+      border-radius: 5vw;
+      margin-bottom: 15vw;
+    } 
+
     & h2 {
       font-size: max(4.5vw, 2rem);
       font-family: 'Tango Sans', sans-serif;
@@ -36,7 +41,7 @@
     z-index: 2;
 
     @media screen and (max-width: 768px) { 
-      width: 80vw;
+      width: 84vw;
     }
 
     & .fileContainer {
@@ -49,6 +54,12 @@
       justify-content:center;
       align-items: center;
       margin: 1rem 0;
+
+      @media screen and (max-width: 768px) { 
+        border-radius: 7vw;  
+        padding: 2px 0.5vw 2px 2px;  
+        margin: 0.5rem 0;       
+      }
       
       & .file {
         min-height: calc(5vw - 3px);
@@ -62,6 +73,10 @@
         align-items: center;
         padding: 0 2.5vw;
 
+        @media screen and (max-width: 768px) { 
+          border-radius: 7vw; 
+        }
+
         & .textNoOpen {
           font-size: 2rem;
           font-weight: 200;
@@ -72,7 +87,8 @@
           }
 
           @media screen and (max-width: 768px) { 
-            font-size: 1.2rem
+            font-size: 1.2rem;
+            padding: 3.6vw 5vw; 
           }
 
           @media screen and (max-width: 576px) { 
@@ -105,41 +121,26 @@
 
       & .fileOpen {
         height: 170px;
-        position: relative;        
+        position: relative; 
 
-        @media screen and (max-width: 1000px) { 
-          display: flex;
-          flex-direction: column;
-          height: auto;
+        @media screen and (max-width: 768px) { 
+          height: 120px;               
         }
-
 
         & .fileInfo {
           position: absolute;
           top: 1.2rem;
-          left: calc(4.4vw + 5.5rem);                
-
-          @media screen and (max-width: 1000px) { 
-            position: relative;
-            width: 100%;
-            top: 0;
-            left: 0;
-          }
+          left: calc(4.4vw + 5.5rem);            
 
           & h3 {            
             font-size: 2rem;
-            font-size: max(2vw, 2rem); 
+            font-size: max(2vw, 1.5rem); 
             font-weight: 600;
-            color: #ff6363;
-
-            @media screen and (max-width: 1000px) { 
-              font-size: 2.5vw;    
-              margin: 1rem 0 0;
-            }
+            color: #ff6363;           
             
-            @media screen and (max-width: 768px) {               
-              margin-left: 1rem;         
-              font-size: 1.5rem;              
+            @media screen and (max-width: 768px) { 
+              font-size: max(1vw, 1rem);               
+              margin-left: -8vw;               
             }
           }
 
@@ -149,9 +150,8 @@
             font-size: max(1.3vw, 1rem);
 
             @media screen and (max-width: 768px) { 
-              font-size: 1rem;
-              padding-bottom: 1rem;  
-              margin-left: 1rem;             
+              font-size: max(0.9vw, 0.8rem);
+              margin-left: -8vw;             
             }
           }
         }
@@ -164,50 +164,15 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start !important;
-          position: relative;
-
-          @media screen and (max-width: 1000px) {
-
-            height: 6rem !important;
-
-            &::-webkit-media-controls-panel {  
-              height: 7rem !important;
-              padding: 0 !important;
-              padding-top: 0.5rem !important;
-            }
-            
-
-            &::-webkit-media-controls-play-button {
-              transform: scale(2.5) !important;
-              margin-top: -1rem !important;
-            }   
-            
-            &::-webkit-media-controls-current-time-display, &::-webkit-media-controls-time-remaining-display {              
-              margin-top: -2rem !important;
-            }
-            
-          }
-
+          position: relative;         
+          
           @media screen and (max-width: 768px) { 
-            &::-webkit-media-controls-play-button {
-              transform: scale(2) !important;
-            }       
-          }
-
-          @media screen and (max-width: 576px) { 
             height: 8rem !important;
-            margin-left: -5.5rem;
-            width: calc(100% + 6rem);
-
-            &::-webkit-media-controls-play-button {
-              transform: scale(2) translate(140%, -80%) !important;
-            }
+            /* margin-left: -5.5rem; */
+            /* width: calc(100% + 6rem); */
+            margin-left: -5vw;
+            width: 100%;   
             
-            &::-webkit-media-controls-panel {      
-              padding-top: 4.2rem !important;
-              height: 5rem !important;
-             /*  margin: 0 !important; */
-            }
           }
           
         }
@@ -223,7 +188,7 @@
 
         & audio::-webkit-media-controls-enclosure {          
           background-color: transparent;
-          height: 20rem;          
+          height: 20rem;             
         }
 
         & audio::-webkit-media-controls-play-button {
@@ -257,11 +222,36 @@
         & audio::-webkit-media-controls-timeline {          
           margin-left: -5rem;          
           width: 150px;                      
-        }
+        }        
+       
         & audio::-webkit-media-controls-mute-button {
           filter: invert(55%) sepia(6%) saturate(7491%) hue-rotate(316deg) brightness(101%) contrast(100%);                           
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  audio::-webkit-media-controls-panel { 
+    top: 0rem !important;
+  }
+
+  audio::-webkit-media-controls-play-button {
+    transform: scale(1.5) translate(0%, 50%) !important;
+  } 
+
+  audio::-webkit-media-controls-timeline { 
+   width: 85px !important;    
+   /* margin-left: -35vw !important;  */                 
+  } 
+
+  audio::-webkit-media-controls-current-time-display {
+    margin-left: 0.7rem !important;
+  }
+
+  audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+    font-size: 0.7rem;
+    text-align: left !important;
   }
 }

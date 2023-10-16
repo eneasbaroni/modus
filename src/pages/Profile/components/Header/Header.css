@@ -3,6 +3,15 @@
   border-image: linear-gradient(90deg, rgba(241,255,51,1) 0%, rgba(255,99,99,1) 80%, rgba(52,22,119,1) 100%) 10;  
   background-color: #ebebeb;
 
+  @media screen and (max-width: 1000px) { 
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  @media screen and (max-width: 768px) { 
+    padding: 6vw 6.5vw;
+  }
+
   & .navBar a, &.navBar h3 {
     color: #341677;
   }
@@ -31,13 +40,13 @@
       position: relative;
 
       @media screen and (max-width: 1000px) { 
-        width: 2.8vw;
-        height: 2.8vw;
+        width: 3vw;
+        height: 3vw;
       }
 
       @media screen and (max-width: 768px) { 
-        width: 3.5vw;
-        height: 3.5vw;
+        width: 6vw;
+        height: 6vw;
       }
 
       & img {
@@ -75,7 +84,10 @@
         }
 
         @media screen and (max-width: 768px) {           
-          top: 9vw;
+          top: 14vw;
+          left: 50%;
+          transform: translate(-55%, 0);
+          border-radius: 2vw;
         }
 
         & .msgContainer {
@@ -110,11 +122,19 @@
             grid-column: 2 / span 9;             
             width: 100%; 
             padding: 0 0 1rem; 
-            border-bottom: 1px solid #35167718 ;         
+            border-bottom: 1px solid #35167718 ;    
+            
+            @media screen and (max-width: 768px) {           
+              padding: 0 0 0.5rem;
+            }
 
             & p {
               color: #341677;
-              width: 100%;
+              width: 100%;              
+
+              @media screen and (max-width: 768px) {           
+                font-size: 0.8rem;
+              }
             }
 
             & .msgTextfalse {
@@ -143,18 +163,19 @@
       cursor: pointer;   
 
       @media screen and (max-width: 1000px) { 
-        width: 3.3vw;
-        height: 3.3vw;
-      }
-
-      @media screen and (max-width: 768px) { 
         width: 4vw;
         height: 4vw;
       }
 
+      @media screen and (max-width: 768px) { 
+        width: 8vw;
+        height: 8vw;
+        margin-left: 4vw;
+      }
+
       & p {        
         @media screen and (max-width: 500px) { 
-          font-size: 0.7rem;
+          font-size: 0.8rem;
         }
       }
       
@@ -182,26 +203,40 @@
 
       }
     }
+
+    .menuIcon {
+      background-color: #ff636334;
+      border-radius: 1vw;
+      width: 5vw;
+      height: 4.5vw;
+      border: 1px #FF6363 solid;     
+      margin: 2.5vw 2vw 2.5vw 0;
+      
+      @media screen and (max-width: 768px) { 
+        width: 11vw;
+        height: 9.5vw;
+        margin: 2.5vw 3.6vw;
+      }
+    }
   }  
 
   .menuMobile {
-    background: rgb(52,22,119);
-    background: linear-gradient(45deg, rgba(52,22,119,.6) 0%, rgba(255,99,99,6) 100%);
-    border-radius: 5vw; 
+    background: #F1F1F1;
+    border-radius: 2vw; 
     justify-content: space-around;
-    border: 2px solid rgb(216, 216, 216);  
-    position: fixed;  
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    /* border: 2px solid rgb(216, 216, 216);  */ 
+    top: 18vw;    
+    box-shadow: 7px 7px 9px -2px #35167746;
+    width: 38vw;
+    
 
     & a {
       width: 100%;      
       margin: 0;
-      padding-bottom: 2.8vw;
+      padding: 2.8vw 0;
       text-align: center;
-      color: white;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.473);    
+      color: #341677;         
+      box-shadow: 0px 4px 6px -2px rgba(255,99,99,0.15);
     }
     
     & .topLink {
@@ -211,6 +246,7 @@
     & .btnLink {
       border-bottom: 1px solid transparent;   
       padding-bottom: 1.5vw;  
+      box-shadow: none;
     }
     
   }

@@ -42,24 +42,21 @@ const HeaderMobile = () => {
         
        
         <div className='iconsContainer'>
-        {menuActive ? <img className='menuIcon' src={"/images/main/menu_mobile_icon_active_red.svg"} alt="logo" onClick={() => setMenuActive(!menuActive)}/> : <img className='menuIcon' src={"/images/main/menu_mobile_icon_red.svg"} alt="logo" onClick={() => setMenuActive(!menuActive)}/>}
         
-        {menuActive && <MenuMobile desactive={() => setMenuActive(false)} setResumeActive={() => setResumeActive(!resumeActive)}/>}
-          <div className='mailsContainer' onClick={() => setMsgPanel(!msgPanel)}>
-            {user && <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />}
-            {user && msgPanel && <Msn msg={user.mensajes}/>}   
-            {user && mensajesNoLeidos && <div className='mailNotification'></div>}       
-          </div>
-          {/* <div className='notifContainer'>
-            <img className='notifIcon' src={"/images/header/notification.svg"} alt="notification icon" />        
-          </div> */}
-          {user && 
-            /* user first leter */
-            <div className='userInitial' onClick={() => setLogout(!logout)}>                      
-                <p>{user.nombre.charAt(0).toUpperCase()}</p>  
-                {logout && <Logout/>}
-            </div>
-          }
+          {menuActive && <MenuMobile desactive={() => setMenuActive(false)} setResumeActive={() => setResumeActive(!resumeActive)}/>}
+            <div className='mailsContainer' onClick={() => setMsgPanel(!msgPanel)}>
+              {user && <img className='mailIcon' src={"/images/header/notification.svg"} alt="mail icon" />}
+              {user && msgPanel && <Msn msg={user.mensajes}/>}   
+              {user && mensajesNoLeidos && <div className='mailNotification'></div>}       
+            </div>         
+            {user && 
+              /* user first leter */
+              <div className='userInitial' onClick={() => setLogout(!logout)}>                      
+                  <p>{user.nombre.charAt(0).toUpperCase()}</p>  
+                  {logout && <Logout/>}
+              </div>
+            }
+          {menuActive ? <img className='menuIcon' src={"/images/main/menu_mobile_icon_active_red.svg"} alt="logo" onClick={() => setMenuActive(!menuActive)}/> : <img className='menuIcon' src={"/images/main/menu_mobile_icon_red.svg"} alt="logo" onClick={() => setMenuActive(!menuActive)}/>}
         </div>       
       </div>  
     </header>

@@ -27,6 +27,14 @@
       left: 1vw;
     }
 
+    @media screen and (max-width: 768px) { 
+      width: 40vw;
+      height: 40vw;
+      top: 20vw;
+    } 
+
+    
+
   }
 
   & .titleContainer {   
@@ -38,12 +46,17 @@
     margin-bottom: 2.5vw;
     z-index: 2;
 
+    @media screen and (max-width: 768px) { 
+      border-radius: 5vw;
+      margin-bottom: 15vw;
+    } 
+
     & h2 {
       font-size: max(4.5vw, 2rem);
       font-family: 'Tango Sans', sans-serif;
       background: -webkit-linear-gradient(360deg, #341677, #ff6363);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;      
+      -webkit-text-fill-color: transparent; 
     }
   }  
 
@@ -56,7 +69,7 @@
     z-index: 2;
 
     @media screen and (max-width: 768px) { 
-      width: 80vw;
+      width: 84vw;
     }
 
     & .informeContainer {
@@ -69,6 +82,12 @@
         justify-content:center;
         align-items: center;
         margin: 1rem 0;
+
+        @media screen and (max-width: 768px) { 
+          border-radius: 7vw;  
+          padding: 2px 0.5vw 2px 2px;  
+          margin: 0.5rem 0;       
+        }
         
         & .informe {
           min-height: calc(5vw - 3px);
@@ -81,6 +100,10 @@
           justify-content:space-between;
           align-items: center;
           padding: 0 2.5vw;
+
+          @media screen and (max-width: 768px) { 
+            border-radius: 7vw;           
+          }
   
          & .textNoOpen {
           font-size: 2rem;
@@ -92,7 +115,8 @@
           }
 
           @media screen and (max-width: 768px) { 
-            font-size: 1.2rem
+            font-size: 1.2rem;
+            padding: 3.6vw 5vw;            
           }
 
           @media screen and (max-width: 576px) { 
@@ -139,7 +163,7 @@
             @media screen and (max-width: 768px) { 
               font-size: 1.5rem;
               margin: 1rem 0 0;
-              padding: 0;
+              padding: 0 4vw;
             }
           }
 
@@ -151,6 +175,7 @@
             @media screen and (max-width: 768px) { 
               font-size: 1rem;
               padding-bottom: 3rem;
+              padding-left: 4vw;
             }
           }
 
@@ -163,9 +188,9 @@
             transition: all 0.2s ease-in-out;   
 
             @media screen and (max-width: 768px) { 
-              margin-left: 0%;
+              margin-left: 50%;
               margin-top: -2rem;
-              margin-bottom: -3px;
+              margin-bottom: -3px;              
             }      
 
             & p {
@@ -183,7 +208,7 @@
               transition: all 0.2s ease-in-out;  
               
               @media screen and (max-width: 768px) { 
-                transform: translate(-200%);
+                transform: translate(-70%, 5%);
                 -webkit-text-stroke: 1px white;
               }
             }
@@ -212,6 +237,10 @@
             & .informeLink {
               width: 25vw;
               height: auto;
+
+              @media screen and (max-width: 768px) { 
+                width: 33vw;              
+              }  
               
             }
 
@@ -240,10 +269,14 @@
               }
 
               @media screen and (max-width: 768px) { 
-                right: -5.5%; 
-                width: 5vw;
-                height: 5vw;  
+                left: 4vw;
+                top: 70%;                
+                width: 6vw;
+                height: 6vw;                
+              }
 
+              @media screen and (max-width: 450px) {
+                top: 80%;          
               }
             }
           }
