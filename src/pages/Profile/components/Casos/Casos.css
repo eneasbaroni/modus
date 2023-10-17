@@ -12,7 +12,8 @@
 
   @media screen and (max-width: 768px) { 
     min-height: auto;
-    margin-top: 8vw;
+    margin-top: 6vw;
+    padding-top: 2vw;
   }
 
   & .titleContainer {   
