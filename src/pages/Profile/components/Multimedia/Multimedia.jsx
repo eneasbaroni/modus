@@ -37,6 +37,7 @@ const Multimedia = () => {
 
   return (
     <div id='multimedia'>
+      <div className="circleInforme"></div>
       <div className='titleContainer'>
         <h2>Multimedia</h2>
       </div>
