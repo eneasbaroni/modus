@@ -222,8 +222,13 @@
           } 
 
           & .linkContainer {
+
+            @media screen and (max-width: 768px) { 
+              display: flex;
+              margin-top: 2vw;
+            }
             
-            & p {
+            & p {              
               color: #341677;               
               letter-spacing: 1vw !important; 
               margin-top: -0.8vw;
@@ -274,6 +279,7 @@
       align-content: center;
       justify-content: flex-start;
       text-align: center;
+      margin-bottom: 10vw;
     }
     
     & .linktoGP {
