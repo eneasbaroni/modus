@@ -119,7 +119,7 @@
       @media screen and (max-width: 768px) { 
         border-radius: 7vw;  
         padding: 2px 0.5vw 2px 2px;  
-        margin: 0.5rem 0;       
+        margin: 0.5rem 0; 
       }
       
       & .file {
@@ -135,7 +135,7 @@
         padding: 0 2.5vw;
 
         @media screen and (max-width: 768px) { 
-          border-radius: 7vw; 
+          border-radius: 7vw;           
         }
 
         & .textNoOpen {
@@ -174,7 +174,10 @@
           cursor: pointer;
 
           @media screen and (max-width: 768px) { 
-            font-size: 5vw;            
+            font-size: 5vw; 
+            position: absolute;    
+            top: 50%;       
+            right: 3vw;
           }
         }  
         
@@ -185,13 +188,28 @@
         position: relative; 
 
         @media screen and (max-width: 768px) { 
-          height: 120px;               
+          height: auto; 
+          display: flex;              
+          flex-direction: column;
+          justify-content: flex-start;
+          align-content: flex-start;
+          text-align: left;
         }
 
         & .fileInfo {
           position: absolute;
           top: 1.2rem;
-          left: calc(4.4vw + 5.5rem);            
+          left: calc(4.4vw + 5.5rem); 
+          
+          @media screen and (max-width: 768px) { 
+            position:static;   
+            justify-self: flex-start;
+            align-self: flex-start;
+            margin-left: 4rem;
+            margin-top: 3vw;
+            width: calc(100% - 20vw);
+            /* margin-left: -10vw; */
+          }
 
           & h3 {            
             font-size: 2rem;
@@ -200,8 +218,10 @@
             color: #ff6363;           
             
             @media screen and (max-width: 768px) { 
-              font-size: max(1vw, 1rem);               
-              margin-left: -8vw;               
+              font-size: max(1vw, 1.3rem);               
+              width: 100%; 
+              /* margin-left: -8vw;  
+              width: 100;  */            
             }
           }
 
@@ -211,8 +231,7 @@
             font-size: max(1.3vw, 1rem);
 
             @media screen and (max-width: 768px) { 
-              font-size: max(0.9vw, 0.8rem);
-              margin-left: -8vw;             
+              font-size: max(0.9vw, 0.8rem);                           
             }
           }
         }
@@ -228,11 +247,13 @@
           position: relative;         
           
           @media screen and (max-width: 768px) { 
-            height: 8rem !important;
+            height: 6rem !important;
             /* margin-left: -5.5rem; */
             /* width: calc(100% + 6rem); */
             margin-left: -5vw;
-            width: 100%;   
+            width: 100%;  
+            margin-top: -3.5rem; 
+            margin-bottom: 1.2rem;
             
           }
           
@@ -294,6 +315,7 @@
 }
 
 @media screen and (max-width: 768px) {
+ 
   audio::-webkit-media-controls-panel { 
     top: 0rem !important;
   }
@@ -303,7 +325,7 @@
   } 
 
   audio::-webkit-media-controls-timeline { 
-   width: 85px !important;    
+   width: 90px !important;    
    /* margin-left: -35vw !important;  */                 
   } 
 
