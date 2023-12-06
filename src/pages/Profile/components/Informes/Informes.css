@@ -242,34 +242,34 @@
               font-family: 'Tango Sans', sans-serif;
               font-size: 4vw;
               letter-spacing: 1vw;
-              color: white;
+              color: #ff6363;
               -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-              -webkit-text-stroke: 3px white;
+              -webkit-text-stroke: 3px #ff6363;
               transition: all 0.2s ease-in-out;  
               
               @media screen and (max-width: 768px) { 
                 transform: translate(-70%, 5%);
-                -webkit-text-stroke: 1px white;
+                -webkit-text-stroke: 1px #ff6363;
               }
             }
 
             &:hover {
               background: linear-gradient(135deg, rgba(255,99,99,0.2) 0%, rgba(255,255,255,0) 20%);
               & p {
-                -webkit-text-stroke: 3px #ff6363;
+                -webkit-text-stroke: 3px #341677;
 
                 @media screen and (max-width: 768px) { 
-                  -webkit-text-stroke: 1px #ff6363;                  
+                  -webkit-text-stroke: 1px #341677;                  
                 }
               }
             }
 
             &:active {
               & p {
-                -webkit-text-stroke: 3px #341677;
+                -webkit-text-stroke: 3px #6c1677;
 
                 @media screen and (max-width: 768px) { 
-                  -webkit-text-stroke: 1px #341677;                 
+                  -webkit-text-stroke: 1px #6c1677;                 
                 }
               }
             }
