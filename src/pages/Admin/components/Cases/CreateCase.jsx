@@ -24,7 +24,7 @@ const CreateCase = ({closeModal, loadCases}) => {
 			method: 'post',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'http://localhost:8080/case',
+			url: 'https://modus-server-client.onrender.com/case',
 			data: caseCreated
 		})
 		.then(res => {

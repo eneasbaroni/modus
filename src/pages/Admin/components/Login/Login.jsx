@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import Loader from '../../../../components/Loader/Loader'
 import './Login.css'
 
-const URL = 'http://localhost:8080/auth/login' //cambiar al subir a produccion
+const URL = 'https://modus-server-client.onrender.com/auth/login' //cambiar al subir a produccion
 
 const LoginError = ({foo}) => {
     const [opacity, setOpacity] = useState(0)

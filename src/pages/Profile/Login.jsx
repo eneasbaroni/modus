@@ -4,7 +4,7 @@ import {UserContext} from '../../context/userContex'
 import axios from 'axios'
 import Loader from '../../components/Loader/Loader'
 
-const URL = 'http://localhost:8080/auth/login' //cambiar al subir a produccion
+const URL = 'https://modus-server-client.onrender.com/auth/login' //cambiar al subir a produccion
 
 const LoginError = ({foo}) => {
   const [opacity, setOpacity] = useState(0)

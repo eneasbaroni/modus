@@ -11,7 +11,7 @@ const ConfirmDelete = ({userId, reportId, closeModal, loadReports}) => {
 			method: 'delete',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `http://localhost:8080/client/report`,	
+			url: `https://modus-server-client.onrender.com/client/report`,	
 			data: {
 				userId,
 				reportId

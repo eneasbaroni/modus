@@ -20,7 +20,7 @@ const ClientsView = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'http://localhost:8080/client',
+			url: 'https://modus-server-client.onrender.com/client',
 		})
 		.then(res => {
 			if (res.status === 200) {
@@ -39,8 +39,9 @@ const ClientsView = () => {
 			reloadClients()
 		} else {
 			const filteredClients = cacheClients.filter(client => client.username.toLowerCase().includes(event.target.value.toLowerCase()))
-			setClients(filteredClients)
-			if (filteredClients.length === 0) {
+			const activedClients = filteredClients.filter(client => client.active)
+			setClients(activedClients)
+			if (activedClients.length === 0) {
 				setNoClients(true)				
 			} else {
 				setNoClients(false)
@@ -54,7 +55,7 @@ const ClientsView = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'http://localhost:8080/client',
+			url: 'https://modus-server-client.onrender.com/client',
 		})
 		.then(res => {
 			if (res.status === 200) {

@@ -46,7 +46,7 @@ const HeaderMobile = () => {
     axios({
       method: 'put',
       withCredentials: true,
-		  url: 'http://localhost:8080/client/message',
+		  url: 'https://modus-server-client.onrender.com/client/message',
       data: {
         username: user.username      
       }

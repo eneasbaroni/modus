@@ -37,7 +37,7 @@ const CreateClient = () => {
             method: 'post',
             //origin: "http://localhost:3000", 
             withCredentials: true,
-            url: 'http://localhost:8080/client',
+            url: 'https://modus-server-client.onrender.com/client',
             data: client,
         })
         .then(async res => {
@@ -62,7 +62,7 @@ const CreateClient = () => {
         <form className="actionForms" onSubmit={handleSubmit}>
             <legend>Formulario de Carga</legend>  
             <input type="text" name="username" id="username" placeholder='Username' onChange={handleInputChange} required/>
-            <input type="password" name="password" id="password" placeholder='Password' onChange={handleInputChange} required/>
+            <input type="password" name="password" id="password" placeholder='Token' onChange={handleInputChange} required/>
             <input type="text" name="contactA" id="contactA" placeholder='Contacto A' onChange={handleInputChange} required/>
             <input type="email" name="emailA" id="emailA" placeholder='Email contacto A' onChange={handleInputChange} required/>
             <input type="text" name="phoneA" id="phoneA" placeholder='Teléfono contaco A' onChange={handleInputChange} required/>

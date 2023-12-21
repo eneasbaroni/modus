@@ -33,14 +33,16 @@ const Report = () => {
 		  method: 'get',
 		  //origin: "http://localhost:3000", 
 		  withCredentials: true,
-		  url: 'http://localhost:8080/client',
+		  url: 'https://modus-server-client.onrender.com/client',
 		})
 		.then(res => {
 		  if (res.status === 200) {
 					//filtrar al administrador
 					const onlyClients = res.data.filter(client => client.username !== 'ModusAdmin')
+					//filter actives clients
+					const activeClients = onlyClients.filter(client => client.active)
 					//setClients solo un array de los username
-					const clientNames = onlyClients.map(client => client.username)
+					const clientNames = activeClients.map(client => client.username)
 					setClients(clientNames)	
 			setLoading(false)        
 		  }
@@ -60,7 +62,7 @@ const Report = () => {
 			method: 'post',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'http://localhost:8080/client/report',
+			url: 'https://modus-server-client.onrender.com/client/report',
 			data: report,
 		})
 		.then(async res => {

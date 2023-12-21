@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useLocation } from 'react-router-dom'
 import ConfirmDelete from './ConfirmDelete'
 import UpdateReport from './UpdateReport'
+import { Link } from 'react-router-dom'
 
 
 const ReportViewer = () => {
@@ -32,7 +33,7 @@ const ReportViewer = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `http://localhost:8080/client/${userId}`,
+			url: `https://modus-server-client.onrender.com/client/${userId}`,
 		})
 		.then(res => {
 			if (res.status === 200) {	
@@ -78,7 +79,7 @@ const ReportViewer = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `http://localhost:8080/client/${client._id}`,
+			url: `https://modus-server-client.onrender.com/client/${client._id}`,
 		})
 		.then(res => {					
 			if (res.status === 200) {
@@ -104,6 +105,7 @@ const ReportViewer = () => {
 		{deleteModal && idToDelete && client && <ConfirmDelete userId={client._id} reportId={idToDelete} closeModal={closeDeleteModal} loadReports={updateReports}/>}
 		{showUpdateModal && client && <UpdateReport userId={client._id} report={reportToUpdate} closeModal={closeUpdateModal} loadReports={updateReports}/>}
 		{reports && client &&
+		<>
 		<section id="reportsViewer">			
 			<div className="reportsContainer">
 				<h1>Informes de {client.username}</h1>
@@ -121,7 +123,9 @@ const ReportViewer = () => {
 					</div>
 				)}
 			</div>
-		</section>			
+		</section>	
+		<Link to='/admin/clientes'><button className='backButton'>Volver  a Clientes</button></Link>
+		</>		
 		}
 	</>
 	)

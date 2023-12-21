@@ -12,7 +12,7 @@ const ConfirmDelete = ({id, closeModal, loadCases}) => {
 			method: 'delete',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `http://localhost:8080/case/${id}`,		
+			url: `https://modus-server-client.onrender.com/case/${id}`,		
 		})
 		.then(res => {
 			if (res.status === 200) {			

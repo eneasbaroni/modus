@@ -26,7 +26,7 @@ const Cases = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'http://localhost:8080/case',		  
+			url: 'https://modus-server-client.onrender.com/case',		  
 		})
 		.then(res => {
 			if (res.status === 200) {
