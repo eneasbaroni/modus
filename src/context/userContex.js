@@ -17,6 +17,7 @@ const UserProvider = ({children}) => {
     axios ({
       method: 'get',
       withCredentials: true,
+      origin: "https://somos-modus.com", 
       url: 'https://modus-server-sjng.onrender.com/user'      
     })
     .then (res => {

@@ -56,7 +56,7 @@ const Login = () => {
 
     axios({
         method: 'post',
-        //origin: "http://localhost:3000", 
+        origin: "https://somos-modus.com", 
         withCredentials: true,
         url: URL,
         data: user,    
