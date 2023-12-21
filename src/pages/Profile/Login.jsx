@@ -4,7 +4,7 @@ import {UserContext} from '../../context/userContex'
 import axios from 'axios'
 import Loader from '../../components/Loader/Loader'
 
-const URL = 'https://modus-server-sjng.onrender.com/auth/login' //cambiar al subir a produccion
+const URL = 'http://localhost:8080/auth/login' //cambiar al subir a produccion
 
 const LoginError = ({foo}) => {
   const [opacity, setOpacity] = useState(0)
@@ -51,20 +51,19 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log("cookie de sesión:", document.cookie);
     setLoading(true)
 
     axios({
         method: 'post',
-        origin: "https://somos-modus.com", 
+        //origin: "http://localhost:3000", 
         withCredentials: true,
         url: URL,
         data: user,    
     })
     .then(async res => {
         
-        if (res.status === 200) {                      
-            login()
+        if (res.status === 200) { 
+            login(res.data)
         }
         setLoading(false)
         

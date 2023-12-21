@@ -12,7 +12,7 @@ const ConfirmDelete = ({id, closeModal, loadClients}) => {
 			method: 'delete',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `https://modus-server-sjng.onrender.com/client/user/${id}`,		
+			url: `http://localhost:8080/client/user/${id}`,		
 		})
 		.then(res => {
 			if (res.status === 200) {			

@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import Loader from '../../../../components/Loader/Loader'
 import './Login.css'
 
-const URL = 'https://modus-server-sjng.onrender.com/auth/login' //cambiar al subir a produccion
+const URL = 'http://localhost:8080/auth/login' //cambiar al subir a produccion
 
 const LoginError = ({foo}) => {
     const [opacity, setOpacity] = useState(0)
@@ -65,7 +65,7 @@ const Login = () => {
         .then(async res => {
             
             if (res.status === 200) {                      
-                login()
+                login(res.data)
             }
             setLoading(false)
             

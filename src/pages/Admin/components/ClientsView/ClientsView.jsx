@@ -20,7 +20,7 @@ const ClientsView = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'https://modus-server-sjng.onrender.com/client',
+			url: 'http://localhost:8080/client',
 		})
 		.then(res => {
 			if (res.status === 200) {
@@ -54,7 +54,7 @@ const ClientsView = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: 'https://modus-server-sjng.onrender.com/client',
+			url: 'http://localhost:8080/client',
 		})
 		.then(res => {
 			if (res.status === 200) {

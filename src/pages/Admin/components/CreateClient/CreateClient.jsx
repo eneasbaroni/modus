@@ -37,7 +37,7 @@ const CreateClient = () => {
             method: 'post',
             //origin: "http://localhost:3000", 
             withCredentials: true,
-            url: 'https://modus-server-sjng.onrender.com/client',
+            url: 'http://localhost:8080/client',
             data: client,
         })
         .then(async res => {

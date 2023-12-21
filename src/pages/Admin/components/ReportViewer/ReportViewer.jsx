@@ -32,7 +32,7 @@ const ReportViewer = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `https://modus-server-sjng.onrender.com/client/${userId}`,
+			url: `http://localhost:8080/client/${userId}`,
 		})
 		.then(res => {
 			if (res.status === 200) {	
@@ -78,7 +78,7 @@ const ReportViewer = () => {
 			method: 'get',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `https://modus-server-sjng.onrender.com/client/${client._id}`,
+			url: `http://localhost:8080/client/${client._id}`,
 		})
 		.then(res => {					
 			if (res.status === 200) {

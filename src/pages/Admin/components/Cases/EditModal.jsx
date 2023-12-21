@@ -25,7 +25,7 @@ const EditModal = ({id, name, closeModal, loadCases}) => {
 			method: 'put',
 			//origin: "http://localhost:3000", 
 			withCredentials: true,
-			url: `https://modus-server-sjng.onrender.com/case/${id}`,
+			url: `http://localhost:8080/case/${id}`,
 			data: caseEdited
 		})
 		.then(res => {
