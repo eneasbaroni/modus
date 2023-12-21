@@ -1,19 +1,19 @@
 import './Casos.css'
-import casos from '../../../../data/casos'
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import Loader from '../../../../components/Loader/Loader';
+import axios from 'axios';
 
 const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const formatDate = (date) => {
-  const parts = date.split('-')
-  return `${parts[0]} de ${meses[parseInt(parts[1]) - 1]} de ${parts[2]}`
+  const parts = date.split('/')
+  return `${parts[1]} de ${meses[parseInt(parts[0]) - 1]} de ${parts[2]}`
 }
 
 const mothDate = (date) => {
-  const parts = date.split('-')
-  return `${meses[parseInt(parts[1]) - 1]}`
+  const parts = date.split('/')
+  return `${meses[parseInt(parts[0]) - 1]}`
 }
 
 //funcion para obtener en enlace directo a una imagen
@@ -39,8 +39,10 @@ const Casos = () => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    //reemplazar por logica de Base de datos en la nube
-    setCasosArr(casos)
+    axios.get('https://modus-server-client.onrender.com/case')
+    .then(res => {
+      setCasosArr(res.data)
+    })
   }, [])
 
   const handleOpenImg = (url) => {
@@ -77,6 +79,12 @@ const Casos = () => {
         <h2>Casos de éxito</h2>
       </div>
       <div className="casosContainer">
+        {casosArr && casosArr.length === 0 &&
+          <div className="casoContainer">
+            <div className='caso'>
+              <p className='textNoOpen'>No se han cargado Casos de Éxito</p>
+            </div>
+          </div>}
         {casosArr &&
         casosArr.map((caso, index) => (
           <div className="casoContainer" key={index} >
@@ -85,10 +93,10 @@ const Casos = () => {
                 <>
                   <img className='graphImg' src="./images/profile/star.svg" alt="estrella"></img>
                   <div className='casoOpen'>
-                    <h3>Caso mes de {mothDate(caso.fecha)}</h3>
-                    <p>{formatDate(caso.fecha)}</p>
+                    <h3>Caso mes de {mothDate(caso.date)}</h3>
+                    <p>{formatDate(caso.date)}</p>
 
-                    <div className="linkContainer" onClick={ () => handleOpenImg(caso.url)}>:                                            
+                    <div className="linkContainer" onClick={ () => handleOpenImg(caso.link)}>:                                            
                                                                 
                       <p>VER</p>                    
                       {imgOpening &&
@@ -109,7 +117,7 @@ const Casos = () => {
                     </div>
                   </div>
                 </>:
-                <p className='textNoOpen'>{formatDate(caso.fecha)}</p> 
+                <p className='textNoOpen'>{formatDate(caso.date)}</p> 
               }
               {indexInf === index ?
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>:              
