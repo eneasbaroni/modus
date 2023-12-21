@@ -20,6 +20,7 @@ const UserProvider = ({children}) => {
       url: 'https://modus-server-sjng.onrender.com/user'      
     })
     .then (res => {
+      console.log("🚀 ~ file: userContex.js:28 ~ login ~ res:", res.data)
       if (res.data) {       
         setUser(res.data)      
       }
@@ -32,8 +33,7 @@ const UserProvider = ({children}) => {
       withCredentials: true,
       url: 'https://modus-server-sjng.onrender.com/auth/logout',
     })
-    .then (res => {
-      console.log("🚀 ~ file: userContex.js:36 ~ logout ~ res:", res.data)
+    .then (res => {      
       console.log()
       if (res.status === 200) {
         setUser(null)
