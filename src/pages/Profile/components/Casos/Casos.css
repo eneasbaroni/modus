@@ -283,12 +283,13 @@
     }
     
     & .linktoGP {
-      background-image: url(../../../../../public/images/main/link-sp.svg);
+      background-image: url(../../../../../public/images/profile/bg-sp-link.svg);
       transition: all 0.5s ease-in-out;
       border: solid 3px #d36d8f; 
+      opacity: 0.45;
 
       &:hover {
-        background-image: url(../../../../../public/images/profile/bg-sp-link.svg);
+        opacity: 1;
       }
 
       @media screen and (max-width: 768px) { 
@@ -300,12 +301,13 @@
     }   
     
     & .linktoSP {
-      background-image: url(../../../../../public/images/main/link-gp.svg);
+      background-image: url(../../../../../public/images/profile/bg-pp-link.svg);
       transition: all 0.5s ease-in-out;   
-      border: solid 3px #c2e76a;  
+      border: solid 3px #c2e76a;
+      opacity: 0.5;  
       
       &:hover {
-        background-image: url(../../../../../public/images/profile/bg-pp-link.svg);
+        opacity: 1;
       }
 
       @media screen and (max-width: 768px) { 
