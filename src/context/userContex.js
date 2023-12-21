@@ -17,7 +17,7 @@ const UserProvider = ({children}) => {
     axios ({
       method: 'get',
       withCredentials: true,
-      url: 'https://modus-server-sjng.onrender.com/user',
+      url: 'https://modus-server-sjng.onrender.com/user'      
     })
     .then (res => {
       if (res.data) {       
@@ -33,6 +33,8 @@ const UserProvider = ({children}) => {
       url: 'https://modus-server-sjng.onrender.com/auth/logout',
     })
     .then (res => {
+      console.log("🚀 ~ file: userContex.js:36 ~ logout ~ res:", res.data)
+      console.log()
       if (res.status === 200) {
         setUser(null)
       }

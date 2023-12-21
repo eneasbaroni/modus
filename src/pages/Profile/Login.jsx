@@ -51,6 +51,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    console.log("cookie de sesión:", document.cookie);
     setLoading(true)
 
     axios({
