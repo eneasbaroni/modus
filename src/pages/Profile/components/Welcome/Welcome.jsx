@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import './Welcome.css'
-import UserContext from '../../../../context/userContex'
+import {UserContext} from '../../../../context/userContex'
 import useScreenSize from '../../../../hooks/useScreenSize'
 
 const Welcome = () => {
@@ -29,7 +29,7 @@ const Welcome = () => {
     <div id='welcome'>
       <h1 style={scrollY > windowSize.width * 0.2 ? {filter: 'blur(2px)'} : {}}>¡Bienvenido</h1>
       <p style={scrollY > windowSize.width * 0.2 ? {filter: 'blur(2px)'} : {}}>a tu espacio</p>
-      <p style={scrollY > windowSize.width * 0.2 ? {filter: 'blur(2px)'} : {}}>{user.nombre}!</p>
+      <p style={scrollY > windowSize.width * 0.2 ? {filter: 'blur(2px)'} : {}}>{user.username}!</p>
       <div className="circleA"></div>
       <div className="circleB"></div>
     </div>

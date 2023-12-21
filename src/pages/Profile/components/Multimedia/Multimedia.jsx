@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import './Multimedia.css'
-import UserContext from '../../../../context/userContex'
+import {UserContext} from '../../../../context/userContex'
 
 const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
@@ -42,9 +42,17 @@ const Multimedia = () => {
         <h2>Multimedia</h2>
       </div>
       <div className="multimediaContainer">
-        {user.informes.map((file, index) => (
+        {/* Si no hay informes */}
+        {user.reports && user.reports.length === 0 && 
+        <div className="fileContainer">
+          <div className='file'>
+            <p className='textNoOpen'>No existen informes</p>
+          </div>
+        </div>}
+        {user.reports.map((file, index) => (
           <div className="fileContainer" key={index} >            
             {indexInf === index ?
+              /* Informe Abierto */
               <div className='file fileOpen'>
                 <div className="fileInfo">
                   <h3>Análisi de {mothDate(file.fecha)}</h3> 
@@ -56,6 +64,7 @@ const Multimedia = () => {
                 </audio>             
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>
               </div>:
+              /* Informe Cerrado */
               <div className='file'>
                 <p className='textNoOpen'>{formatDate(file.fecha)}</p>
                 <img src="./images/profile/inf-arrow.svg" alt="" onClick={() => setIndexInf(index)}/>

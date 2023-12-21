@@ -1,6 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import './Profile.css'
-import UserContext from '../../context/userContex'
+import {UserContext} from '../../context/userContex'
+import axios from 'axios'
+import Loader from '../../components/Loader/Loader'
+
+const URL = 'https://modus-server-sjng.onrender.com/auth/login' //cambiar al subir a produccion
 
 const LoginError = ({foo}) => {
   const [opacity, setOpacity] = useState(0)
@@ -29,61 +33,69 @@ const LoginError = ({foo}) => {
 }
 
 const Login = () => {
+  const [loading, setLoading] = useState(false)
   const {login} = useContext (UserContext)
   const [loginError, setLoginError] = useState(false)
 
-  const [usuario, setUsuario] = useState({
-    nombre:"",
-    password:"",     
+  const [user, setUser] = useState({
+    username: '',
+    password: ''
   })
 
   const handleInputChange = (event) => {
-    setUsuario({
-      ...usuario,
-      [event.target.name] : event.target.value
+    setUser({
+        ...user,
+        [event.target.name] : event.target.value
     })
   } 
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(usuario)
-    const logueado = await login(usuario.nombre, usuario.password)
-    if (logueado) {
-      console.log('logueado')
-    } else {
-      setLoginError(true)    
-    }
+    setLoading(true)
 
-  }
-
-  const handleLogError = () => {
-    //restart form
-    setLoginError(false)
-  }
-
-
-  return (
-    <>
-      {loginError && <LoginError foo={handleLogError}/>}
-      <div className='loginFormContainer'>
-        <form onSubmit={handleSubmit} >
-          <div className="circleA"></div>
-          <div className="circleB"></div>
-
-          <h2>Iniciar Sesión</h2>
-          <input type='text'  placeholder='USUARIO' name='nombre' id='nombre' onChange={handleInputChange} required></input>        
-          <input className='formPass' type='password'  placeholder='CONTRASEÑA' name='password' id='password' onChange={handleInputChange} required></input>
-
-          {usuario.nombre && usuario.password ?
-            <button onClick={handleSubmit}className='btnActive'><p>Ingresar</p></button> :
-            <button disabled><p>Ingresar</p></button> 
-          } 
-
-          
-        </form>
-      </div>
-    </>
-  )
+    axios({
+        method: 'post',
+        //origin: "http://localhost:3000", 
+        withCredentials: true,
+        url: URL,
+        data: user,    
+    })
+    .then(async res => {
+        
+        if (res.status === 200) {                      
+            login()
+        }
+        setLoading(false)
+        
+    })
+    .catch(err => {         
+        console.log('Error de logue', err)
+        setLoginError(true)
+        setLoading(false)
+    })
 }
 
+const handleLogError = () => {
+    //restart form
+    setLoginError(false)
+}
+
+return (
+  <>    
+      {loading && <Loader/>}
+      {loginError && <LoginError foo={handleLogError}/>}
+      <div className='loginAdminForm'>
+          <form  onSubmit={handleSubmit}>
+              <h2>Iniciar Sesion</h2>       
+              <input type="text" name="username" id="username" placeholder='USERNAME' onChange={handleInputChange}/>
+              <input type="password" name="password" id="password" placeholder='PASSWORD' onChange={handleInputChange}/>
+              {user.username && user.password ?
+                  <button onClick={handleSubmit}className='btnActive'><p>Ingresar</p></button> :
+                  <button disabled><p>Ingresar</p></button> 
+              } 
+          </form>
+      </div>
+  </>
+)
+}
 export default Login

@@ -1,0 +1,107 @@
+#reportsViewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    h1 {
+      margin-bottom: 2vw;
+    }
+
+    .reportsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .report {
+        border: solid 2px white;
+        padding: 1rem 5rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.20) 0%, rgba(35, 5, 119, 0.05) 100%);
+
+        @media screen and (max-width: 576px) { 
+            width: 80vw;  
+            padding: 1rem 1.5rem; 
+        } 
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #341677;
+            margin-bottom: 1.5vw;
+        }
+
+        p {      
+            padding: 0.5vw 3vw;      
+            color: #351677b7;
+            font-weight: 200;
+            border-radius: 1.75vw;
+            border: 1px solid #54b6eb33;
+            font-size: max(1vw, 14px);
+            font-weight: 200;
+            margin-bottom: 0.7vw;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease-in-out;
+            color: rgb(11, 11, 70);
+            text-align: left;
+            
+            span {
+                font-size: max(1.1vw, 14px);
+                font-weight: 400;
+                color: #341677;
+                
+            }
+        }
+
+        button {
+            background-color: var(--fourth-color);
+            width: auto;
+            height: auto;
+            border: transparent;
+            border-radius: 1vw;
+            padding: 0.8vw 2vw;
+            font-family: 'Tango Sans', sans-serif;
+            font-size: 1.3vw;
+            font-size: max(1.3vw, 14px);
+            color: #fff;
+            margin: 1rem auto 0;
+            display: block;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+            background-color: #341677;
+            }
+        }
+    }
+}
+
+.updateReportContainer {
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);    
+    backdrop-filter: blur(4px);
+    z-index: 95;
+
+    .actionForms {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.80) 0%, rgba(35, 5, 119, 0.2) 100%);
+
+        button {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        padding-bottom: 1rem;
+    }
+}
+
+

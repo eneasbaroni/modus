@@ -1,0 +1,70 @@
+#welcome {
+  width: 100%;
+  background-color: #efefef;
+  text-align: center;
+  min-height: calc(100vh - 6.5vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  & h1 {
+    font-size: max(5.3vw, 2rem);
+    color: #341677;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 768px) { 
+      font-size: max(7.2vw, 3rem);
+    }
+  }
+  
+  & p {
+    font-size: max(2.3vw, 1rem);
+    color: #341677;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 768px) { 
+      font-size: max(4vw, 1rem);
+    }
+  }
+
+  & .circleA {
+    height: 27vw;
+    width: 27vw;
+    border-radius: 50%;
+    background: rgb(241,255,51);
+    background: linear-gradient(180deg, rgba(241,255,51,0.3) 0%, rgba(255,99,99,0.7) 100%);
+    filter: blur(5px);
+    position: absolute;
+    left: -15vw;    
+
+    @media screen and (max-width: 768px) { 
+      height: 36vw;
+      width: 36vw;
+      top:15%
+    }
+  }
+
+  & .circleB {
+    height: 41vw;
+    width: 41vw;
+    border-radius: 50%;
+    background: rgb(52,22,119);
+    background: linear-gradient(-45deg, rgba(52,22,119,1) 0%, rgba(193,185,211,0.5) 30%, rgba(255, 255, 255, 0.5) 100%);
+    opacity: 0.3;
+    filter: blur(5px);
+    position: absolute;
+    left: 50vw;
+
+    @media screen and (max-width: 768px) { 
+      height: 60vw;
+      width: 60vw;
+      left: 30vw;
+      top:40%
+    }
+  }
+}

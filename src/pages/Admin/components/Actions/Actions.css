@@ -1,0 +1,35 @@
+#adminActions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin: 5vw auto 10vw;
+
+  button {
+    width: 40vw;
+    margin-bottom: 1rem;
+    padding: 2vw 4vw;
+    border-radius: 3.2vw ;
+    border: 4px solid white;
+    font-size: max(3vw, 1.5rem);
+    font-family: 'Tango Sans', sans-serif;
+    background: -webkit-linear-gradient(360deg, #341677, #ff6363);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;    
+
+    &:hover {    
+      box-shadow: 0 0 10px 1px rgb(148, 102, 130, 0.5);
+    }
+
+    @media screen and (max-width: 576px) { 
+      width: 80vw;      
+      border: 2px solid white;
+      border-radius: 5vw ;
+    } 
+
+  }
+}
+

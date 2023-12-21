@@ -30,6 +30,7 @@ const Header = () => {
         <h3 onClick={() => setResumeActive(!resumeActive)}>{lang === 'esp' ? 'Unite al equipo' : 'Join the team'}</h3>
         <Link to="formulario" className="linkedin-icon">{lang === "esp" ? "Contacto" : "Contact"}</Link>        
       </div>
+      <RouterLink to="/profile"> <img className='profileIcon' src={"/images/header/profile-pink.svg"} alt="logo" /> </RouterLink>
       <LangSelector/>
       {resumeActive && lang === 'esp' && <Resume desactive={desactiveResume}/>}
       {resumeActive && lang === 'eng' && <ResumeEng desactive={desactiveResume}/>}

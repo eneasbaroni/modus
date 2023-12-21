@@ -1,0 +1,104 @@
+@keyframes pulse {
+	0% {
+		background-size: 100%;
+	}
+
+	50% {
+		background-size: 200%;
+	}
+
+	100% {
+		background-size: 100%;
+	}
+}
+
+#requestSucces {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 120vh;
+	background-color: rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(4px);
+	z-index: 91;
+
+	.errorContainer {
+		margin: 20vh auto 0;
+		width: 60vw;
+		height: 60vh;
+		background: rgb(52, 22, 119);
+		background: linear-gradient(45deg,
+				rgba(52, 22, 119, 0.8) 0%,
+				rgba(99, 255, 229, 0.8) 100%);
+		border-radius: 2.6vw;
+		border: solid 2px white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	
+		@media screen and (max-width: 768px) {
+			padding: 1rem;
+			width: 80vw;
+			height: 40vh;
+		}
+
+		div {
+
+			width: 100%;
+			height: 100%;
+			background-image: url(../../../../../public/images/profile/Logsucces.svg);        
+			background-position: center;
+			/* background-size: contain; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			animation: 6s linear 0s infinite alternate pulse;
+
+			h2 {
+				color: white;
+				text-align: center;
+				font-size: 2vw;
+				font-size: max(2vw, 2rem);
+				margin: 0 auto 2rem;
+
+				@media screen and (max-width: 768px) {
+					font-size: 16px;
+					font-size: max(3vw, 1.5rem);
+				}
+			}
+
+			.btnError{
+				width: 20rem;
+				height: 2.5rem;
+				margin-bottom: 2rem;
+				border-radius: 10vw;
+				text-align: center;
+				font-size: 1.2rem;
+				border: 2px rgba(255, 255, 255, 0.479) solid;
+				background: #f1ff33;
+    		background: linear-gradient(45deg,rgba(92, 255, 51, 0.2),rgba(92,255,51,.7));
+				cursor: pointer;
+				transition: all 0.5s ease-in-out;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 90%;
+				}
+
+				button {
+					width: 100%;
+					height: 100%;
+					background: transparent;
+					border: none;
+					cursor: pointer;
+
+				}
+			}
+		}
+
+	}
+}

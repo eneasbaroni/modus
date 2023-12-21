@@ -16,6 +16,15 @@ header {
   height: auto;  
 }
 
+.profileIcon {
+  position: absolute;
+  top: 0;
+  height: calc(6.5vw - 1rem);  
+  width: auto;  
+  padding: calc(2.25vw - 0.5rem);
+  right: 5.5vw;  
+}
+
 header .navBar {
   display: flex;
   flex-direction: row;
@@ -61,7 +70,7 @@ header .navBar a:hover, header .navBar h3:hover {
   top: 15vw;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../../../../../public/images/main/menu_mobile_bg.svg);
+  background: url(../../../../../public/images/main/menu_mobile_bg_2.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

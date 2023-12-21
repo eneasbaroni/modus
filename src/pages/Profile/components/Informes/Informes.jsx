@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import './Informes.css'
-import UserContext from '../../../../context/userContex'
+import {UserContext} from '../../../../context/userContex'
 
 const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
@@ -38,10 +38,19 @@ const Informes = () => {
         <h2>Informes</h2>
       </div>
       <div className="informesContainer">
-        {user.informes.map((informe, index) => (
+        {/* Si no hay informes */}
+        {user.reports && user.reports.length === 0 && 
+        <div className="informeContainer">
+          <div className='informe'>
+            <p className='textNoOpen'>No existen informes</p>
+          </div>
+        </div>}
+        {/* Mapeo de Informes */}
+        {user.reports.map((informe, index) => (          
           <div className="informeContainer" key={index} >
             <div className='informe'>
               {indexInf === index ?
+                /* Informe Abierto */
                 <div className='informeOpen'>
                   <h3>Informe {user.nombre}</h3>
                   <p>{formatDate(informe.fecha)}</p>
@@ -53,6 +62,7 @@ const Informes = () => {
                     <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
                   </a>
                 </div>:
+                /* Informe Cerrado */
                 <p className='textNoOpen'>{formatDate(informe.fecha)}</p> 
               }
               {indexInf === index ?

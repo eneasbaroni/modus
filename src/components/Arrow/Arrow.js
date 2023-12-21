@@ -20,7 +20,8 @@ const Arrow = () => {
   
   return (
     <div className={url === '/profile' ? 'upArrowContainer profileArrow' : 'upArrowContainer'} onClick={scrollUp}>
-      <img className='upArrow' src='./images/main/form-arrow.svg' alt='up arrow' />
+      {/* <img className='upArrow' src='./images/main/form-arrow.svg' alt='up arrow' /> */}
+      <img className='upArrow' src='/images/main/form-arrow.svg' alt='up arrow' />
     </div>
   )
 }

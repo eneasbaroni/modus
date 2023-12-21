@@ -1,6 +1,6 @@
 import './Estadisticas.css'
 import { useContext, useState } from 'react'
-import UserContext from '../../../../context/userContex'
+import {UserContext} from '../../../../context/userContex'
 
 const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
@@ -25,10 +25,18 @@ const Estadisticas = () => {
         <h2>Estadísticas</h2>
       </div>
       <div className="grafContainer">
-        {user.informes.map((grafico, index) => (
+        {/* Si no hay informes */}
+        {user.reports && user.reports.length === 0 && 
+        <div className="graficoContainer">
+          <div className='grafico'>
+            <p className='textNoOpen'>No existen informes</p>
+          </div>
+        </div>}
+        {user.reports.map((grafico, index) => (
           <div className="graficoContainer" key={index} >
             <div className='grafico'>
               {indexInf === index ?
+                /* Informe Abierto */
                 <>
                   <img className='graphImg' src="./images/profile/grafico.svg" alt="grafico torta"></img>
                   <div className='graficoOpen'>
@@ -39,6 +47,7 @@ const Estadisticas = () => {
                     </a>  
                   </div>
                 </>:
+                /* Informe Cerrado */
                 <p className='textNoOpen'>{formatDate(grafico.fecha)}</p> 
               }
               {indexInf === index ?

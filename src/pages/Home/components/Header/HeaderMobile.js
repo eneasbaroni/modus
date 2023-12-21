@@ -20,7 +20,7 @@ const HeaderMobile = () => {
         
         {menuActive && <MenuMobile desactive={() => setMenuActive(false)} setResumeActive={() => setResumeActive(!resumeActive)}/>}
           
-      </div>        
+      </div>          
       {resumeActive && <Resume desactive={desactiveResume}/>}
     </header>
   )
