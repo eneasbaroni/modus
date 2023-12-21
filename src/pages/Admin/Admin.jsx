@@ -52,7 +52,7 @@ const Admin = () => {
 								{actualLocation ==='/admin/create-informe' && <Report/>}
 								{actualLocation ==='/admin/message' && <Messages/>}	
 								{actualLocation && actualLocation.startsWith('/admin/reports') && <ReportViewer/>}	
-								<Link to='/admin'><button className='backButton'>Volver  a Panel administrador</button></Link>
+								{actualLocation !=='/admin' && <Link to='/admin'><button className='backButton'>Volver  a Panel administrador</button></Link>}
 							</>:
 							<div id='noAccesContainer'>
 								<h1>Acceso Denegado</h1>
