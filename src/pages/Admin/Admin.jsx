@@ -24,9 +24,9 @@ const Admin = () => {
 	}, [location.pathname])
 	
 
-	useEffect(() => {
+	/* useEffect(() => {
 		window.scrollTo(0, 0);
-	  }, [location]);
+	  }, [location]); */
 
 
 
