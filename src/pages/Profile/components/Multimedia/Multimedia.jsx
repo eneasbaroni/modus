@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import './Multimedia.css'
 import {UserContext} from '../../../../context/userContex'
 
-const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+/* const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const mothDate = (date) => {
   const parts = date.split('-')
@@ -12,7 +12,7 @@ const mothDate = (date) => {
 const formatDate = (date) => {
   const parts = date.split('-')
   return `${parts[0]} de ${meses[parseInt(parts[1]) - 1]} de ${parts[2]}`
-}
+} */
 
 //funcion para obtener link descargable a partir de un googel drive
 const obtenerIDDeLinkDrive = (link) => {
@@ -55,8 +55,8 @@ const Multimedia = () => {
               /* Informe Abierto */
               <div className='file fileOpen'>
                 <div className="fileInfo">
-                  <h3>Análisi de {mothDate(file.fecha)}</h3> 
-                  <p>{formatDate(file.fecha)}</p>
+                  <h3>Análisis</h3> 
+                  <p>{file.nombre}</p>
                 </div>
                 <audio controls className={playing ? 'playing' : ''} onPlay={() => setPlaying(!playing)} onPause={() => setPlaying(!playing)}>
                     <source src={obtenerIDDeLinkDrive(file.multimedia)} type="audio/mp3" />
@@ -66,7 +66,7 @@ const Multimedia = () => {
               </div>:
               /* Informe Cerrado */
               <div className='file'>
-                <p className='textNoOpen'>{formatDate(file.fecha)}</p>
+                <p className='textNoOpen'>{file.nombre}</p>
                 <img src="./images/profile/inf-arrow.svg" alt="" onClick={() => setIndexInf(index)}/>
               </div>
             }

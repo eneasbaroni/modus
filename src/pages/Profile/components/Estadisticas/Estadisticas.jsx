@@ -2,7 +2,7 @@ import './Estadisticas.css'
 import { useContext, useState } from 'react'
 import {UserContext} from '../../../../context/userContex'
 
-const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+/* const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const formatDate = (date) => {
   const parts = date.split('-')
@@ -12,7 +12,7 @@ const formatDate = (date) => {
 const mothDate = (date) => {
   const parts = date.split('-')
   return `${meses[parseInt(parts[1]) - 1]}`
-}
+} */
 
 const Estadisticas = () => {
   const {user} = useContext (UserContext) 
@@ -40,15 +40,15 @@ const Estadisticas = () => {
                 <>
                   <img className='graphImg' src="./images/profile/grafico.svg" alt="grafico torta"></img>
                   <div className='graficoOpen'>
-                    <h3>Rendimiento mes de {mothDate(grafico.fecha)}</h3>
-                    <p>{formatDate(grafico.fecha)}</p>
+                    <h3>Rendimiento</h3>
+                    <p>{grafico.nombre}</p>
                     <a className='linkContainer graphLink' href={grafico.grafico} target="_blank" rel="noreferrer">
                       <p>VER</p>
                     </a>  
                   </div>
                 </>:
                 /* Informe Cerrado */
-                <p className='textNoOpen'>{formatDate(grafico.fecha)}</p> 
+                <p className='textNoOpen'>{grafico.nombre}</p> 
               }
               {indexInf === index ?
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>:              

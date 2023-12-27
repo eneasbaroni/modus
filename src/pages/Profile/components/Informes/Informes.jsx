@@ -1,13 +1,14 @@
 import { useContext, useState } from 'react'
 import './Informes.css'
 import {UserContext} from '../../../../context/userContex'
+import useScreenSize from '../../../../hooks/useScreenSize';
 
-const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+/* const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const formatDate = (date) => {
   const parts = date.split('-')
   return `${parts[0]} de ${meses[parseInt(parts[1]) - 1]} de ${parts[2]}`
-}
+} */
 
 //funcion para obtener link descargable a partir de un googel drive
 const obtenerIDDeLinkDrive = (link) => {
@@ -29,6 +30,7 @@ const Informes = () => {
   const {user} = useContext (UserContext) 
   const [indexInf, setIndexInf] = useState(null)
   const [imgLoaded, setImgLoaded] = useState(false)
+  const windowSize = useScreenSize()
 
 
   return (
@@ -53,17 +55,29 @@ const Informes = () => {
                 /* Informe Abierto */
                 <div className='informeOpen'>
                   <h3>Informe {user.nombre}</h3>
-                  <p>{formatDate(informe.fecha)}</p>
-                  <a className='linkContainer' href={informe.informe} target="_blank" rel="noreferrer">
-                    {imgLoaded && <p>ABRIR</p>}
-                    <img className='informeLink' src="./images/profile/link-Informe.svg" alt="Link" onLoad={ () => setImgLoaded(true)}/>
-                  </a>
-                  <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informe)} download>
-                    <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
-                  </a>
+                  <p>{informe.nombre}</p>
+                  {windowSize.width > 576 ?
+                    <a className='linkContainer' href={informe.informe} target="_blank" rel="noreferrer">
+                      {imgLoaded && <p>ABRIR</p>}
+                      <img className='informeLink' src="./images/profile/link-Informe.svg" alt="Link" onLoad={ () => setImgLoaded(true)}/>
+                    </a>:
+                    <a className='linkContainer' href={informe.informeMobile} target="_blank" rel="noreferrer">
+                      {imgLoaded && <p>ABRIR</p>}
+                      <img className='informeLink' src="./images/profile/link-Informe.svg" alt="Link" onLoad={ () => setImgLoaded(true)}/>
+                    </a>
+                  }
+
+                 {windowSize.width > 576 ?
+                    <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informe)} download>
+                      <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
+                    </a>:
+                    <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informeMobile)} download>
+                      <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
+                    </a>
+                  }
                 </div>:
                 /* Informe Cerrado */
-                <p className='textNoOpen'>{formatDate(informe.fecha)}</p> 
+                <p className='textNoOpen'>{informe.nombre}</p> 
               }
               {indexInf === index ?
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>:              
