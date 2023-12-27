@@ -1,5 +1,5 @@
 import './Profile.css'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import {UserContext} from '../../context/userContex'
 import Login from './Login'
 import Header from './components/Header/Header'
@@ -11,13 +11,33 @@ import Casos from './components/Casos/Casos'
 import HeaderMobile from './components/Header/HeaderMobile'
 import useScreenSize from '../../hooks/useScreenSize'
 import { Link } from 'react-router-dom'
+import SharedFolder from './components/SharedFolder/SharedFolder'
+import Loader from '../../components/Loader/Loader'
 
 const Profile = () => {
-  const {user} = useContext (UserContext)  
+  const {user, userLoading} = useContext (UserContext) 
+  const [folder, setFolder] = useState(false) 
   const windowSize = useScreenSize()
 
+  useEffect(() => {
+    //verificar si en alguno de los reportes tiene carpeta compartida
+    if (user){
+      if(user.reports){
+        for (let i = 0; i < user.reports.length; i++) {
+          if(user.reports[i].carpeta){
+            setFolder(true)
+            break
+          }
+        }
+      }   
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user])
+  
+
   return (
-    <main id='profile'>      
+    <main id='profile'>   
+      {userLoading && <Loader/>}   
       {windowSize.width > 1000 ? <Header/> : <HeaderMobile/>}
 
       {user ? 
@@ -28,7 +48,8 @@ const Profile = () => {
               <Informes/> 
               <Multimedia/>
               <Estadisticas/>
-              <Casos/>              
+              {folder && <SharedFolder/>}           
+              <Casos/>  
             </>:
             <div id='noAccesContainer'>
               <h1>Acceso Denegado</h1>

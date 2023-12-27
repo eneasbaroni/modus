@@ -1,0 +1,239 @@
+#estadisticas {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; 
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) { 
+    min-height: auto;
+    margin-top: 6vw;
+    padding-top: 2vw;
+  }
+
+  & .titleContainer {   
+    padding: 2vw 4vw;
+    border-radius: 3.2vw;
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(229,229,229,1) 0%, rgba(246,246,246,1) 100%);    
+    margin-bottom: 2.5vw;
+    z-index: 2;  
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: -5px;
+      top: -5px;
+      height: calc(100% + 10px);
+      width: calc(100% + 10px);
+      opacity: .8;
+      border-radius: calc(3.2vw + 5px);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);      
+      filter: blur(1px);      
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;  
+      left: 0;
+      top: 0;    
+      height: 100%;
+      width: 100%;
+      opacity: .8;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(229,229,229,1) 0%, rgba(233,233,233,1) 100%);      
+    }
+
+    @media screen and (max-width: 768px) { 
+      border-radius: 5vw;
+      margin-bottom: 5vw;   
+      
+      &::before {         
+        left: -3px;
+        top: -3px;
+        border-radius: calc(5vw + 3px);
+        height: calc(100% + 6px);
+        width: calc(100% + 6px);   
+        filter: blur(2px);                    
+      }
+    } 
+
+    & h2 {
+      font-size: max(4.5vw, 2rem);
+      font-family: 'Tango Sans', sans-serif;
+      background: -webkit-linear-gradient(360deg, #341677, #ff6363);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;      
+    }
+    
+  }  
+
+  & .grafContainer {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: #dbdbdb;
+    border-radius: 3vw;
+    padding: 1.6vw;
+    z-index: 2;    
+
+    @media screen and (max-width: 768px) { 
+      width: 84vw;
+    }
+
+    & .graficoContainer {
+        min-height: 5vw;        
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242, 242, 242, 0) 100%);
+        padding: 3px 1vw 3px 3px;
+        border-radius: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin: 1rem 0;
+
+        @media screen and (max-width: 768px) { 
+          border-radius: 7vw;  
+          padding: 2px 0.5vw 2px 2px;  
+          margin: 0.5rem 0;       
+        }
+        
+        
+        & .grafico {
+          min-height: calc(5vw - 3px);
+          height: auto;
+          width: 100%;
+          border-radius: 2.5vw;          
+          background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(242, 242, 242, 0) 100%);
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+          align-items: center;
+          padding: 0 2.5vw;
+
+          @media screen and (max-width: 768px) { 
+            border-radius: 7vw;                     
+          }
+  
+         & .textNoOpen {
+          font-size: 2rem;
+          font-weight: 200;
+          color: #341677;
+
+          @media screen and (max-width: 1100px) { 
+            font-size: 1.6rem
+          }
+
+          @media screen and (max-width: 768px) { 
+            font-size: 1.2rem;
+            padding: 3.6vw 5vw; 
+          }
+
+          @media screen and (max-width: 576px) { 
+            font-size: 1rem
+          }
+         }
+
+         & img {
+          width: 1.5vw;
+          height: auto;
+          cursor: pointer;   
+          
+          @media screen and (max-width: 768px) { 
+            width: 3vw;
+          }
+         }
+
+         & .graphImg {
+          width: 5.6vw;
+          margin-right: 1rem;
+          height: auto;
+          cursor: auto;
+
+          @media screen and (max-width: 1210px) { 
+            width: 7vw !important;
+          }
+
+          @media screen and (max-width: 768px) { 
+            width: 11vw !important;
+            margin-right: 0.5rem;
+          }        
+
+         }
+
+         & .closeInfo {
+          font-size: 3vw;
+          color:#ff6363;
+          margin-top: -5vw;
+          cursor: pointer;
+
+          @media screen and (max-width: 768px) { 
+            font-size: 5vw;
+          }
+         }
+
+         & .graficoOpen {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          width: 100%;          
+
+          &:hover {
+            & h3, & p {
+              color: #341677 !important;
+            }
+          }
+
+          & h3 {
+            font-size: 2rem;
+            font-size: max(2.5vw, 2rem);
+            color: #ff6363;
+            padding: 1rem 0 0;
+            font-weight: 600;
+            transition: color 0.5s ease-in-out;
+
+            @media screen and (max-width: 768px) { 
+              font-size: 1.3rem;
+              margin: 1rem 0 0;             
+              padding: 0 0;
+            }            
+          }
+
+          & p {
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem);
+            color: #ff6363;
+            transition: color 0.5s ease-in-out;
+
+            @media screen and (max-width: 768px) { 
+              font-size: 0.7rem;   
+              padding-left: 0vw;           
+            }
+          }  
+
+          & .graphLink  {
+            font-size: 1.5vw;
+            font-size: max(1.3vw, 1rem);
+            color: #341677;
+            text-decoration: none;  
+            margin-bottom: 1rem; 
+            
+             & p {
+              color: #341677;  
+              letter-spacing: 1vw; 
+              margin-top: 0.3vw;           
+             }
+          }  
+
+         }
+      }
+    }
+
+  }
+}

@@ -12,10 +12,11 @@ import Report from './components/Report/Report'
 import Messages from './components/Messages/Messages'
 import ReportViewer from './components/ReportViewer/ReportViewer'
 import Cases from './components/Cases/Cases'
+import Loader from '../../components/Loader/Loader'
 
 
 const Admin = () => {
-    const {user} = useContext (UserContext)  
+    const {user, userLoading} = useContext (UserContext)  
 	const [actualLocation, setActualLocation] = useState(null)
 	const location = useLocation()
 
@@ -33,6 +34,7 @@ const Admin = () => {
 
 	return (
 		<>
+		{userLoading && <Loader/>}
 			<Header/>
 			<main id="admin">
 

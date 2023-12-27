@@ -18,7 +18,8 @@ const Report = () => {
 		informe: "",
 		multimedia: "",
 		/* estadistica: "", */
-		grafico: ""	
+		grafico: "",
+		carpeta: ""
 	});
 
 	const handleInputChange = (event) => {
@@ -114,7 +115,7 @@ const Report = () => {
 				<input type="text" name="informe" id="informe" placeholder='Link a Informe en PDF' onChange={handleInputChange} required/>
 				<input type="text" name="multimedia" id="Multimedia" placeholder='Link a archivo de Audio' onChange={handleInputChange} required/>
 				<input type="text" name="grafico" id="grafico" placeholder='Link a Grafico' onChange={handleInputChange} required/>
-				
+				<input type="text" name="carpeta" id="carpeta" placeholder='Carpeta compartida (opcional)' onChange={handleInputChange}/>
 	
 				{clientToSend && informe.informe && informe.multimedia  && informe.grafico ?
 	
