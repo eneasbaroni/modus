@@ -112,12 +112,15 @@ const ReportViewer = () => {
 				{reports.length === 0 && <p>No hay informes</p>}
 				{reports.map(report => 
 					<div className="report" key={report._id}>
+						<h3>{report.nombre}</h3>
 						<p>Cliente: {client.username}</p>
 						<p>Id de Informe: {report._id}</p>
 						<p>Fecha: {report.fecha}</p>
-						<p>Informe: {report.informe}</p>
+						<p>Informe desk: {report.informe}</p>
+						<p>Informe mobile: {report.informeMobile}</p>
 						<p>Multimedia: {report.multimedia}</p>
 						<p>Grafico: {report.grafico}</p>
+						{report.carpeta && <p>Carpeta compartida: {report.carpeta}</p>}
 						<button onClick={() => openUpdateModal(report)}>Editar Informe</button>
 						<button onClick={() => openDeleteModal(report._id)}>Eliminar Informe</button>
 					</div>

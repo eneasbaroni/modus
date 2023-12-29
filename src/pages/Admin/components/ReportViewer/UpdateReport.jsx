@@ -9,10 +9,13 @@ const UpdateReport = ({userId, report, closeModal, loadReports}) => {
 	const [reportUpdated, setReportUpdated] = useState({
 		_id: report._id,
 		fecha: report.fecha,
-		informe: '',
+		nombre: "",
+		informe: "",
+		informeMobile: "",
 		multimedia: "",
 		/* estadistica: "", */
-		grafico: ""
+		grafico: "",
+		carpeta: ""
 	})
 
 	const handleInputChange = (event) => {
@@ -56,14 +59,15 @@ const UpdateReport = ({userId, report, closeModal, loadReports}) => {
 			{loading && <Loader/>}
 			<div className="updateReportContainer">
 				<form className="actionForms" onSubmit={handleSubmit}>
-						<legend>Actualizar Informe</legend> 				
-						<input type="text" name="informe" id="informe" placeholder='Link a Informe en PDF' onChange={handleInputChange} required/>
+						<legend>Actualizar Informe</legend> 
+						<input type="text" name="nombre" id="nombre" placeholder='Nombre del Informe' onChange={handleInputChange} required/>				
+						<input type="text" name="informe" id="informe" placeholder='Link a Informe en PDF Desktop' onChange={handleInputChange} required/>				
+						<input type="text" name="informeMobile" id="informeMobile" placeholder='Link a Informe en PDF Mobile' onChange={handleInputChange} required/>
 						<input type="text" name="multimedia" id="Multimedia" placeholder='Link a archivo de Audio' onChange={handleInputChange} required/>
 						<input type="text" name="grafico" id="grafico" placeholder='Link a Grafico' onChange={handleInputChange} required/>
-						
+						<input type="text" name="carpeta" id="carpeta" placeholder='Carpeta compartida (opcional)' onChange={handleInputChange}/>	
 			
-						{ reportUpdated.informe && reportUpdated.multimedia  && reportUpdated.grafico ?
-			
+						{ reportUpdated.nombre && reportUpdated.informe && reportUpdated.informeMobile && reportUpdated.multimedia  && reportUpdated.grafico ?			
 							<button type="submit">Actualizar</button>:
 							<button type="submit" className='disabledBtn' disabled>Actualizar</button>
 						}
