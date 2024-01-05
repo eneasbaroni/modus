@@ -2,12 +2,13 @@ import axios from "axios"
 import { useState } from "react"
 import Loader from "../../../../components/Loader/Loader"
 
-const EditModal = ({id, name, closeModal, loadCases}) => {
+const EditModal = ({id, client, name, closeModal, loadCases}) => {
     
     const [loading, setLoading] = useState(false)	
     const [caseEdited, setCaseEdited] = useState({
 		name: '',
-		link: ''
+		link: '',
+		client: client
 	})
 
     const handleInputChange = (event) => {
@@ -48,7 +49,8 @@ const EditModal = ({id, name, closeModal, loadCases}) => {
             {loading && <Loader/>}
             <div className="createCaseContainer">
 				<form className="actionForms" onSubmit={handleSubmit}>
-					<legend>Editar Caso "{name}"</legend>
+					<legend>Editar Caso "{name}" <br/>para {client}</legend>	
+						
 					<input type="text" name="name" id="name" placeholder='Nombre del caso' onChange={handleInputChange} required/>
 					<input type="text" name="link" id="link" placeholder='Link del caso' onChange={handleInputChange} required/>
 					{ caseEdited.name && caseEdited.link ?			

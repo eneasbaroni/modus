@@ -11,6 +11,7 @@ const Cases = () => {
 	const [caseModal, setCaseModal] = useState(false)
 	const [loading, setLoading] = useState(false)
 	const [idToEdit, setIdToEdit] = useState(null)
+	const [clientToEdit, setClientToEdit] = useState(null)
 	const [caseNametoEdit, setCaseNameToEdit] = useState(null)
 	const [editModal, setEditModal] = useState(false)
 	const [idToDelete, setIdToDelete] = useState(null)
@@ -48,9 +49,10 @@ const Cases = () => {
 		setCaseModal(false)
 	}
 
-	const openEditModal = (id, name) => {		
+	const openEditModal = (id, name, client) => {		
 		setIdToEdit(id)
 		setCaseNameToEdit(name)
+		setClientToEdit(client)
 		setEditModal(true)
 	}
 
@@ -77,7 +79,7 @@ const Cases = () => {
 			{loading && <Loader/>}
 			{caseModal && <CreateCase closeModal={closeModal} loadCases={loadCases}/>}
 			{deleteModal && idToDelete && <ConfirmDelete id={idToDelete} closeModal={closeDeleteModal} loadCases={loadCases}/>}
-			{editModal && idToEdit && <EditModal id={idToEdit} name={caseNametoEdit} closeModal={closeEditModal} loadCases={loadCases}/>}
+			{editModal && idToEdit && <EditModal id={idToEdit} name={caseNametoEdit} client={clientToEdit} closeModal={closeEditModal} loadCases={loadCases}/>}
 			<section id="cases">
 				<h1>Casos de Éxito</h1>
 				<button className='backButton' onClick={openModal}>Crear Caso</button>
@@ -86,9 +88,10 @@ const Cases = () => {
 					{cases.length > 0 && 
 						cases.map(c => (
 							<div className="case" key={c._id}>
-								<p>{c.name}</p>
-								<p>{c.link}</p>
-								<button onClick={() => openEditModal(c._id, c.name)}>Editar Caso</button>
+								<p>Nombre del caso: {c.name}</p>
+								<p>Nombre de cliente: {c.client}</p>
+								<p>Link: {c.link}</p>
+								<button onClick={() => openEditModal(c._id, c.name, c.client)}>Editar Caso</button>
 								<button onClick={() => openDeleteModal(c._id)}>Borrar Caso</button>
 							</div>
 						))

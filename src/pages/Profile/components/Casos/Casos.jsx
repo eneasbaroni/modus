@@ -1,8 +1,9 @@
 import './Casos.css'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import Loader from '../../../../components/Loader/Loader';
 import axios from 'axios';
+import { UserContext } from '../../../../context/userContex';
 
 const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
@@ -32,6 +33,7 @@ const obtenerImg = (link) => {
 }
 
 const Casos = () => {  
+  const {user} = useContext (UserContext)
   const [indexInf, setIndexInf] = useState(null)
   const [casosArr, setCasosArr] = useState()
   const [imgOpening, setImgOpening] = useState(false)
@@ -40,9 +42,13 @@ const Casos = () => {
 
   useEffect(() => {
     axios.get('https://modus-server-client.onrender.com/case')
-    .then(res => {
-      setCasosArr(res.data)
+    
+   .then(res => {
+      //filtrar los casos del usuario (client)
+      const casos = res.data.filter(caso => caso.client === user.username)
+      setCasosArr(casos)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleOpenImg = (url) => {
