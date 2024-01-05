@@ -5,9 +5,9 @@ import Loader from '../../../../components/Loader/Loader';
 import axios from 'axios';
 import { UserContext } from '../../../../context/userContex';
 
-const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+//const meses = [ "Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-const formatDate = (date) => {
+/* const formatDate = (date) => {
   const parts = date.split('/')
   return `${parts[1]} de ${meses[parseInt(parts[0]) - 1]} de ${parts[2]}`
 }
@@ -15,7 +15,7 @@ const formatDate = (date) => {
 const mothDate = (date) => {
   const parts = date.split('/')
   return `${meses[parseInt(parts[0]) - 1]}`
-}
+} */
 
 //funcion para obtener en enlace directo a una imagen
 const obtenerImg = (link) => {
@@ -45,7 +45,7 @@ const Casos = () => {
     
    .then(res => {
       //filtrar los casos del usuario (client)
-      const casos = res.data.filter(caso => caso.client === user.username)
+      const casos = res.data.filter(caso => caso.client === user.username)      
       setCasosArr(casos)
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -99,8 +99,8 @@ const Casos = () => {
                 <>
                   <img className='graphImg' src="./images/profile/star.svg" alt="estrella"></img>
                   <div className='casoOpen'>
-                    <h3>Caso mes de {mothDate(caso.date)}</h3>
-                    <p>{formatDate(caso.date)}</p>
+                    <h3>Caso de Éxito</h3>
+                    <p>{caso.name}</p>
 
                     <div className="linkContainer" onClick={ () => handleOpenImg(caso.link)}>:                                            
                                                                 
@@ -123,7 +123,7 @@ const Casos = () => {
                     </div>
                   </div>
                 </>:
-                <p className='textNoOpen'>{formatDate(caso.date)}</p> 
+                <p className='textNoOpen'>{caso.name}</p> 
               }
               {indexInf === index ?
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>:              
