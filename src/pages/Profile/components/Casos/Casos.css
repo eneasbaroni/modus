@@ -244,15 +244,50 @@
             transform: translate(-50%);
             height: 80vh;
             width: auto;
-            z-index: 99;
-
-            & img {
-              background-color: white;
+            z-index: 99;            
+            
+            @media (orientation: portrait) {
+              width: 80vw;
+              height: auto;
+            }
+            
+            & img {              
+              background-color: rgba(0, 0, 0, 0.226);
               border-radius: 2vw;
               height: 100%;
               width: auto; 
+              max-width: 90vw;
+              object-fit: contain;
+
+              @media (orientation: portrait) {
+                width: 100%;
+                height: auto;               
+              }
                            
-            }          
+            }   
+            
+            .closeImg {
+              text-align: center;              
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              top: 2vw;
+              right: 2vw;
+              width: 2.5vw;
+              height: 2.5vw;
+              /* background-color: white; */
+              background: (90deg, rgba(240,240,240,1) 0%, rgba(242, 242, 242, 0) 100%);
+              color: #341677;
+              border-radius: 50%;
+              border: solid 1px #d36d8f;
+              cursor: pointer;
+
+              @media screen and (max-width: 768px) { 
+                width: 3vw;
+                height: 3vw;                
+              } 
+            }
             
           }
          }

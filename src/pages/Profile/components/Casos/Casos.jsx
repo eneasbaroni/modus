@@ -114,6 +114,7 @@ const Casos = () => {
                           </>:
                           <>
                             <div className='imgContainer'>
+                              <button className='closeImg' onClick={handleCloseImg}>X</button>
                               <img src={caseOpen} alt="caso de éxito"  onClick={handleCloseImg}/>                                                        
                             </div>
                           </>
