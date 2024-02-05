@@ -25,7 +25,8 @@ const obtenerImg = (link) => {
 
   if (match && match.length === 2) {   
     console.log('hola'); 
-    return `https://drive.google.com/uc?id=${match[1]}`    
+    //return `https://drive.google.com/uc?id=${match[1]}`    
+    return `https://lh3.googleusercontent.com/d/${match[1]}`    
   } else {
     console.log("No se pudo extraer el ID del enlace de Google Drive.");
     return null;

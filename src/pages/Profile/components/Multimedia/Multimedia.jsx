@@ -15,7 +15,7 @@ const formatDate = (date) => {
 } */
 
 //funcion para obtener link descargable a partir de un googel drive
-const obtenerIDDeLinkDrive = (link) => {
+/* const obtenerIDDeLinkDrive = (link) => {
   // Expresión regular para buscar el patrón del ID en el enlace de Google Drive
   const regex = /\/file\/d\/([a-zA-Z0-9_-]+)\//;
   const match = link.match(regex);
@@ -27,7 +27,7 @@ const obtenerIDDeLinkDrive = (link) => {
     console.log("No se pudo extraer el ID del enlace de Google Drive.");
     return null;
   }
-}
+} */
 
 
 const Multimedia = () => {
@@ -59,7 +59,7 @@ const Multimedia = () => {
                   <p>{file.nombre}</p>
                 </div>
                 <audio controls className={playing ? 'playing' : ''} onPlay={() => setPlaying(!playing)} onPause={() => setPlaying(!playing)}>
-                    <source src={obtenerIDDeLinkDrive(file.multimedia)} type="audio/mp3" />
+                    <source src={`./audios/${file.multimedia}`} type="audio/mp3" />
                     Tu navegador no soporta la reproducción de audio.
                 </audio>             
                 <p className="closeInfo"  onClick={() => setIndexInf(null)}>-</p>
