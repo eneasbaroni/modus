@@ -12,9 +12,9 @@ Web application developed with React JS. It is institutional web app for a socia
    npm install
    ```   
 
-4. Create an .env file with the necessary environment variables. Take a look at the env.example file
+3. Create an .env file with the necessary environment variables. Take a look at the env.example file
 
-3. Deploy the project 
+4. Deploy the project 
 
    ```
    npm start
