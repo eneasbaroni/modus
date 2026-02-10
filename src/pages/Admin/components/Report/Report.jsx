@@ -16,12 +16,7 @@ const Report = () => {
 
 	const [informe, setInforme] = useState({
 		nombre: "",
-		informe: "",
-		informeMobile: "",
-		multimedia: "",
-		/* estadistica: "", */
-		grafico: "",
-		carpeta: ""
+		informe: ""
 	});
 
 	const handleInputChange = (event) => {
@@ -115,12 +110,8 @@ const Report = () => {
 				
 				<input type="text" name="nombre" id="nombre" placeholder='Nombre del Informe' onChange={handleInputChange} required/>
 				<input type="text" name="informe" id="informe" placeholder='Link a Informe en PDF Desktop' onChange={handleInputChange} required/>				
-				<input type="text" name="informeMobile" id="informeMobile" placeholder='Link a Informe en PDF Mobile' onChange={handleInputChange} required/>				
-				<input type="text" name="multimedia" id="Multimedia" placeholder='Link a archivo de Audio' onChange={handleInputChange} required/>
-				<input type="text" name="grafico" id="grafico" placeholder='Link a Grafico' onChange={handleInputChange} required/>
-				<input type="text" name="carpeta" id="carpeta" placeholder='Carpeta compartida (opcional)' onChange={handleInputChange}/>
 	
-				{clientToSend && informe.nombre && informe.informe && informe.informeMobile && informe.multimedia  && informe.grafico ?
+				{clientToSend && informe.nombre && informe.informe ?
 	
 					<button type="submit">Enviar</button>:
 					<button type="submit" className='disabledBtn' disabled>Enviar</button>

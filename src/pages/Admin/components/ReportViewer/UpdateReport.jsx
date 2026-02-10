@@ -11,10 +11,10 @@ const UpdateReport = ({userId, report, closeModal, loadReports}) => {
 		fecha: report.fecha,
 		nombre: report.nombre,
 		informe: report.informe,
-		informeMobile: report.informeMobile,
-		multimedia: report.multimedia,
+		informeMobile: report.informeMobile || "",
+		multimedia: report.multimedia || "",
 		/* estadistica: "", */
-		grafico: report.grafico,
+		grafico: report.grafico || "",
 		carpeta: report.carpeta || ""
 	})
 
@@ -65,15 +65,15 @@ const UpdateReport = ({userId, report, closeModal, loadReports}) => {
 						<label>Link a Informe en PDF Desktop</label>
 						<input type="text" name="informe" id="informe" placeholder='Link a Informe en PDF Desktop' defaultValue={report.informe} onChange={handleInputChange} required/>				
 						<label>Link a Informe en PDF Mobile</label>
-						<input type="text" name="informeMobile" id="informeMobile" placeholder='Link a Informe en PDF Mobile' defaultValue={report.informeMobile} onChange={handleInputChange} required/>
+						<input type="text" name="informeMobile" id="informeMobile" placeholder='Link a Informe en PDF Mobile' defaultValue={report.informeMobile || ""} onChange={handleInputChange} />
 						<label>Link a archivo de Audio</label>
-						<input type="text" name="multimedia" id="Multimedia" placeholder='Link a archivo de Audio' defaultValue={report.multimedia} onChange={handleInputChange} required/>
+						<input type="text" name="multimedia" id="Multimedia" placeholder='Link a archivo de Audio' defaultValue={report.multimedia || ""} onChange={handleInputChange} />
 						<label>Link a Gráfico</label>
-						<input type="text" name="grafico" id="grafico" placeholder='Link a Gráfico' defaultValue={report.grafico} onChange={handleInputChange} required/>
+						<input type="text" name="grafico" id="grafico" placeholder='Link a Gráfico' defaultValue={report.grafico || ""} onChange={handleInputChange} />
 						<label>Link a Carpeta compartida</label>
 						<input type="text" name="carpeta" id="carpeta" placeholder='Carpeta compartida (opcional)' onChange={handleInputChange}/>	
 			
-						{ reportUpdated.nombre && reportUpdated.informe && reportUpdated.informeMobile && reportUpdated.multimedia  && reportUpdated.grafico ?			
+						{ reportUpdated.nombre && reportUpdated.informe ?			
 							<button type="submit">Actualizar</button>:
 							<button type="submit" className='disabledBtn' disabled>Actualizar</button>
 						}

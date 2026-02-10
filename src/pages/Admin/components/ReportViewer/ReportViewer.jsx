@@ -117,9 +117,9 @@ const ReportViewer = () => {
 						<p>Id de Informe: {report._id}</p>
 						<p>Fecha: {report.fecha}</p>
 						<p>Informe desk: {report.informe}</p>
-						<p>Informe mobile: {report.informeMobile}</p>
-						<p>Multimedia: {report.multimedia}</p>
-						<p>Grafico: {report.grafico}</p>
+						{report.informeMobile && <p>Informe mobile: {report.informeMobile}</p>}
+						{report.multimedia && <p>Multimedia: {report.multimedia}</p>}
+						{report.grafico && <p>Grafico: {report.grafico}</p>}
 						{report.carpeta && <p>Carpeta compartida: {report.carpeta}</p>}
 						<button onClick={() => openUpdateModal(report)}>Editar Informe</button>
 						<button onClick={() => openDeleteModal(report._id)}>Eliminar Informe</button>
