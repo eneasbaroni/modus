@@ -35,6 +35,8 @@ const Multimedia = () => {
   const [indexInf, setIndexInf] = useState(null)
   const [playing, setPlaying] = useState(false)
 
+  const multimediaReports = (user.reports || []).filter(report => report.multimedia)
+
   return (
     <div id='multimedia'>
       <div className="circleInforme"></div>
@@ -43,13 +45,13 @@ const Multimedia = () => {
       </div>
       <div className="multimediaContainer">
         {/* Si no hay informes */}
-        {user.reports && user.reports.length === 0 && 
+        {multimediaReports.length === 0 && 
         <div className="fileContainer">
           <div className='file'>
-            <p className='textNoOpen'>No existen informes</p>
+            <p className='textNoOpen'>No existen archivos multimedia</p>
           </div>
         </div>}
-        {user.reports.map((file, index) => (
+        {multimediaReports.map((file, index) => (
           <div className="fileContainer" key={index} >            
             {indexInf === index ?
               /* Informe Abierto */

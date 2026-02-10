@@ -48,7 +48,7 @@ const Informes = () => {
           </div>
         </div>}
         {/* Mapeo de Informes */}
-        {user.reports.map((informe, index) => (          
+        {user.reports.map((informe, index) => (
           <div className="informeContainer" key={index} >
             <div className='informe'>
               {indexInf === index ?
@@ -61,7 +61,7 @@ const Informes = () => {
                       {imgLoaded && <p>ABRIR</p>}
                       <img className='informeLink' src="./images/profile/link-Informe.svg" alt="Link" onLoad={ () => setImgLoaded(true)}/>
                     </a>:
-                    <a className='linkContainer' href={informe.informeMobile} target="_blank" rel="noreferrer">
+                    <a className='linkContainer' href={informe.informeMobile || informe.informe} target="_blank" rel="noreferrer">
                       {imgLoaded && <p>ABRIR</p>}
                       <img className='informeLink' src="./images/profile/link-Informe.svg" alt="Link" onLoad={ () => setImgLoaded(true)}/>
                     </a>
@@ -71,7 +71,7 @@ const Informes = () => {
                     <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informe)} download>
                       <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
                     </a>:
-                    <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informeMobile)} download>
+                    <a className='downloadContainer' href={ obtenerIDDeLinkDrive(informe.informeMobile || informe.informe)} download>
                       <img className='informeDonwload' src="./images/profile/download.svg" alt="Link" />
                     </a>
                   }

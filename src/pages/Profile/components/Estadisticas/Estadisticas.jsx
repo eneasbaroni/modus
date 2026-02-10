@@ -19,6 +19,8 @@ const Estadisticas = () => {
   const [indexInf, setIndexInf] = useState(null)
 
   
+  const graficoReports = (user.reports || []).filter(report => report.grafico)
+
   return (
     <div id='estadisticas'>      
       <div className='titleContainer'>
@@ -26,13 +28,13 @@ const Estadisticas = () => {
       </div>
       <div className="grafContainer">
         {/* Si no hay informes */}
-        {user.reports && user.reports.length === 0 && 
+        {graficoReports.length === 0 && 
         <div className="graficoContainer">
           <div className='grafico'>
-            <p className='textNoOpen'>No existen informes</p>
+            <p className='textNoOpen'>No existen estadísticas</p>
           </div>
         </div>}
-        {user.reports.map((grafico, index) => (
+        {graficoReports.map((grafico, index) => (
           <div className="graficoContainer" key={index} >
             <div className='grafico'>
               {indexInf === index ?
